@@ -15,16 +15,25 @@
 
 <body>
 
-  <!-- toolbar
-  <md-toolbar class="headToolbar">
-         Bryce Hairabedian
-  </md-toolbar>
--->
+  <!-- toolbar -->
+  <md-toolbar>
+       <div class="md-toolbar-tools">
+         <h2>
+           <span>Bryce Hairabedian</span>
+         </h2>
+         <span flex class="flex"></span>
+         <button class="md-raised md-button md-ink-ripple" type="button" aria-label="Contact Me">
+           <span class="ng-scope">Contact Me</span>
+           <div class="md-ripple-container"></div>
+         </button>
+       </div>
+     </md-toolbar>
+   <!-- end toolbar-->
 
 <!-- navbar/ md-tabs -->
   <div ng-controller="AppCtrl" ng-cloak="" class="tabsdemoStaticTabs" ng-app="MyApp">
 <!--  <md-content class="md-padding"> -->
-    <md-tabs md-dynamic-height class="md-primary" md-selected="data.selectedIndex" md-align-tabs="top">
+    <md-tabs md-dynamic-height md-stretch-tabs md-center-tabs="true" md-selected="data.selectedIndex" md-align-tabs="top">
       <md-tab id="tab1">
         <md-tab-label>About</md-tab-label>
         <md-tab-body>

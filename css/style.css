@@ -2,6 +2,11 @@ footer {
   background-color: #ccc;
 }
 
+.md-toolbar h2 {
+  color: #000;
+
+}
+
 .tabsdemoStaticTabs md-tab-content {
   background-color: white;
   padding: 35px;
