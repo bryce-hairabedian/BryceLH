@@ -4,15 +4,15 @@ footer {
 
 .tabsdemoStaticTabs md-tab-content {
   background-color: white;
-  padding: 25px;
+  padding: 35px;
 }
   .tabsdemoStaticTabs md-tab-content:nth-child(1) {
     background-color: #fff; }
   .tabsdemoStaticTabs md-tab-content:nth-child(2) {
-    background-color: grey; }
+    background-color: #9E9E9E; }
   .tabsdemoStaticTabs md-tab-content:nth-child(3) {
     background-color: #fff; }
-
+/*
 .tabsdemoStaticTabs .after-tabs-area > span {
   margin-top: 25px;
   padding-right: 15px;
@@ -23,7 +23,7 @@ footer {
 .tabsdemoStaticTabs .after-tabs-area > md-checkbox {
   margin-top: 26px;
   margin-left: 0; }
-
+*/
 
 /*
 Copyright 2016 Google Inc. All Rights Reserved.

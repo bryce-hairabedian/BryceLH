@@ -15,14 +15,11 @@
 
 <body>
 
-  <!-- toolbar-->
+  <!-- toolbar
   <md-toolbar class="headToolbar">
          Bryce Hairabedian
-         <br>
-         B.S Computer Science
-         <br>
-         Certificate Software Engineering
   </md-toolbar>
+-->
 
 <!-- navbar/ md-tabs -->
   <div ng-controller="AppCtrl" ng-cloak="" class="tabsdemoStaticTabs" ng-app="MyApp">
@@ -32,21 +29,26 @@
         <md-tab-label>About</md-tab-label>
         <md-tab-body>
           <div layout="row" layout-sm="column" layout-align="center center">
-            <div>
+            <div align="center">
               <md-content class="md-padding">
                   <img src="images/myFace.jpg">
-              </md-content>
-            </div>
-            <div>
-              <md-content class="md-padding">
-                <h2>Bryce Hairabedian</h2>
+                <h1>Bryce Hairabedian</h1>
                 <br>
-                <h3>Software Engineer</h3>
+                <h2>Software Engineer</h2>
                 <br>
                 <p>
-                  Hello, I'm Bryce. I have a <href="#tab2"> Portfolio </href>.
-                  Make sure to check it out.
+                  I am passionate backend and front end developer. Graduate with a B.S. in Computer Science.
+                  <br> I strive for beauty in everyting I do. Creating with the user in mind.
+                  <br>Click on portfolio at the top for apps I've created and projects I've worked on.
                 </p>
+                <md-card-actions layout="row" layout-align="center">
+                  <md-button class="md-icon-button" aria-label="Favorite">
+                    <img src="images/gitHub_32px.png">
+                  </md-button>
+                  <md-button class="md-icon-button" aria-label="Favorite">
+                    <img src="images/in_icon.png">
+                  </md-button>
+                </md-card-actions>
               </md-content>
             </div>
           </div><!--end landing page div -->
@@ -60,9 +62,9 @@
         <div class="md-padding" layout="row" layout-sm="column" layout-wrap>
           <md-card flex="40" flex-sm="80" ng-repeat="card in portfolios">
           <!--Card Title -->
-            <md-card-title>
+            <md-card-title style="background-color:{{card.color}};">
               <md-card-title-text>
-                <span class="md-headline">
+                <span class="md-headline" style="color:white;">
                   {{card.title}}
                 </span>
               </md-card-title-text>
@@ -73,7 +75,7 @@
                 </div>
               </md-card-title-media>
             </md-card-title>
-            <md-card-content>
+            <md-card-content class="md-padding">
           <!-- Card description -->
               <p>
                 {{card.description}}
@@ -146,12 +148,42 @@
           </div>
         </md-tab-body>
       </md-tab>
+<!-- Education Tab____________________________________________ -->
       <md-tab id="tab4">
         <md-tab-label>Education</md-tab-label>
         <md-tab-body>
-          View for Item #3 <br>
-          <img src="images/myFace.jpg">
-          data.selectedIndex = 2;
+          <div class="md-padding" layout="row" layout-sm="column" layout-wrap>
+            <md-card flex="40" flex-sm="80">
+            <!--Card Title -->
+              <md-card-title style="background-color:#00573d;">
+                <md-card-title-media>
+                                      <img ng-src="images/csus_gold.png" class="md-card-image-sm" alt="{{card.alt}}">
+                </md-card-title-media>
+            <!-- Card Image -->
+              </md-card-title>
+              <md-card-content>
+            <!-- Card description -->
+                <h3>
+                  B.S. Computer Science
+                <br>
+                <br>
+            <!-- Card Skills -->
+                  Certificate in Software Engineering
+                </h3>
+              </md-card-content>
+              <md-card-actions layout="row" layout-align="end center">
+                <md-button class="md-icon-button" aria-label="Favorite">
+                  <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Settings">
+                  <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Share">
+                  <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+                </md-button>
+              </md-card-actions>
+            </md-card>
+        </div> <!-- layout column= -->
         </md-tab-body>
       </md-tab>
       <!-- tab4 -->

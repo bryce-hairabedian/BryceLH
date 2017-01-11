@@ -38,39 +38,45 @@
     $scope.tools = [
       {tool: 'JUnit'},
       {tool: 'Visio'},
-      {tool: 'Emma'}
+      {tool: 'Spring'},
+      {tool: 'REST'}
     ];
 
     $scope.portfolios = [
       {imagePath:'images/cardHeader_saferides_small_200.jpg',
       title:'ASI SafeRides',
-      description:'Currently developing App on small team using Scrum with Agile. Mobile dispatching system used to find student or faculty a safe ride home. Deliverable date May 2017',
+      description:'Currently developing App with small team using Scrum with Agile. Mobile dispatching system used to find student or faculty a safe ride home. Deliverable date May 2017',
       skills: 'JS, PHP, REST, Spring, MySQL, HTML, CSS',
-      alt:'asi SafeRides'
+      alt:'asi SafeRides',
+      color:'#7e9f2a'
       },
       {imagePath:'images/dogCatcher_small_200.jpg',
       title:'Dog Catcher',
-      description:'2D Mobile cross platform game. Includes touch screen controls, scoreview, and mapview. Based on observer design pattern.',
+      description:'2D Mobile cross platform game. Includes touch screen controls, scoreview, and mapview. Based on observer design pattern. Written with Codename One.',
       skills: 'Codename One, Java',
-      alt:'Dog in net'
+      alt:'Dog in net',
+      color:'#a15a2c'
       },
       {imagePath:'images/myWebsite_small_200.jpg',
       title:'My Website',
       description:'My own personal webapp built from scratch for the fun of learning AngularJS. Designed aesthetically with a passion for Google’s Material Design.',
       skills: 'JS, AngularJS, Node.js, CSS, HTML',
-      alt:'Bryce Hairabedian Website'
+      alt:'Bryce Hairabedian Website',
+      color:'#3F51B5'
       },
       {imagePath:'images/gtaQuickCodes_small_200.jpg',
       title:'GTA Codes Quick',
-      description:'Currently developing a App in my own time to be deployed. Very fast, light, and customizable mobile app. Provides GTA codes quickly and up to date.',
+      description:'Currently developing a App in my own time to be deployed. Very fast, light, and customizable mobile app. Provides GTA codes quickly and up to date. Blah blah delete blah delete blah delete blah delete blah delete',
       skills: 'Java, XML, Android Development',
-      alt:'GTA Code Quick'
+      alt:'GTA Code Quick',
+      color:'#F44336'
       },
-      {imagePath:'images/cardHeader_saferides_small_200.jpg',
+      {imagePath:'images/sacState_200.png',
       title:'CSUS Ride Share',
       description:'Lead team of 5 in development of Android App. CSUS Students willing to share rides to & from campus. App was reviewed by CSUS VP of Student Affairs.',
       skills: 'Java, PHP, MySQL, XML, Android Development',
-      alt:'CSUS Ride Share'
+      alt:'CSUS Ride Share',
+      color:'#cfb668'
       }
     ];
 
