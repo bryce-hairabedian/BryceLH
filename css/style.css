@@ -2,9 +2,10 @@ footer {
   background-color: #ccc;
 }
 
-.md-toolbar h2 {
-  color: #000;
-
+.myHeading {
+  color: #fff;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 30px;
 }
 
 .tabsdemoStaticTabs md-tab-content {
