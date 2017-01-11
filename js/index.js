@@ -21,6 +21,26 @@
       },
     ];
 
+    $scope.languages = [
+      {lang: 'Java'},
+      {lang: 'C/C++'},
+      {lang: 'JS'},
+      {lang: 'PHP'},
+      {lang: 'MySQL'},
+      {lang: 'XML'},
+      {lang: 'CSS'},
+      {lang: 'Codename One'}
+    ];
+    $scope.methods = [
+      {method: 'Scrum'},
+      {method: 'Agile'},
+    ];
+    $scope.tools = [
+      {tool: 'JUnit'},
+      {tool: 'Visio'},
+      {tool: 'Emma'}
+    ];
+
     $scope.portfolios = [
       {imagePath:'images/cardHeader_saferides_small_200.jpg',
       title:'ASI SafeRides',
