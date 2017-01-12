@@ -94,17 +94,18 @@ footer {
   font-size: medium;
 }
 
-.tabsdemoStaticTabs md-tab-content {
-  background-color: white;
-  padding: 35px;
+.navTabs md-tab-content {
+  /*background-color: white;*/
+  padding: 15px;
 }
-  .tabsdemoStaticTabs md-tab-content:nth-child(1) {
-    background-color: #fff; }
-  .tabsdemoStaticTabs md-tab-content:nth-child(2) {
-    background-color: #9E9E9E;
+  .navTabs md-tab-content:nth-child(1) {
+  /*background-color: #fff;*/
+ }
+  .navTabs md-tab-content:nth-child(2) {
+    /*background-color: #9E9E9E;*/
   }
-  .tabsdemoStaticTabs md-tab-content:nth-child(3) {
-    background-color: #fff;
+  .navTabs md-tab-content:nth-child(3) {
+    /*background-color: #fff;*/
   }
 /*
 .tabsdemoStaticTabs .after-tabs-area > span {

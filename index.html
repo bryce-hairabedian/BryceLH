@@ -61,7 +61,7 @@
    <!-- end toolbar-->
 
 <!-- navbar/ md-tabs -->
-  <div ng-cloak="" class="tabsdemoStaticTabs">
+  <div ng-cloak="" class="navTabs">
 <!--  <md-content class="md-padding"> -->
     <md-tabs md-dynamic-height md-swipe-content md-center-tabs="true" md-stretch-tabs="auto" md-selected="data.selectedIndex" md-align-tabs="top">
       <md-tab id="tab1">
@@ -69,17 +69,12 @@
         <md-tab-body>
           <div layout="row" layout-sm="column" layout-align="center center">
             <div align="center">
-
-
               <md-content class="md-padding">
                   <img src="images/myFace.jpg">
                 <h1>Bryce Hairabedian</h1>
                 <br>
                 <h2>Software Engineer</h2>
                 <br>
-
-
-
                 <p>
                   I am passionate backend and front end developer. Graduate with a B.S. in Computer Science.
                   <br> I strive for beauty in everyting I do. Creating with the user in mind.
@@ -102,137 +97,143 @@
       <md-tab id="tab2">
         <md-tab-label>Portfolio</md-tab-label>
         <md-tab-body>
-<md-content class="_md layout-xs-column layout-row" layout-xs="column" layout="row">
-  <!-- left column -->
-    <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-      <md-card ng-repeat="card in portfolios_left"><!-- flex="40" flex-sm="80" -->
-      <!--Card Title -->
-        <md-card-title style="background-color:{{card.color}};">
-          <md-card-title-text>
-            <span class="md-headline" style="color:white;">
-              {{card.title}}
-            </span>
-          </md-card-title-text>
-      <!-- Card Image -->
-          <md-card-title-media>
-            <div class="md-media card-media">
-              <img ng-src="{{card.imagePath}}" class="md-card-image" alt="{{card.alt}}">
-            </div>
-          </md-card-title-media>
-        </md-card-title>
-        <md-card-content class="md-padding">
-      <!-- Card description -->
-          <p>
-            {{card.description}}
-          <br>
-          <br>
-      <!-- Card Skills -->
-            {{card.skills}}
-          </p>
-        </md-card-content>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
-          </md-button>
-          <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-          </md-button>
-          <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
-          </md-button>
-        </md-card-actions>
-      </md-card><!-- end card in portfolios -->
-    </div><!--end left column-->
+          <md-content class="_md layout-xs-column layout-row" layout-xs="column" layout="row">
+            <!-- left column -->
+              <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+                <md-card ng-repeat="card in portfolios_left"><!-- flex="40" flex-sm="80" -->
+                <!--Card Title -->
+                  <md-card-title style="background-color:{{card.color}};">
+                    <md-card-title-text>
+                      <span class="md-headline" style="color:white;">
+                        {{card.title}}
+                      </span>
+                    </md-card-title-text>
+                <!-- Card Image -->
+                    <md-card-title-media>
+                      <div class="md-media card-media">
+                        <img ng-src="{{card.imagePath}}" class="md-card-image" alt="{{card.alt}}">
+                      </div>
+                    </md-card-title-media>
+                  </md-card-title>
+                  <md-card-content class="md-padding">
+                <!-- Card description -->
+                    <p>
+                      {{card.description}}
+                    <br>
+                    <br>
+                <!-- Card Skills -->
+                      {{card.skills}}
+                    </p>
+                  </md-card-content>
+                  <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Favorite">
+                      <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Settings">
+                      <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share">
+                      <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+                    </md-button>
+                  </md-card-actions>
+                </md-card><!-- end card in portfolios -->
+              </div><!--end left column-->
 
-  <!--start right column-->
-    <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-      <md-card ng-repeat="card in portfolios_right"><!-- flex="40" flex-sm="80" -->
-      <!--Card Title -->
-        <md-card-title style="background-color:{{card.color}};">
-          <md-card-title-text>
-            <span class="md-headline" style="color:white;">
-              {{card.title}}
-            </span>
-          </md-card-title-text>
-      <!-- Card Image -->
-          <md-card-title-media>
-            <div class="md-media card-media">
-              <img ng-src="{{card.imagePath}}" class="md-card-image" alt="{{card.alt}}">
-            </div>
-          </md-card-title-media>
-        </md-card-title>
-        <md-card-content class="md-padding">
-      <!-- Card description -->
-          <p>
-            {{card.description}}
-          <br>
-          <br>
-      <!-- Card Skills -->
-            {{card.skills}}
-          </p>
-        </md-card-content>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
-          </md-button>
-          <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-          </md-button>
-          <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
-          </md-button>
-        </md-card-actions>
-      </md-card><!-- end card in portfolios -->
-    </div><!--end right column-->
-<!-- end new -->
-<!-- *end card**************** -->
+            <!--start right column-->
+              <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+                <md-card ng-repeat="card in portfolios_right"><!-- flex="40" flex-sm="80" -->
+                <!--Card Title -->
+                  <md-card-title style="background-color:{{card.color}};">
+                    <md-card-title-text>
+                      <span class="md-headline" style="color:white;">
+                        {{card.title}}
+                      </span>
+                    </md-card-title-text>
+                <!-- Card Image -->
+                    <md-card-title-media>
+                      <div class="md-media card-media">
+                        <img ng-src="{{card.imagePath}}" class="md-card-image" alt="{{card.alt}}">
+                      </div>
+                    </md-card-title-media>
+                  </md-card-title>
+                  <md-card-content class="md-padding">
+                <!-- Card description -->
+                    <p>
+                      {{card.description}}
+                    <br>
+                    <br>
+                <!-- Card Skills -->
+                      {{card.skills}}
+                    </p>
+                  </md-card-content>
+                  <md-card-actions layout="row" layout-align="end center">
+                    <md-button class="md-icon-button" aria-label="Favorite">
+                      <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Settings">
+                      <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Share">
+                      <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+                    </md-button>
+                  </md-card-actions>
+                </md-card><!-- end card in portfolios -->
+              </div><!--end right column-->
+          <!-- end new -->
+          <!-- *end card**************** -->
+          </md-content>
         </md-tab-body>
       </md-tab>
 <!-- Skill Tab____________________________________________ -->
       <md-tab id="tab3" ng-disabled="data.secondLocked">
         <md-tab-label>Skills</md-tab-label>
         <md-tab-body>
-          <div class="md-padding" layout="column" layout-wrap>
-            <md-list>
-              <!-- item 1 -->
-              <md-item>
-                <md-item-content>
-                  <span class="md-title">Methodologies</span>
-                </md-item-content>
-                <div class="md-padding" layout="row" layout-sm="column">
-                  <md-card ng-repeat="card in methods">
-                    <md-card-content>
-                      {{card.method}}
-                    </md-card-content>
-                  </md-card>
-                </div>
-              </md-item><!-- end item 1-->
-              <md-item>
-                <md-item-content>
-                  <span class="md-title">Languages</span>
-                </md-item-content>
-                <div class="md-padding" layout="row" layout-sm="column">
-                  <md-card ng-repeat="card in languages">
-                    <md-card-content>
-                      {{card.lang}}
-                    </md-card-content>
-                  </md-card>
-                </div>
-              </md-item><!-- end item 2-->
-              <md-item>
-                <md-item-content>
-                  <span class="md-title">Testing Tools</span>
-                </md-item-content>
-                <div class="md-padding" layout="row" layout-sm="column">
-                  <md-card ng-repeat="card in tools">
-                    <md-card-content>
-                      {{card.tool}}
-                    </md-card-content>
-                  </md-card>
-                </div>
-              </md-item><!-- end item 3-->
+          <md-content class="_md layout-xs-column layout-row" layout-xs="column" layout="row">
+            <!-- left column -->
+                <md-list>
+                  <!-- item 1 -->
+
+                  <md-item>
+                    <md-item-content>
+                      <span class="md-title">Methodologies</span>
+                    </md-item-content>
+                <div layout="row" class="md-padding">
+                      <md-card ng-repeat="card in methods">
+                        <md-card-content>
+                          {{card.method}}
+                        </md-card-content>
+                      </md-card>
+                    </div>
+
+                  </md-item><!-- end item 1-->
+                
+
+                  <md-item>
+                    <md-item-content>
+                      <span class="md-title">Languages</span>
+                    </md-item-content>
+                    <div class="md-padding" layout="row" layout-sm="column">
+                      <md-card ng-repeat="card in languages">
+                        <md-card-content>
+                          {{card.lang}}
+                        </md-card-content>
+                      </md-card>
+                    </div>
+                  </md-item><!-- end item 2-->
+                  <md-item>
+                    <md-item-content>
+                      <span class="md-title">Testing Tools</span>
+                    </md-item-content>
+                    <div class="md-padding" layout="row" layout-sm="column">
+                      <md-card ng-repeat="card in tools">
+                        <md-card-content>
+                          {{card.tool}}
+                        </md-card-content>
+                      </md-card>
+                    </div>
+                  </md-item><!-- end item 3-->
             </md-list>
-          </div>
+        </md-content>
         </md-tab-body>
       </md-tab>
 
