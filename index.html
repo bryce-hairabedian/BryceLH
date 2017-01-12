@@ -197,22 +197,20 @@
                     <md-item-content>
                       <span class="md-title">Methodologies</span>
                     </md-item-content>
-                <div layout="row" class="md-padding">
+                    <div layout="row" class="md-padding"><!--flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50"-->
                       <md-card ng-repeat="card in methods">
                         <md-card-content>
                           {{card.method}}
                         </md-card-content>
                       </md-card>
                     </div>
-
                   </md-item><!-- end item 1-->
-                
 
                   <md-item>
                     <md-item-content>
                       <span class="md-title">Languages</span>
                     </md-item-content>
-                    <div class="md-padding" layout="row" layout-sm="column">
+                    <div layout="row" class="md-padding">
                       <md-card ng-repeat="card in languages">
                         <md-card-content>
                           {{card.lang}}
