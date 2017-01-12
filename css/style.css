@@ -5,7 +5,7 @@ footer {
 .myHeading {
   color: #fff;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 30px;
+  font-size: medium;
 }
 
 .tabsdemoStaticTabs md-tab-content {
@@ -15,9 +15,11 @@ footer {
   .tabsdemoStaticTabs md-tab-content:nth-child(1) {
     background-color: #fff; }
   .tabsdemoStaticTabs md-tab-content:nth-child(2) {
-    background-color: #9E9E9E; }
+    background-color: #9E9E9E;
+  }
   .tabsdemoStaticTabs md-tab-content:nth-child(3) {
-    background-color: #fff; }
+    background-color: #fff;
+  }
 /*
 .tabsdemoStaticTabs .after-tabs-area > span {
   margin-top: 25px;
