@@ -1,11 +1,30 @@
-(function () {
-  'use strict';
-
-  angular
+angular
       .module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
-      .controller('AppCtrl', AppCtrl);
+      .controller('AppCtrl', function($scope, $timeout, $mdSidenav){
 
-  function AppCtrl ( $scope ) {
+        var toggles = document.querySelectorAll(".c-hamburger");
+        for(var i=toggles.length-1;i>=0;i--){
+          var toggle = toggles[i];
+          toggleHandler(toggle);
+
+        };
+        function toggleHandler(toggle) {
+            toggle.addEventListener( "click", function(e) {
+              e.preventDefault();
+              (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+            });
+          }
+
+
+            $scope.toggleLeft = buildToggler('left');
+            $scope.toggleRight = buildToggler('right');
+
+            function buildToggler(componentId) {
+              return function() {
+                $mdSidenav(componentId).toggle();
+              }
+            }
+
     $scope.cards = [
       {imagePath:'images/cardHeader_saferides_small_200.jpg',
       title:'ASI SafeRides',
@@ -91,8 +110,9 @@
     $scope.previous = function() {
       $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
     };
-  }
-})();
+
+
+});
 
 
 /**

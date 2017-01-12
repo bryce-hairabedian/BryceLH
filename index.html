@@ -15,10 +15,38 @@
 </head>
 
 <body>
+<div ng-controller="AppCtrl" ng-app="MyApp">
+  <!--Hamburger menu / sidenav -->
+                <md-sidenav class="md-sidenav-left ng-isolate-scope _md md-whiteframe-4dp" md-component-id="left" md-disable-backdrop="" md-whiteframe="4" tabindex="-1">
+
+                      <md-toolbar class="md-theme-indigo _md _md-toolbar-transitions">
+                        <!-- hamburger button
+                            <button class="c-hamburger c-hamburger--htla">
+                            <span>toggle menu</span>
+                          </button>
+                          -->
+
+                        <h1 class="md-toolbar-tools">Disabled Backdrop</h1>
+                      </md-toolbar>
+
+                      <md-content layout-margin="" class="layout-margin _md">
+                        <p>
+                          This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
+                        </p>
+                        <button class="md-accent md-button md-ink-ripple" type="button" ng-transclude="" ng-click="toggleLeft()"><span class="ng-scope">
+                          Close this Sidenav
+                        </span><div class="md-ripple-container"></div></button>
+                      </md-content>
+                </md-sidenav>
+  <!-- end hamburger menu -->
 
   <!-- toolbar -->
-  <md-toolbar>
+  <md-toolbar class="md-hue-2 _md _md-toolbar-transitions">
+
        <div class="md-toolbar-tools">
+         <md-button class="md-icon-button" aria-label="Settings">
+           <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+         </md-button>
          <h2>
            <span class="myHeading">Bryce Hairabedian</span>
          </h2>
@@ -32,7 +60,7 @@
    <!-- end toolbar-->
 
 <!-- navbar/ md-tabs -->
-  <div ng-controller="AppCtrl" ng-cloak="" class="tabsdemoStaticTabs" ng-app="MyApp">
+  <div ng-cloak="" class="tabsdemoStaticTabs">
 <!--  <md-content class="md-padding"> -->
     <md-tabs md-dynamic-height md-swipe-content md-center-tabs="true" md-selected="data.selectedIndex" md-align-tabs="top">
       <md-tab id="tab1">
@@ -40,12 +68,21 @@
         <md-tab-body>
           <div layout="row" layout-sm="column" layout-align="center center">
             <div align="center">
+
+
               <md-content class="md-padding">
                   <img src="images/myFace.jpg">
                 <h1>Bryce Hairabedian</h1>
                 <br>
                 <h2>Software Engineer</h2>
                 <br>
+
+                <div>
+                  <md-button ng-click="toggleLeft()" class="md-raised">
+                    Toggle Sidenav
+                  </md-button>
+                </div>
+
                 <p>
                   I am passionate backend and front end developer. Graduate with a B.S. in Computer Science.
                   <br> I strive for beauty in everyting I do. Creating with the user in mind.
@@ -247,7 +284,7 @@
     </md-tabs>
 <!--  </md-content> -->
 </div>
-
+</div>
 <!--
 <footer>
         <div layout="row" layout-align="center center">
