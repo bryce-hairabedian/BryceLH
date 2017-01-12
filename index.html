@@ -34,7 +34,7 @@
                           This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
                         </p>
                         <button class="md-accent md-button md-ink-ripple" type="button" ng-transclude="" ng-click="toggleLeft()"><span class="ng-scope">
-                          Close this Sidenav
+                          Close
                         </span><div class="md-ripple-container"></div></button>
                       </md-content>
                 </md-sidenav>
@@ -45,16 +45,17 @@
 
        <div class="md-toolbar-tools">
          <md-button class="md-icon-button" aria-label="Settings">
-           <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+           <md-icon md-svg-icon="img/icons/menu.svg" ng-click="toggleLeft()"></md-icon>
          </md-button>
          <h2>
            <span class="myHeading">Bryce Hairabedian</span>
          </h2>
          <span flex class="flex"></span>
-         <button class="md-raised md-button md-ink-ripple" type="button" aria-label="Contact Me">
-           <span class="ng-scope">Contact Me</span>
-           <div class="md-ripple-container"></div>
-         </button>
+         <div>
+           <md-button ng-click="toggleLeft()" class="md-raised">
+             Toggle Sidenav
+           </md-button>
+         </div>
        </div>
      </md-toolbar>
    <!-- end toolbar-->
@@ -77,11 +78,7 @@
                 <h2>Software Engineer</h2>
                 <br>
 
-                <div>
-                  <md-button ng-click="toggleLeft()" class="md-raised">
-                    Toggle Sidenav
-                  </md-button>
-                </div>
+
 
                 <p>
                   I am passionate backend and front end developer. Graduate with a B.S. in Computer Science.
