@@ -42,7 +42,7 @@
       {tool: 'REST'}
     ];
 
-    $scope.portfolios = [
+    $scope.portfolios_left = [
       {imagePath:'images/cardHeader_saferides_small_200.jpg',
       title:'ASI SafeRides',
       description:'Currently developing App with small team using Scrum with Agile. Mobile dispatching system used to find student or faculty a safe ride home. Deliverable date May 2017',
@@ -63,7 +63,9 @@
       skills: 'JS, AngularJS, Node.js, CSS, HTML',
       alt:'Bryce Hairabedian Website',
       color:'#3F51B5'
-      },
+      }
+    ];
+    $scope.portfolios_right = [
       {imagePath:'images/gtaQuickCodes_small_200.jpg',
       title:'GTA Codes Quick',
       description:'Currently developing a App in my own time to be deployed. Very fast, light, and customizable mobile app. Provides GTA codes quickly and up to date. Blah blah delete blah delete blah delete blah delete blah delete',
