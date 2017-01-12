@@ -19,14 +19,14 @@
   <!--Hamburger menu / sidenav -->
                 <md-sidenav class="md-sidenav-left ng-isolate-scope _md md-whiteframe-4dp" md-component-id="left" md-disable-backdrop="" md-whiteframe="4" tabindex="-1">
 
-                      <md-toolbar class="md-theme-indigo _md _md-toolbar-transitions">
+                      <md-toolbar class="md-primary _md _md-toolbar-transitions">
                         <!-- hamburger button
                             <button class="c-hamburger c-hamburger--htla">
                             <span>toggle menu</span>
                           </button>
                           -->
 
-                        <h1 class="md-toolbar-tools">Disabled Backdrop</h1>
+                        <h1 class="md-toolbar-tools">Connect With Me</h1>
                       </md-toolbar>
 
                       <md-content layout-margin="" class="layout-margin _md">
@@ -34,14 +34,14 @@
                           This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
                         </p>
                         <button class="md-accent md-button md-ink-ripple" type="button" ng-transclude="" ng-click="toggleLeft()"><span class="ng-scope">
-                          Close
+                          Close Menu
                         </span><div class="md-ripple-container"></div></button>
                       </md-content>
                 </md-sidenav>
   <!-- end hamburger menu -->
 
   <!-- toolbar -->
-  <md-toolbar class="md-hue-2 _md _md-toolbar-transitions">
+  <md-toolbar class="md-primary _md _md-toolbar-transitions">
 
        <div class="md-toolbar-tools">
          <md-button class="md-icon-button" aria-label="Settings">
@@ -188,6 +188,7 @@
       <md-tab id="tab3" ng-disabled="data.secondLocked">
         <md-tab-label>Skills</md-tab-label>
         <md-tab-body>
+          <div layout="row" layout-sm="column" layout-align="center center">
           <md-content class="_md layout-xs-column layout-row" layout-xs="column" layout="row">
             <!-- left column -->
                 <md-list>
@@ -210,7 +211,7 @@
                     <md-item-content>
                       <span class="md-title">Languages</span>
                     </md-item-content>
-                    <div layout="row" class="md-padding">
+                    <div layout="row" class="md-padding"><!--flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50"-->
                       <md-card ng-repeat="card in languages">
                         <md-card-content>
                           {{card.lang}}
@@ -222,8 +223,7 @@
                     <md-item-content>
                       <span class="md-title">Testing Tools</span>
                     </md-item-content>
-                    <div class="md-padding" layout="row" layout-sm="column">
-                      <md-card ng-repeat="card in tools">
+                    <div layout="row" class="md-padding"><!--flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50"-->                      <md-card ng-repeat="card in tools">
                         <md-card-content>
                           {{card.tool}}
                         </md-card-content>
@@ -232,6 +232,7 @@
                   </md-item><!-- end item 3-->
             </md-list>
         </md-content>
+      </div>
         </md-tab-body>
       </md-tab>
 
@@ -240,12 +241,13 @@
  </md-content>
 </div>
 </div>
-<!--
+
+<!-- Footer
 <footer>
         <div layout="row" layout-align="center center">
             <h2>My Awesome Footer</h2>
         </div>
-    </footer>
+</footer>
 -->
 
 <!--
@@ -263,4 +265,5 @@ Use of this source code is governed by an MIT-style license that can be foundin 
     <script src="js/index.js"></script>
 
 </body>
+
 </html>
