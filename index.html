@@ -52,8 +52,8 @@
          </h2>
          <span flex class="flex"></span>
          <div>
-           <md-button ng-click="toggleLeft()" class="md-raised">
-             Toggle Sidenav
+           <md-button class="md-raised"><!--ng-click="toggleLeft()"> -->
+             Contact
            </md-button>
          </div>
        </div>
@@ -63,7 +63,7 @@
 <!-- navbar/ md-tabs -->
   <div ng-cloak="" class="tabsdemoStaticTabs">
 <!--  <md-content class="md-padding"> -->
-    <md-tabs md-dynamic-height md-swipe-content md-center-tabs="true" md-selected="data.selectedIndex" md-align-tabs="top">
+    <md-tabs md-dynamic-height md-swipe-content md-center-tabs="true" md-stretch-tabs="auto" md-selected="data.selectedIndex" md-align-tabs="top">
       <md-tab id="tab1">
         <md-tab-label>About</md-tab-label>
         <md-tab-body>

@@ -17,7 +17,7 @@ footer {
   transition: transform 0.3s, width 0.3s, bottom 0.3s;
 }
 
-/* active state, i.e. menu open */
+/* active state == menu open */
 .c-hamburger--htla.is-active {
   background-color: #18903c;
 }
