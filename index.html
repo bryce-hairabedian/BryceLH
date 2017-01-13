@@ -33,13 +33,32 @@
                           <i class="material-icons md-36" ng-click="toggleLeft()" >arrow_back</i><!--md-svg-icon="img/icons/menu.svg" -->
                         </md-button>
                       </div>
-
                       </md-toolbar>
+                    <!-- LinkedIn sidenav -->
+                      <div style="background-color:#0077b5;" class="md-padding">
+                        <md-list>
+                          <md-item>
+                            <div layout="column" layout-align="center center">
+                                <img hide show-sm flex src="images/in_icon.png"><!--show only on small devices-->
+                                <img hide show-gt-sm flex src="images/in_logo_h48.png"><!-- show on greater-than small devices-->
+                            </div>
+                          </md-item>
+                        </md-list>
+                      </div>
+                    <!--Github sidenav -->
+                      <div style="background-color:#ccc;"><!--class="md-padding"-->
+                        <md-list>
+                          <md-item>
+                            <div layout="column" layout-align="center center">
+                                <img hide show-sm flex src="images/gitHub_logo_h32.png"><!--show only on small devices-->
+                                <img hide show-gt-sm flex src="images/gitHub_logo_h48.png"><!-- show on greater-than small devices-->
+                            </div>
+                          </md-item>
+                        </md-list>
+                      </div>
+
 
                       <md-content layout-margin="" class="layout-margin _md">
-                        <p>
-                          This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
-                        </p>
                         <button class="md-accent md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
                           Close Menu
                         </span><div class="md-ripple-container"></div>
@@ -89,10 +108,10 @@
                   <br>Click on portfolio at the top for apps I've created and projects I've worked on.
                 </p>
                 <md-card-actions layout="row" layout-align="center">
-                  <md-button class="md-icon-button" aria-label="Favorite">
+                  <md-button class="md-icon-button" aria-label="github">
                     <img src="images/gitHub_32px.png">
                   </md-button>
-                  <md-button class="md-icon-button" aria-label="Favorite">
+                  <md-button class="md-icon-button" aria-label="LinkdIn">
                     <img src="images/in_icon.png">
                   </md-button>
                 </md-card-actions>
@@ -126,6 +145,7 @@
                   <md-card-content class="md-padding">
                 <!-- Card description -->
                     <p>
+                      <!-- Subheader <md-subheader style="background-color:inherit;">Description</md-subheader> -->
                       {{card.description}}
                     </p>
                     <br>
