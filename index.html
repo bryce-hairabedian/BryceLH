@@ -203,21 +203,6 @@
               <md-list>
               <md-item>
                 <md-item-content>
-                  <span class="md-title">Languages</span>
-                  <md-card ng-repeat="card in languages">
-                    <md-card-content>
-                      {{card.lang}}
-                    </md-card-content>
-                  </md-card>
-                </md-item-content>
-              </md-item>
-            </md-list>
-            </div>
-
-            <div layout="row" class="skills_tabs">
-              <md-list>
-              <md-item>
-                <md-item-content>
                   <span class="md-title">Methodologies</span>
                   <md-card ng-repeat="card in methods">
                     <md-card-content>
@@ -233,7 +218,22 @@
               <md-list>
               <md-item>
                 <md-item-content>
-                  <span class="md-title">Testing Tools</span>
+                  <span class="md-title">Languages</span>
+                  <md-card ng-repeat="card in languages">
+                    <md-card-content>
+                      {{card.lang}}
+                    </md-card-content>
+                  </md-card>
+                </md-item-content>
+              </md-item>
+            </md-list>
+            </div>
+
+            <div layout="row" class="skills_tabs">
+              <md-list>
+              <md-item>
+                <md-item-content>
+                  <span class="md-title">Tools</span>
                   <md-card ng-repeat="card in tools">
                     <md-card-content>
                       {{card.tool}}
