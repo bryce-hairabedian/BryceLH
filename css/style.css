@@ -5,6 +5,10 @@
   font-size: medium;
 }
 
+.skills_tabs {
+    padding: 15px;
+}
+
 .navTabs md-tab-content {
   /*background-color: white;*/
   padding: 15px;

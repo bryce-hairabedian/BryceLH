@@ -196,50 +196,54 @@
       <md-tab id="tab3" ng-disabled="data.secondLocked">
         <md-tab-label>Skills</md-tab-label>
         <md-tab-body>
-          <div layout="row" layout-sm="column" layout-align="center center">
-          <md-content class="_md layout-xs-column layout-row" layout-xs="column" layout="row">
-            <!-- left column -->
-                <md-list>
-                  <!-- item 1 -->
-                  <md-item>
-                    <md-item-content>
-                      <span class="md-title">Methodologies</span>
-                    </md-item-content>
-                    <div layout="row" class="md-padding"><!--flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50"-->
-                      <md-card ng-repeat="card in methods">
-                        <md-card-content>
-                          {{card.method}}
-                        </md-card-content>
-                      </md-card>
-                    </div>
-                  </md-item><!-- end item 1-->
 
-                  <md-item>
-                    <md-item-content>
-                      <span class="md-title">Languages</span>
-                    </md-item-content>
-                    <div layout="row" class="md-padding"><!--flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50"-->
-                      <md-card ng-repeat="card in languages">
-                        <md-card-content>
-                          {{card.lang}}
-                        </md-card-content>
-                      </md-card>
-                    </div>
-                  </md-item><!-- end item 2-->
-                  <md-item>
-                    <md-item-content>
-                      <span class="md-title">Testing Tools</span>
-                    </md-item-content>
-                    <div layout="row" class="md-padding"><!--flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50"-->                      <md-card ng-repeat="card in tools">
-                        <md-card-content>
-                          {{card.tool}}
-                        </md-card-content>
-                      </md-card>
-                    </div>
-                  </md-item><!-- end item 3-->
+          <div layout="row" layout-align-sm="column-2" layout-xs="column" layout-align="center start">
+
+            <div layout="row" class="skills_tabs">
+              <md-list>
+              <md-item>
+                <md-item-content>
+                  <span class="md-title">Languages</span>
+                  <md-card ng-repeat="card in languages">
+                    <md-card-content>
+                      {{card.lang}}
+                    </md-card-content>
+                  </md-card>
+                </md-item-content>
+              </md-item>
             </md-list>
-        </md-content>
-      </div>
+            </div>
+
+            <div layout="row" class="skills_tabs">
+              <md-list>
+              <md-item>
+                <md-item-content>
+                  <span class="md-title">Methodologies</span>
+                  <md-card ng-repeat="card in methods">
+                    <md-card-content>
+                      {{card.method}}
+                    </md-card-content>
+                  </md-card>
+                </md-item-content>
+              </md-item>
+            </md-list>
+            </div>
+
+            <div layout="row" class="skills_tabs">
+              <md-list>
+              <md-item>
+                <md-item-content>
+                  <span class="md-title">Testing Tools</span>
+                  <md-card ng-repeat="card in tools">
+                    <md-card-content>
+                      {{card.tool}}
+                    </md-card-content>
+                  </md-card>
+                </md-item-content>
+                </md-item>
+              </md-list>
+            </div>
+          </div><!--end div laoyout=column-3 -->
         </md-tab-body>
       </md-tab>
 
