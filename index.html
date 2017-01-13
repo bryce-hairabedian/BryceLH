@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
   <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css'>
   <link rel='stylesheet prefetch' href='https://material.angularjs.org/1.1.1/docs.css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -25,17 +27,23 @@
                             <span>toggle menu</span>
                           </button>
                           -->
+                      <div layout="row" layout-align="space-between none" class="md-toolbar-tools" style="background-color:inherit;">
+                        <h1>Connect With Me</h1>
+                        <md-button class="md-icon-button" aria-label="Settings">
+                          <i class="material-icons md-36" ng-click="toggleLeft()" >arrow_back</i><!--md-svg-icon="img/icons/menu.svg" -->
+                        </md-button>
+                      </div>
 
-                        <h1 class="md-toolbar-tools">Connect With Me</h1>
                       </md-toolbar>
 
                       <md-content layout-margin="" class="layout-margin _md">
                         <p>
                           This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
                         </p>
-                        <button class="md-accent md-button md-ink-ripple" type="button" ng-transclude="" ng-click="toggleLeft()"><span class="ng-scope">
+                        <button class="md-accent md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
                           Close Menu
-                        </span><div class="md-ripple-container"></div></button>
+                        </span><div class="md-ripple-container"></div>
+                      </button>
                       </md-content>
                 </md-sidenav>
   <!-- end hamburger menu -->
@@ -193,7 +201,6 @@
             <!-- left column -->
                 <md-list>
                   <!-- item 1 -->
-
                   <md-item>
                     <md-item-content>
                       <span class="md-title">Methodologies</span>
