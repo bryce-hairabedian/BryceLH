@@ -56,11 +56,11 @@
            <md-icon md-svg-icon="img/icons/menu.svg" ng-click="toggleLeft()"></md-icon>
          </md-button>
          <h2>
-           <span class="myHeading">Bryce Hairabedian</span>
+           Bryce Hairabedian
          </h2>
          <span flex class="flex"></span>
          <div>
-           <md-button class="md-raised"><!--ng-click="toggleLeft()"> -->
+           <md-button class="md-raised" ng-click="toggleLeft()">
              Contact
            </md-button>
          </div>
@@ -119,7 +119,7 @@
                 <!-- Card Image -->
                     <md-card-title-media>
                       <div class="md-media card-media">
-                        <img ng-src="{{card.imagePath}}" class="md-card-image" alt="{{card.alt}}">
+                          <img ng-src="{{card.imagePath}}" class="md-card-image" alt="{{card.alt}}">
                       </div>
                     </md-card-title-media>
                   </md-card-title>
@@ -127,25 +127,27 @@
                 <!-- Card description -->
                     <p>
                       {{card.description}}
-                    <br>
+                    </p>
                     <br>
                 <!-- Card Skills -->
-                      {{card.skills}}
-                    </p>
-                  </md-card-content>
-                  <md-card-actions layout="row" layout-align="end center">
-                    <md-button class="md-icon-button" aria-label="Favorite">
-                      <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button" aria-label="Settings">
-                      <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button" aria-label="Share">
-                      <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
-                    </md-button>
-                  </md-card-actions>
-                </md-card><!-- end card in portfolios -->
+                    <div layout="row" layout-xs="column" layout-align="space-between none" >
+                      <p>{{card.skills}}</p>
+                <!-- links / buttons -->
+                    <div layout="row" layout-align="end start">
+                        <a style="visibility:{{card.linkButton_visible}}" class="md-raised md-button" ng-transclude="" ng-href="{{card.linkButton_link}}" target="_blank" href="{{card.linkButton_link}}">
+                          <span style="color:{{card.linkButton_color}}">{{card.linkButton_text}}</span>
+                          <div class="md-ripple-container"></div>
+                        </a>
+                      <md-button style="visibility:{{card.github_visible}}" class="md-icon-button" href="{{card.github_link}}" aria-label="Github">
+                        <img src="images/gitHub_32px.png">
+                      </md-button>
+                    </div><!--end button /link section-->
+                  </div><!--end bottom row of card -->
+                </md-card-content>
+              </md-card><!-- end card in portfolios_left -->
               </div><!--end left column-->
+
+
 
             <!--start right column-->
               <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
@@ -168,27 +170,25 @@
                 <!-- Card description -->
                     <p>
                       {{card.description}}
-                    <br>
+                    </p>
                     <br>
                 <!-- Card Skills -->
-                      {{card.skills}}
-                    </p>
-                  </md-card-content>
-                  <md-card-actions layout="row" layout-align="end center">
-                    <md-button class="md-icon-button" aria-label="Favorite">
-                      <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button" aria-label="Settings">
-                      <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-                    </md-button>
-                    <md-button class="md-icon-button" aria-label="Share">
-                      <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
-                    </md-button>
-                  </md-card-actions>
-                </md-card><!-- end card in portfolios -->
+                    <div layout="row" layout-xs="column" layout-align="space-between none" >
+                      <p>{{card.skills}}</p>
+                <!-- links / buttons -->
+                    <div layout="row" layout-align="end start">
+                        <a style="visibility:{{card.linkButton_visible}}" class="md-raised md-button" ng-transclude="" ng-href="{{card.linkButton_link}}" target="_blank" href="{{card.linkButton_link}}">
+                          <span style="color:{{card.linkButton_color}}">{{card.linkButton_text}}</span>
+                          <div class="md-ripple-container"></div>
+                        </a>
+                      <md-button style="visibility:{{card.github_visible}}" class="md-icon-button" href="{{card.github_link}}" aria-label="Github">
+                        <img src="images/gitHub_32px.png">
+                      </md-button>
+                    </div><!--end button /link section-->
+                  </div><!--end bottom row of card -->
+                </md-card-content>
+              </md-card><!-- end card in portfolios_right -->
               </div><!--end right column-->
-          <!-- end new -->
-          <!-- *end card**************** -->
           </md-content>
         </md-tab-body>
       </md-tab>
