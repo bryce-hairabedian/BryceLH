@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Bryce Hairabedian Software Engineer</title>
+  <title>Bryce Hairabedian-Software Engineer</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
   <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css'>
@@ -20,13 +20,7 @@
 <div ng-controller="AppCtrl" ng-app="MyApp">
   <!--Hamburger menu / sidenav -->
                 <md-sidenav class="md-sidenav-left ng-isolate-scope _md md-whiteframe-4dp" md-component-id="left" md-disable-backdrop="" md-whiteframe="4" tabindex="-1">
-
                       <md-toolbar class="md-primary _md _md-toolbar-transitions">
-                        <!-- hamburger button
-                            <button class="c-hamburger c-hamburger--htla">
-                            <span>toggle menu</span>
-                          </button>
-                          -->
                       <div layout="row" layout-align="space-between none" class="md-toolbar-tools" style="background-color:inherit;">
                         <h1>Connect With Me</h1>
                         <md-button class="md-icon-button" aria-label="Settings">
@@ -34,31 +28,36 @@
                         </md-button>
                       </div>
                       </md-toolbar>
-                    <!-- LinkedIn sidenav -->
-                      <div style="background-color:#0077b5;" class="md-padding">
-                        <md-list>
-                          <md-item>
-                            <div layout="column" layout-align="center center">
-                                <img hide show-xs flex src="images/in_icon.png"><!--show only on small devices-->
-                                <img hide show-gt-sm flex src="images/in_logo_h48.png"><!-- show on greater-than small devices-->
-                            </div>
-                          </md-item>
-                        </md-list>
-                      </div>
+
+                    <div layout="column" layout-align="start stretch">
                     <!--Github sidenav -->
-                      <div style="background-color:#ccc;"><!--class="md-padding"-->
+                    <div style="background-color:#ccc;"><!--class="md-padding"-->
+                      <md-list>
+                        <md-item>
+                          <div layout="column" layout-align="center center">
+                            <img class="md-media" src="images/github_195_48_2.png">
+                              <!--<img hide show-xs flex src="images/gitHub_logo_h32.png"><!--show only on small devices-->
+                              <!--<img hide show-gt-sm flex src="images/gitHub_logo_h48.png"><!-- show on greater-than small devices-->
+                          </div>
+                        </md-item>
+                      </md-list>
+                    </div>
+
+                    <!-- LinkedIn sidenav -->
+                      <div style="background-color:#0077b5;"><!--class="md-padding"-->
                         <md-list>
                           <md-item>
                             <div layout="column" layout-align="center center">
-                                <img hide show-xs flex src="images/gitHub_logo_h32.png"><!--show only on small devices-->
-                                <img hide show-gt-sm flex src="images/gitHub_logo_h48.png"><!-- show on greater-than small devices-->
+                              <img class="md-media" src="images/in_logo_195_48.png">
+                                <!--<img hide show-xs flex src="images/gitHub_logo_h32.png"><!--show only on small devices-->
+                                <!--<img hide show-gt-sm flex src="images/gitHub_logo_h48.png"><!-- show on greater-than small devices-->
                             </div>
                           </md-item>
                         </md-list>
                       </div>
+                    </div>
 
-
-                      <md-content layout-margin="" class="layout-margin _md">
+                      <md-content layout="row" layout-align="end end" class="layout-margin _md">
                         <button class="md-accent md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
                           Close Menu
                         </span><div class="md-ripple-container"></div>
@@ -154,13 +153,20 @@
                       <p>{{card.skills}}</p>
                 <!-- links / buttons -->
                     <div layout="row" layout-align="end start" layout-align-xs="center end">
+
                         <a style="visibility:{{card.linkButton_visible}}" class="md-raised md-button" ng-transclude="" ng-href="{{card.linkButton_link}}" target="_blank" href="{{card.linkButton_link}}">
                           <span style="color:{{card.linkButton_color}}">{{card.linkButton_text}}</span>
                           <div class="md-ripple-container"></div>
                         </a>
+
+                        <md-button style="visibility:{{card.asi_visible}}" class="md-icon-button" aria-label="ASI">
+                          <img src="images/asi_icon.png">
+                        </md-button>
+
                       <md-button style="visibility:{{card.github_visible}}" class="md-icon-button" href="{{card.github_link}}" aria-label="Github">
                         <img src="images/gitHub_32px.png">
                       </md-button>
+
                     </div><!--end button /link section-->
                   </div><!--end bottom row of card -->
                 </md-card-content>

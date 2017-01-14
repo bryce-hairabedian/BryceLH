@@ -54,10 +54,11 @@ angular
       alt:'asi SafeRides',
       github_visible:'visible',
       github_link:'',
-      linkButton_visible:'visible',
+      linkButton_visible:'hidden',
       linkButton_link:'http://www.asi.csus.edu/programs/safe-rides/',
       linkButton_color:'#7e9f2a',
       linkButton_text:'ASI',
+      asi_visible:'visible',
       color:'#7e9f2a'
       },
       {imagePath:'images/dogCatcher_small_200.jpg',
@@ -71,6 +72,7 @@ angular
       linkButton_link:'',
       linkButton_color:'',
       linkButton_text:'',
+      asi_visible:'hidden',
       color:'#a15a2c'
       },
       {imagePath:'images/myWebsite_small_200.jpg',
@@ -84,6 +86,7 @@ angular
       linkButton_link:'',
       linkButton_color:'',
       linkButton_text:'',
+      asi_visible:'hidden',
       color:'#3F51B5'
       }
     ];
@@ -99,6 +102,7 @@ angular
       linkButton_link:'',
       linkButton_color:'',
       linkButton_text:'',
+      asi_visible:'hidden',
       color:'#F44336'
       },
       {imagePath:'images/sacState_200.png',
@@ -112,6 +116,7 @@ angular
       linkButton_link:'',
       linkButton_color:'',
       linkButton_text:'',
+      asi_visible:'hidden',
       color:'#cfb668'
       }
     ];
