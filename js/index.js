@@ -2,6 +2,7 @@ angular
       .module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
       .controller('AppCtrl', function($scope, $timeout, $mdSidenav){
 
+/*SideNav toggler */
         var toggles = document.querySelectorAll(".c-hamburger");
         for(var i=toggles.length-1;i>=0;i--){
           var toggle = toggles[i];
@@ -15,7 +16,6 @@ angular
             });
           }
 
-
             $scope.toggleLeft = buildToggler('left');
             $scope.toggleRight = buildToggler('right');
 
@@ -24,7 +24,7 @@ angular
                 $mdSidenav(componentId).toggle();
               }
             }
-
+/* Skills page */
     $scope.languages = [
       {lang: 'Java'},
       {lang: 'C/C++'},
@@ -46,7 +46,7 @@ angular
       {tool: 'Spring'},
       {tool: 'REST'}
     ];
-
+/* Portfolios Page */
     $scope.portfolios_left = [
       {imagePath:'images/cardHeader_saferides_small_200.jpg',
       title:'ASI SafeRides',
@@ -122,7 +122,7 @@ angular
       }
     ];
 
-
+/*Begin on tab1, and transition between tabs */
     $scope.data = {selectedIndex: 0};
 
     $scope.next = function() {
