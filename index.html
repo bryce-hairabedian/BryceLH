@@ -23,8 +23,8 @@
                       <md-toolbar class="md-primary _md _md-toolbar-transitions">
                       <div layout="row" layout-align="space-between none" class="md-toolbar-tools" style="background-color:inherit;">
                         <h1>Connect With Me</h1>
-                        <md-button class="md-icon-button" aria-label="Settings">
-                          <i class="material-icons md-36" ng-click="toggleLeft()" >arrow_back</i><!--md-svg-icon="img/icons/menu.svg" -->
+                        <md-button class="md-icon-button" ng-click="toggleLeft()" aria-label="Settings">
+                          <i class="material-icons md-36" >arrow_back</i><!--md-svg-icon="img/icons/menu.svg" -->
                         </md-button>
                       </div>
                       </md-toolbar>
@@ -33,19 +33,22 @@
                     <!--Github sidenav -->
                     <div style="background-color:#ccc;"><!--class="md-padding"-->
                       <md-list>
+                        <a href="https://github.com/blh22buck/" target="_blank">
                         <md-item>
                           <div layout="column" layout-align="center center">
-                            <img class="md-media" src="images/github_195_48_2.png">
+                              <img class="md-media" src="images/github_195_48_2.png">
                               <!--<img hide show-xs flex src="images/gitHub_logo_h32.png"><!--show only on small devices-->
                               <!--<img hide show-gt-sm flex src="images/gitHub_logo_h48.png"><!-- show on greater-than small devices-->
                           </div>
                         </md-item>
+                      </a>
                       </md-list>
                     </div>
 
                     <!-- LinkedIn sidenav -->
                       <div style="background-color:#0077b5;"><!--class="md-padding"-->
                         <md-list>
+                          <a  href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
                           <md-item>
                             <div layout="column" layout-align="center center">
                               <img class="md-media" src="images/in_logo_195_48.png">
@@ -53,6 +56,7 @@
                                 <!--<img hide show-gt-sm flex src="images/gitHub_logo_h48.png"><!-- show on greater-than small devices-->
                             </div>
                           </md-item>
+                        </a>
                         </md-list>
                       </div>
                     </div>
@@ -70,8 +74,8 @@
   <md-toolbar class="md-primary _md _md-toolbar-transitions">
 
        <div class="md-toolbar-tools">
-         <md-button class="md-icon-button" aria-label="Settings">
-           <md-icon md-svg-icon="img/icons/menu.svg" ng-click="toggleLeft()"></md-icon>
+         <md-button class="md-icon-button" ng-click="toggleLeft()" aria-label="Connect">
+           <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
          </md-button>
          <h1>
            Bryce Hairabedian
@@ -89,7 +93,8 @@
 <!-- navbar/ md-tabs -->
   <div ng-cloak="" class="navTabs">
 <!--  <md-content class="md-padding"> -->
-    <md-tabs md-dynamic-height md-swipe-content md-center-tabs="true" md-stretch-tabs="auto" md-selected="data.selectedIndex" md-align-tabs="top">
+    <md-tabs md-dynamic-height md-center-tabs="true" md-stretch-tabs="auto" md-selected="data.selectedIndex" md-align-tabs="top">
+      <!-- Add to above for swippable content. Doesn't work well on all browsers.  md-swipe-content -->
       <md-tab id="tab1">
         <md-tab-label>About</md-tab-label>
         <md-tab-body>
@@ -102,15 +107,17 @@
                 <h2>Software Engineer</h2>
                 <br>
                 <p>
-                  I am passionate backend and front end developer. Graduate with a B.S. in Computer Science.
-                  <br> I strive for beauty in everyting I do. Creating with the user in mind.
-                  <br>Click on portfolio at the top for apps I've created and projects I've worked on.
+                  Hello, my name is Bryce.
+                  <br>I am a passionate software developer, avid sports fan, &amp; novice snowboarder.
+                  <br>This site is built with mobile first in mind using AngularJS.
+                  <br>Check out my Portfolio &amp; connect via LinkedIn or Github
+
                 </p>
                 <md-card-actions layout="row" layout-align="center">
-                  <md-button class="md-icon-button" aria-label="github">
+                  <md-button class="md-icon-button" aria-label="github" href="https://github.com/blh22buck/" target="_blank">
                     <img src="images/gitHub_32px.png">
                   </md-button>
-                  <md-button class="md-icon-button" aria-label="LinkdIn">
+                  <md-button class="md-icon-button" aria-label="LinkdIn" href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
                     <img src="images/in_icon.png">
                   </md-button>
                 </md-card-actions>
@@ -154,6 +161,7 @@
                 <!-- links / buttons -->
                     <div layout="row" layout-align="end start" layout-align-xs="center end">
 
+
                         <a style="visibility:{{card.linkButton_visible}}" class="md-raised md-button" ng-transclude="" ng-href="{{card.linkButton_link}}" target="_blank" href="{{card.linkButton_link}}">
                           <span style="color:{{card.linkButton_color}}">{{card.linkButton_text}}</span>
                           <div class="md-ripple-container"></div>
@@ -166,7 +174,6 @@
                       <md-button style="visibility:{{card.github_visible}}" class="md-icon-button" href="{{card.github_link}}" aria-label="Github">
                         <img src="images/gitHub_32px.png">
                       </md-button>
-
                     </div><!--end button /link section-->
                   </div><!--end bottom row of card -->
                 </md-card-content>
