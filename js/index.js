@@ -38,6 +38,7 @@ angular
     $scope.methods = [
       {method: 'Scrum'},
       {method: 'Agile'},
+      {method: 'Iterative'}
     ];
     $scope.tools = [
       {tool: 'JUnit'},
@@ -53,11 +54,11 @@ angular
       skills: 'JS, PHP, REST, Spring, MySQL, HTML, CSS',
       alt:'asi SafeRides',
       github_visible:'visible',
-      github_link:'',
-      linkButton_visible:'hidden',
+      github_link:'https://github.com/blh22buck/safe-rides',
+      linkButton_visible:'visible',
       linkButton_link:'http://www.asi.csus.edu/programs/safe-rides/',
       linkButton_color:'#7e9f2a',
-      linkButton_text:'ASI',
+      linkButton_text:'More Info',
       asi_visible:'visible',
       color:'#7e9f2a'
       },
@@ -66,8 +67,8 @@ angular
       description:'2D Mobile cross platform game. Includes touch screen controls, scoreview, and mapview. Based on observer design pattern. Written with Codename One.',
       skills: 'Codename One, Java',
       alt:'Dog in net',
-      github_visible:'hidden',
-      github_link:'',
+      github_visible:'visible',
+      github_link:'https://github.com/blh22buck/DogCatcher_CodenameOne',
       linkButton_visible:'hidden',
       linkButton_link:'',
       linkButton_color:'',
@@ -75,28 +76,12 @@ angular
       asi_visible:'hidden',
       color:'#a15a2c'
       },
-      {imagePath:'images/myWebsite_small_200.jpg',
-      title:'My Website',
-      description:'My own personal webapp built from scratch for the fun of learning AngularJS. Designed aesthetically with a passion for Google’s Material Design.',
-      skills: 'JS, AngularJS, Node.js, CSS, HTML',
-      alt:'Bryce Hairabedian Website',
-      github_visible:'hidden',
-      github_link:'https://github.com/blh22buck/BryceLH',
-      linkButton_visible:'hidden',
-      linkButton_link:'',
-      linkButton_color:'',
-      linkButton_text:'',
-      asi_visible:'hidden',
-      color:'#3F51B5'
-      }
-    ];
-    $scope.portfolios_right = [
       {imagePath:'images/gtaQuickCodes_small_200.jpg',
       title:'GTA Codes Quick',
       description:'Currently developing a App in my own time to be deployed. Very fast, light, and customizable mobile app. Provides GTA codes quickly and up to date.',
       skills: 'Java, XML, Android Development',
       alt:'GTA Code Quick',
-      github_visible:'',
+      github_visible:'hidden',
       github_link:'',
       linkButton_visible:'hidden',
       linkButton_link:'',
@@ -104,13 +89,29 @@ angular
       linkButton_text:'',
       asi_visible:'hidden',
       color:'#F44336'
-      },
+      }
+    ];
+    $scope.portfolios_right = [
+      {imagePath:'images/myWebsite_small_200.jpg',
+      title:'My Website',
+      description:'My own personal webapp built from scratch for the fun of learning AngularJS. Designed aesthetically with a passion for Google’s Material Design.',
+      skills: 'JS, AngularJS, Node.js, CSS, HTML',
+      alt:'Bryce Hairabedian Website',
+      github_visible:'visible',
+      github_link:'https://github.com/blh22buck/BryceLH',
+      linkButton_visible:'hidden',
+      linkButton_link:'',
+      linkButton_color:'',
+      linkButton_text:'',
+      asi_visible:'hidden',
+      color:'#3F51B5'
+    },
       {imagePath:'images/sacState_200.png',
       title:'CSUS Ride Share',
       description:'Lead team of 5 in development of Android App. CSUS Students willing to share rides to & from campus. App was reviewed by CSUS VP of Student Affairs.',
       skills: 'Java, PHP, MySQL, XML, Android Development',
       alt:'CSUS Ride Share',
-      github_visible:'hidden',
+      github_visible:'visible',
       github_link:'https://github.com/blh22buck/SacStateRideshare',
       linkButton_visible:'hidden',
       linkButton_link:'',

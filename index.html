@@ -74,9 +74,12 @@
   <md-toolbar class="md-primary _md _md-toolbar-transitions">
 
        <div class="md-toolbar-tools">
-         <md-button class="md-icon-button" ng-click="toggleLeft()" aria-label="Connect">
-           <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+
+         <md-button md-ink-ripple="false" class="md-icon-button" ng-click="toggleLeft()" aria-label="Settings">
+           <i class="material-icons md-36" >menu</i><!--md-svg-icon="img/icons/menu.svg" -->
          </md-button>
+
+
          <h1>
            Bryce Hairabedian
          </h1>
@@ -161,19 +164,16 @@
                 <!-- links / buttons -->
                     <div layout="row" layout-align="end start" layout-align-xs="center end">
 
+                      <md-button style="visibility:{{card.linkButton_visible}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
+                        {{card.linkButton_text}}
+                      </span><div class="md-ripple-container"></div>
+                    </md-button>
 
-                        <a style="visibility:{{card.linkButton_visible}}" class="md-raised md-button" ng-transclude="" ng-href="{{card.linkButton_link}}" target="_blank" href="{{card.linkButton_link}}">
-                          <span style="color:{{card.linkButton_color}}">{{card.linkButton_text}}</span>
-                          <div class="md-ripple-container"></div>
-                        </a>
 
-                        <md-button style="visibility:{{card.asi_visible}}" class="md-icon-button" aria-label="ASI">
-                          <img src="images/asi_icon.png">
-                        </md-button>
-
-                      <md-button style="visibility:{{card.github_visible}}" class="md-icon-button" href="{{card.github_link}}" aria-label="Github">
+                      <md-button style="visibility:{{card.github_visible}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
                         <img src="images/gitHub_32px.png">
                       </md-button>
+
                     </div><!--end button /link section-->
                   </div><!--end bottom row of card -->
                 </md-card-content>
@@ -209,8 +209,8 @@
                     <div layout="row" layout-xs="column" layout-align="space-between none" >
                       <p>{{card.skills}}</p>
                 <!-- links / buttons -->
-                    <div layout="row" layout-align="end start" layout-align-xs="center end">
-                        <a style="visibility:{{card.linkButton_visible}}" class="md-raised md-button" ng-transclude="" ng-href="{{card.linkButton_link}}" target="_blank" href="{{card.linkButton_link}}">
+                    <div layout="row" layout-align="end start" layout-align-xs="center end"> <button class="md-accent md-button md-ink-ripple" type="button"
+                        <a style="visibility:{{card.linkButton_visible}}" class="md-raised md-button md-ink-ripple" ng-href="{{card.linkButton_link}}" target="_blank" href="{{card.linkButton_link}}">
                           <span style="color:{{card.linkButton_color}}">{{card.linkButton_text}}</span>
                           <div class="md-ripple-container"></div>
                         </a>
