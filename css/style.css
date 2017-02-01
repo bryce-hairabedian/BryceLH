@@ -13,7 +13,7 @@
 .tileText{
   color: #fff;
   font-weight: bold;
-  font-size: medium;
+  font-size: large;
 }
 .tileText a:link{color:white; text-decoration: none;}
 .tileText a:visited{color:white; text-decoration: none;}
