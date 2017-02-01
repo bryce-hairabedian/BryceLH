@@ -25,8 +25,8 @@
 }
 
 md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
-    color: red !important;
-    background-color:red !important;
+    color: orange !important;
+    background-color: orange !important;
 }
 
 .navTabs md-tab-content {
