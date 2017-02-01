@@ -4,7 +4,9 @@
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: medium;
 }
-
+.profilePic{
+  padding: 15px;
+}
 .skills_tabs {
     padding: 15px;
 }
