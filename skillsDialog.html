@@ -1,0 +1,63 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Languages, Methods, &amp; Tools</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" ng-controller="AppCtrl">
+        <md-list layout="row" layout-sm="column" layout-align="none" flex>
+          <div align="center" flex>
+          <md-title><h3>Languages</h3></md-title>
+          <md-list-item class="md-1-line" ng-repeat="item in languages" ng-click="null">
+            <ul>
+              <li>
+                {{item.lang}}
+              </li>
+            </ul>
+          </md-list-item>
+        </div>
+
+        <div align="center" flex>
+          <md-title><h3>Methodologies</h3></md-title>
+          <md-list-item class="md-1-line" ng-repeat="item in methods" ng-click="null">
+            <ul>
+              <li>
+                {{item.method}}
+              </li>
+            </ul>
+          </md-list-item>
+        </div>
+
+        <div align="center" flex>
+          <md-title><h3>Tools</h3></md-title>
+          <md-list-item class="md-1-line" ng-repeat="item in tools" ng-click="null">
+            <ul>
+              <li>
+                {{item.tool}}
+              </li>
+            </ul>
+          </md-list-item>
+        </div>
+
+        </md-list>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row" layout-align="end center">
+      <md-button class="md-button" type="button" ng-click="cancel()">
+        Done
+      </md-button>
+      <span flex></span>
+      <md-button class="md-accent md-button" type="button" ng-click="closeDialog_openSidenav()">
+        Contact Me
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

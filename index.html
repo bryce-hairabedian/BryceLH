@@ -30,6 +30,7 @@
                       </md-toolbar>
 
                     <div layout="column" layout-align="start stretch">
+                  <!-- colored rows for Hamburgerlinks -->
                     <!--Github sidenav -->
                     <div style="background-color:#ccc;">
                       <md-list>
@@ -55,10 +56,25 @@
                         </a>
                         </md-list>
                       </div>
-                    </div>
+
+                      <!--Gmail sidenav -->
+                      <div style="background-color:#c2272d;">
+                        <md-list>
+                          <a href="" ng-click="showAlert($event)">
+                          <md-item>
+                            <div layout="column" layout-align="center center">
+                                <img class="md-media" src="images/gmail_195_48.png">
+                            </div>
+                          </md-item>
+                        </a>
+                        </md-list>
+                      </div>
+
+
+                    </div><!-- end Colored Rows for hamburger menu -->
 
                       <md-content layout="row" layout-align="end end" class="layout-margin _md">
-                        <button class="md-accent md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
+                        <button class="md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
                           Close Menu
                         </span><div class="md-ripple-container"></div>
                       </button>
@@ -76,9 +92,9 @@
          </md-button>
 
 
-         <h1>
-           Bryce Hairabedian
-         </h1>
+
+           <h1>Bryce Hairabedian</h1>
+
          <span flex class="flex"></span>
          <div>
            <md-button hide show-gt-sm flex class="md-raised" ng-click="toggleLeft()">
@@ -94,38 +110,50 @@
 <!--  <md-content class="md-padding"> -->
     <md-tabs md-dynamic-height md-center-tabs="true" md-stretch-tabs="auto" md-selected="data.selectedIndex" md-align-tabs="top">
       <!-- Add to above for swippable content. Doesn't work well on all browsers.  md-swipe-content -->
+
+<!-- About Tab 1 _____________________________________________________________ -->
       <md-tab id="tab1">
         <md-tab-label>About</md-tab-label>
         <md-tab-body>
-          <div layout="row" layout-sm="column" layout-align="center center">
-            <div align="center">
-              <md-content class="md-padding">
-                  <img src="images/myFace.jpg">
-                <h1>Bryce Hairabedian</h1>
-                <br>
-                <h2>Software Engineer</h2>
-                <br>
-                <p>
-                  Hello, my name is Bryce.
-                  <br>I am a passionate software developer, avid sports fan, &amp; novice snowboarder.
-                  <br>This site is built with mobile first in mind using AngularJS.
-                  <br>Check out my Portfolio &amp; connect via LinkedIn or Github
+          <div layout="row" layout-sm="column" layout-align="center center" layout-align-sm="center center">
 
-                </p>
-                <md-card-actions layout="row" layout-align="center">
-                  <md-button class="md-icon-button" aria-label="github" href="https://github.com/blh22buck/" target="_blank">
-                    <img src="images/gitHub_32px.png">
-                  </md-button>
-                  <md-button class="md-icon-button" aria-label="LinkdIn" href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
-                    <img src="images/in_icon.png">
-                  </md-button>
-                </md-card-actions>
+            <div class="profilePic" layout="column" align="center">
+              <md-content>
+                <img ng-src="images/profilePic_grey_wood_cir.png" alt="profile picture"/>
               </md-content>
-            </div>
-          </div><!--end landing page div -->
+            </div><!-- end profilePic -->
+
+          <!-- Profile Text -->
+            <div class="profileText" layout="column" layout-align="center start" layout-align-sm="start center">
+              <h1>Bryce Hairabedian</h1>
+              <h2>Software Engineer</h2>
+              <p>Hello, my name is Bryce.
+                <br>I am a passionate software developer, avid sports fan, &amp; novice snowboarder.
+                <br>Currently seeking new opportunities as I will be graduating this May 2017.
+                <br>Check out my Portfolio Tab at the top for apps &amp; projects I've worked on.
+              </p>
+
+              <md-card-actions layout="row" layout-align="center">
+                <md-button class="md-icon-button" aria-label="github" href="https://github.com/blh22buck/" target="_blank">
+                  <img ng-src="images/gitHub_32px.png"/>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Gmail" ng-click="showAlert($event)" >
+                  <img ng-src="images/logo_gmail_32px.png"/>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="LinkdIn" href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
+                  <img ng-src="images/in_icon.png"/>
+                </md-button>
+              </md-card-actions>
+
+
+            </div><!-- end profileText -->
+
+          </div><!-- end parent div for About tab 1 -->
+
         </md-tab-body>
       </md-tab>
-<!-- Portfolio Tab 2 ___________________________________________________ -->
+
+<!-- Portfolio Tab 2 _____________________________________________________________ -->
       <md-tab id="tab2">
         <md-tab-label>Portfolio</md-tab-label>
         <md-tab-body>
@@ -157,14 +185,14 @@
                     <div layout="row" layout-xs="column" layout-align="space-between none" >
                       <p>{{card.skills}}</p>
                 <!-- links / buttons -->
-                    <div layout="row" layout-align="end start" layout-align-xs="center end">
+                      <div layout="row" layout-align="end start" layout-align-xs="center end">
 
-                      <md-button style="visibility:{{card.linkButton_visible}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
+                      <md-button style="display:{{card.linkButton_display}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
                         {{card.linkButton_text}}
                       </span><div class="md-ripple-container"></div>
-                    </md-button>
+                      </md-button>
 
-                      <md-button style="visibility:{{card.github_visible}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
+                      <md-button style="display:{{card.githubButton_display}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
                         <img src="images/gitHub_32px.png">
                       </md-button>
 
@@ -205,13 +233,13 @@
                 <!-- links / buttons -->
                     <div layout="row" layout-align="end start" layout-align-xs="center end">
 
-                      <md-button style="visibility:{{card.linkButton_visible}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
+                      <md-button style="display:{{card.linkButton_display}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
                         {{card.linkButton_text}}
                       </span><div class="md-ripple-container"></div>
                     </md-button>
 
 
-                      <md-button style="visibility:{{card.github_visible}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
+                      <md-button style="display:{{card.githubButton_display}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
                         <img src="images/gitHub_32px.png">
                       </md-button>
 
@@ -226,55 +254,38 @@
 <!-- Skill Tab____________________________________________ -->
       <md-tab id="tab3" ng-disabled="data.secondLocked">
         <md-tab-label>Skills</md-tab-label>
-        <md-tab-body>
+        <md-tab-body align="center">
+<!-- Dynamic Tiles skills -->
+        <div align="center" ng-controller="AppCtrl as appCtrl">
+          <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">
+            Skills Listed
+          </md-button>
 
-          <div layout="row" layout-align-sm="column-2" layout-xs="column" layout-align="center start">
+          <md-content layout-padding>
+    <md-grid-list
+        md-cols-gt-md="9" md-cols="4" md-cols-md="8"
+        md-row-height-gt-md="1:1" md-row-height="4:3"
+        md-gutter-gt-md="16px" md-gutter-md="8px" md-gutter="4px">
 
-            <div layout="row" class="skills_tabs">
-              <md-list>
-              <md-item>
-                <md-item-content>
-                  <span class="md-title">Methodologies</span>
-                  <md-card ng-repeat="card in methods">
-                    <md-card-content>
-                      {{card.method}}
-                    </md-card-content>
-                  </md-card>
-                </md-item-content>
-              </md-item>
-            </md-list>
-            </div>
+      <md-grid-tile
+          ng-repeat="tile in appCtrl.tiles"
+          ng-style="{
+            'background': tile.color
+          }"
+          md-colspan-gt-sm="{{tile.colspan}}"
+          md-rowspan-gt-sm="{{tile.rowspan}}">
+          <a href="" ng-click="showAdvanced($event)">
+          <p><span class="tileText">{{tile.skill}}</span></p>
+          <md-grid-tile-footer><h3>{{tile.type}}</h3></md-grid-tile-footer>
+          </a>
+      </md-grid-tile>
 
-            <div layout="row" class="skills_tabs">
-              <md-list>
-              <md-item>
-                <md-item-content>
-                  <span class="md-title">Languages</span>
-                  <md-card ng-repeat="card in languages">
-                    <md-card-content>
-                      {{card.lang}}
-                    </md-card-content>
-                  </md-card>
-                </md-item-content>
-              </md-item>
-            </md-list>
-            </div>
+    </md-grid-list>
+  </md-content>
+        </div>
 
-            <div layout="row" class="skills_tabs">
-              <md-list>
-              <md-item>
-                <md-item-content>
-                  <span class="md-title">Tools</span>
-                  <md-card ng-repeat="card in tools">
-                    <md-card-content>
-                      {{card.tool}}
-                    </md-card-content>
-                  </md-card>
-                </md-item-content>
-                </md-item>
-              </md-list>
-            </div>
-          </div><!--end div laoyout=column-3 -->
+
+
         </md-tab-body>
       </md-tab>
 
@@ -291,12 +302,7 @@
         </div>
 </footer>
 -->
-
-<!--
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
--->
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js'></script>

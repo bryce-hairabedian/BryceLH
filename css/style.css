@@ -4,9 +4,24 @@
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: medium;
 }
-
+.profilePic{
+  padding: 15px;
+}
 .skills_tabs {
     padding: 15px;
+}
+.tileText{
+  color: #fff;
+  font-weight: bold;
+  font-size: medium;
+}
+.tileText a:link{color:white; text-decoration: none;}
+.tileText a:visited{color:white; text-decoration: none;}
+.tileText a:hover{color:white; text-decoration: none;}
+.tileText a:active{color:white; text-decoration: none;}
+
+.dialog-padding{
+  padding: 15px;
 }
 
 .navTabs md-tab-content {
@@ -23,7 +38,49 @@
     /*background-color: #fff;*/
   }
 
+/* Dynamic tiles skills */
+.gridListdemoDynamicTiles md-icon {
+  width: 50%;
+  height: 30%; }
 
+.gridListdemoDynamicTiles .s64 {
+  font-size: 64px; }
+
+.gridListdemoDynamicTiles .s32 {
+  font-size: 48px; }
+
+.gridListdemoDynamicTiles md-icon.fa {
+  display: block;
+  padding-left: 0; }
+
+.gridListdemoDynamicTiles md-icon.s32 span {
+  padding-left: 8px; }
+
+.gridListdemoDynamicTiles md-grid-list {
+  margin: 8px; }
+
+.gridListdemoDynamicTiles md-grid-tile {
+  transition: all 300ms ease-out 50ms; }
+
+.gridListdemoDynamicTiles md-grid-tile md-icon {
+  padding-bottom: 32px; }
+
+.gridListdemoDynamicTiles md-grid-tile md-grid-tile-footer {
+  background: rgba(0, 0, 0, 0.68);
+  height: 36px; }
+
+.gridListdemoDynamicTiles md-grid-tile-footer figcaption {
+  width: 100%; }
+
+.gridListdemoDynamicTiles md-grid-tile-footer figcaption h3 {
+  margin: 0;
+  font-weight: 700;
+  width: 100%;
+  text-align: center; }
+
+
+/* spinning hamburger menu button */
+/* not used */
 
   .c-hamburger--htla{
     background-color: #32dc64;
@@ -109,21 +166,3 @@
   .c-hamburger span::after {
     bottom: -20px;
   }
-
-/*
-.tabsdemoStaticTabs .after-tabs-area > span {
-  margin-top: 25px;
-  padding-right: 15px;
-  vertical-align: middle;
-  line-height: 30px;
-  height: 35px; }
-
-.tabsdemoStaticTabs .after-tabs-area > md-checkbox {
-  margin-top: 26px;
-  margin-left: 0; }
-*/
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
-*/
