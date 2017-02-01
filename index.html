@@ -129,8 +129,8 @@
               <h2>Software Engineer</h2>
               <p>Hello, my name is Bryce.
                 <br>I am a passionate software developer, avid sports fan, &amp; novice snowboarder.
-                <br>This site is built with mobile first in mind using AngularJS.
-                <br>Check out my Portfolio Tab at the top &amp; be sure to connect on GitHub or LinkedIn.
+                <br>Currently seeking new opportunities as I will be graduating this May 2017.
+                <br>Check out my Portfolio Tab at the top for apps &amp; projects I've worked on.
               </p>
 
               <md-card-actions layout="row" layout-align="center">
@@ -184,12 +184,12 @@
                 <!-- links / buttons -->
                       <div layout="row" layout-align="end start" layout-align-xs="center end">
 
-                      <md-button style="visibility:{{card.linkButton_visible}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
+                      <md-button style="display:{{card.linkButton_display}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
                         {{card.linkButton_text}}
                       </span><div class="md-ripple-container"></div>
                       </md-button>
 
-                      <md-button style="visibility:{{card.github_visible}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
+                      <md-button style="display:{{card.githubButton_display}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
                         <img src="images/gitHub_32px.png">
                       </md-button>
 
@@ -230,13 +230,13 @@
                 <!-- links / buttons -->
                     <div layout="row" layout-align="end start" layout-align-xs="center end">
 
-                      <md-button style="visibility:{{card.linkButton_visible}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
+                      <md-button style="display:{{card.linkButton_display}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
                         {{card.linkButton_text}}
                       </span><div class="md-ripple-container"></div>
                     </md-button>
 
 
-                      <md-button style="visibility:{{card.github_visible}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
+                      <md-button style="display:{{card.githubButton_display}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
                         <img src="images/gitHub_32px.png">
                       </md-button>
 
@@ -251,55 +251,34 @@
 <!-- Skill Tab____________________________________________ -->
       <md-tab id="tab3" ng-disabled="data.secondLocked">
         <md-tab-label>Skills</md-tab-label>
-        <md-tab-body>
+        <md-tab-body align="center">
+<!-- Dynamic Tiles skills -->
+        <div align="center" ng-controller="AppCtrl as appCtrl">
+          <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">
+            Skills List
+          </md-button>
 
-          <div layout="row" layout-align-sm="column-2" layout-xs="column" layout-align="center start">
+          <md-content layout-padding>
+    <md-grid-list
+        md-cols-gt-md="12" md-cols="4" md-cols-md="8"
+        md-row-height-gt-md="1:1" md-row-height="4:3"
+        md-gutter-gt-md="16px" md-gutter-md="8px" md-gutter="4px">
+      <md-grid-tile
+          ng-repeat="tile in appCtrl.tiles"
+          ng-style="{
+            'background': tile.color
+          }"
+          md-colspan-gt-sm="{{tile.colspan}}"
+          md-rowspan-gt-sm="{{tile.rowspan}}">
+          <p>{{tile.skill}}</p>
+          <md-grid-tile-footer><h3>{{tile.type}}</h3></md-grid-tile-footer>
+      </md-grid-tile>
+    </md-grid-list>
+  </md-content>
+        </div>
 
-            <div layout="row" class="skills_tabs">
-              <md-list>
-              <md-item>
-                <md-item-content>
-                  <span class="md-title">Methodologies</span>
-                  <md-card ng-repeat="card in methods">
-                    <md-card-content>
-                      {{card.method}}
-                    </md-card-content>
-                  </md-card>
-                </md-item-content>
-              </md-item>
-            </md-list>
-            </div>
 
-            <div layout="row" class="skills_tabs">
-              <md-list>
-              <md-item>
-                <md-item-content>
-                  <span class="md-title">Languages</span>
-                  <md-card ng-repeat="card in languages">
-                    <md-card-content>
-                      {{card.lang}}
-                    </md-card-content>
-                  </md-card>
-                </md-item-content>
-              </md-item>
-            </md-list>
-            </div>
 
-            <div layout="row" class="skills_tabs">
-              <md-list>
-              <md-item>
-                <md-item-content>
-                  <span class="md-title">Tools</span>
-                  <md-card ng-repeat="card in tools">
-                    <md-card-content>
-                      {{card.tool}}
-                    </md-card-content>
-                  </md-card>
-                </md-item-content>
-                </md-item>
-              </md-list>
-            </div>
-          </div><!--end div laoyout=column-3 -->
         </md-tab-body>
       </md-tab>
 
@@ -316,12 +295,7 @@
         </div>
 </footer>
 -->
-
-<!--
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
--->
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js'></script>

@@ -1,0 +1,60 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Languages, Methods, &amp; Tools</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" ng-controller="AppCtrl">
+        <md-list flex>
+          <md-title><h3>Languages</h3></md-title>
+          <md-list-item class="md-1-line" ng-repeat="item in languages" ng-click="null">
+            <ul>
+              <li>
+                {{item.lang}}
+              </li>
+            </ul>
+          </md-list-item>
+
+          <md-title><h3>Methodologies</h3></md-title>
+          <md-list-item class="md-1-line" ng-repeat="item in methods" ng-click="null">
+            <ul>
+              <li>
+                {{item.method}}
+              </li>
+            </ul>
+          </md-list-item>
+
+          <md-title><h3>Tools</h3></md-title>
+          <md-list-item class="md-1-line" ng-repeat="item in tools" ng-click="null">
+            <ul>
+              <li>
+                {{item.tool}}
+              </li>
+            </ul>
+          </md-list-item>
+
+        </md-list>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
+        More on Wikipedia
+      </md-button>
+      <span flex></span>
+      <md-button ng-click="answer('not useful')">
+       Not Useful
+      </md-button>
+      <md-button ng-click="answer('useful')">
+        Useful
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
