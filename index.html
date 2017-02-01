@@ -74,7 +74,7 @@
                     </div><!-- end Colored Rows for hamburger menu -->
 
                       <md-content layout="row" layout-align="end end" class="layout-margin _md">
-                        <button class="md-accent md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
+                        <button class="md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
                           Close Menu
                         </span><div class="md-ripple-container"></div>
                       </button>
@@ -92,9 +92,9 @@
          </md-button>
 
 
-         <h1>
-           Bryce Hairabedian
-         </h1>
+
+           <h1>Bryce Hairabedian</h1>
+
          <span flex class="flex"></span>
          <div>
            <md-button hide show-gt-sm flex class="md-raised" ng-click="toggleLeft()">
@@ -119,7 +119,7 @@
 
             <div class="profilePic" layout="column" align="center">
               <md-content>
-                <img ng-src="images/profilePic_grey_wood.jpg" alt="profile picture"/>
+                <img ng-src="images/profilePic_grey_wood_cir.png" alt="profile picture"/>
               </md-content>
             </div><!-- end profilePic -->
 
@@ -135,10 +135,13 @@
 
               <md-card-actions layout="row" layout-align="center">
                 <md-button class="md-icon-button" aria-label="github" href="https://github.com/blh22buck/" target="_blank">
-                  <img src="images/gitHub_32px.png">
+                  <img ng-src="images/gitHub_32px.png"/>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Gmail" ng-click="showAlert($event)" >
+                  <img ng-src="images/logo_gmail_32px.png"/>
                 </md-button>
                 <md-button class="md-icon-button" aria-label="LinkdIn" href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
-                  <img src="images/in_icon.png">
+                  <img ng-src="images/in_icon.png"/>
                 </md-button>
               </md-card-actions>
 
@@ -255,14 +258,15 @@
 <!-- Dynamic Tiles skills -->
         <div align="center" ng-controller="AppCtrl as appCtrl">
           <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">
-            Skills List
+            Skills Listed
           </md-button>
 
           <md-content layout-padding>
     <md-grid-list
-        md-cols-gt-md="12" md-cols="4" md-cols-md="8"
+        md-cols-gt-md="9" md-cols="4" md-cols-md="8"
         md-row-height-gt-md="1:1" md-row-height="4:3"
         md-gutter-gt-md="16px" md-gutter-md="8px" md-gutter="4px">
+
       <md-grid-tile
           ng-repeat="tile in appCtrl.tiles"
           ng-style="{
@@ -270,9 +274,12 @@
           }"
           md-colspan-gt-sm="{{tile.colspan}}"
           md-rowspan-gt-sm="{{tile.rowspan}}">
-          <p>{{tile.skill}}</p>
+          <a href="" ng-click="showAdvanced($event)">
+          <p><span class="tileText">{{tile.skill}}</span></p>
           <md-grid-tile-footer><h3>{{tile.type}}</h3></md-grid-tile-footer>
+          </a>
       </md-grid-tile>
+
     </md-grid-list>
   </md-content>
         </div>

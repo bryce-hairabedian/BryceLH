@@ -10,6 +10,19 @@
 .skills_tabs {
     padding: 15px;
 }
+.tileText{
+  color: #fff;
+  font-weight: bold;
+  font-size: medium;
+}
+.tileText a:link{color:white; text-decoration: none;}
+.tileText a:visited{color:white; text-decoration: none;}
+.tileText a:hover{color:white; text-decoration: none;}
+.tileText a:active{color:white; text-decoration: none;}
+
+.dialog-padding{
+  padding: 15px;
+}
 
 .navTabs md-tab-content {
   /*background-color: white;*/

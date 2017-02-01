@@ -77,12 +77,15 @@ var SKILLS = [
 /*SideNav toggler */
             $scope.toggleLeft = buildToggler('left');
             $scope.toggleRight = buildToggler('right');
-
+            var compId = "left";
             function buildToggler(componentId) {
+              compId = componentId;
               return function() {
                 $mdSidenav(componentId).toggle();
               }
             }
+
+
 
 /* Dynamic tiles skills page */
           function randomColor() {
@@ -162,29 +165,47 @@ this.tiles = (function() {
   $scope.cancel = function() {
     $mdDialog.cancel();
   };
+
+  $scope.closeDialog_openSidenav = function(){
+    $mdDialog.cancel();
+
+    $mdSidenav(compId).toggle();
+
+  };
 }
 
 /* Skills page */
     $scope.languages = [
+      {lang: 'PHP'},
       {lang: 'Java'},
-      {lang: 'C/C++'},
-      {lang: 'JS'},
+      {lang: 'C'},
+      {lang: 'C++'},
+      {lang: 'JavaScript'},
       {lang: 'PHP'},
       {lang: 'MySQL'},
-      {lang: 'XML'},
+      {lang: 'Python'},
       {lang: 'CSS'},
-      {lang: 'Codename One'}
+      {lang: 'HTML'},
+      {lang: 'XML'},
+      {lang: 'AngularJS'},
+      {lang: 'Scheme'},      
+      {lang: 'R'}
+    ];
+    $scope.tools = [
+      {tool: 'Git'},
+      {tool: 'Linux'},
+      {tool: 'Visio'},
+      {tool: 'Photoshop'},
+      {tool: 'Illustrator'},
+      {tool: 'Spring'},
+      {tool: 'Android Studio'},
+      {tool: 'Eclipse'},
+      {tool: 'RESTful'}
     ];
     $scope.methods = [
       {method: 'Scrum'},
       {method: 'Agile'},
       {method: 'Iterative'}
-    ];
-    $scope.tools = [
-      {tool: 'JUnit'},
-      {tool: 'Visio'},
-      {tool: 'Spring'},
-      {tool: 'REST'}
     ];
 /* Portfolios Page */
     $scope.portfolios_left = [
