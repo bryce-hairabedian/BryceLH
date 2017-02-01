@@ -30,6 +30,7 @@
                       </md-toolbar>
 
                     <div layout="column" layout-align="start stretch">
+                  <!-- colored rows for Hamburgerlinks -->
                     <!--Github sidenav -->
                     <div style="background-color:#ccc;">
                       <md-list>
@@ -55,7 +56,22 @@
                         </a>
                         </md-list>
                       </div>
-                    </div>
+
+                      <!--Gmail sidenav -->
+                      <div style="background-color:#c2272d;">
+                        <md-list>
+                          <a href="" ng-click="showAlert($event)">
+                          <md-item>
+                            <div layout="column" layout-align="center center">
+                                <img class="md-media" src="images/gmail_195_48.png">
+                            </div>
+                          </md-item>
+                        </a>
+                        </md-list>
+                      </div>
+
+
+                    </div><!-- end Colored Rows for hamburger menu -->
 
                       <md-content layout="row" layout-align="end end" class="layout-margin _md">
                         <button class="md-accent md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">

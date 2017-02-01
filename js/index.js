@@ -1,21 +1,8 @@
 angular
       .module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
-      .controller('AppCtrl', function($scope, $timeout, $mdSidenav){
+      .controller('AppCtrl', function($scope, $timeout, $mdSidenav, $mdDialog){
 
 /*SideNav toggler */
-        var toggles = document.querySelectorAll(".c-hamburger");
-        for(var i=toggles.length-1;i>=0;i--){
-          var toggle = toggles[i];
-          toggleHandler(toggle);
-
-        };
-        function toggleHandler(toggle) {
-            toggle.addEventListener( "click", function(e) {
-              e.preventDefault();
-              (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
-            });
-          }
-
             $scope.toggleLeft = buildToggler('left');
             $scope.toggleRight = buildToggler('right');
 
@@ -24,6 +11,32 @@ angular
                 $mdSidenav(componentId).toggle();
               }
             }
+
+/* Dialog - Gmail  */
+  $scope.showAlert = function(ev) {
+    // Appending dialog to document.body to cover sidenav in docs app
+    // Modal dialogs should fully cover application
+    // to prevent interaction outside of dialog
+    $mdDialog.show(
+      $mdDialog.alert()
+        .parent(angular.element(document.querySelector('#popupContainer')))
+        .clickOutsideToClose(true)
+        .title('Email Me')
+        .textContent('Bryce.Hairabedian@Gmail.com')
+        .ariaLabel('Gmail Dialog')
+        .ok('Done')
+        .targetEvent(ev)
+    );
+  };
+
+  $scope.hide = function() {
+    $mdDialog.hide();
+  };
+
+  $scope.cancel = function() {
+    $mdDialog.cancel();
+  };
+
 /* Skills page */
     $scope.languages = [
       {lang: 'Java'},
