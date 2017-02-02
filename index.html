@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="css/style.css">
 <!-- address bar color -->
-<meta name="theme-color" content="#ff6600"/>
+<meta name="theme-color" content="#3f51b5"/>
 </head>
 <body>
 
@@ -114,15 +114,18 @@
       <md-tab id="tab1">
         <md-tab-label>About</md-tab-label>
         <md-tab-body>
-          <div layout="row" layout-sm="column" layout-align="center center" layout-align-sm="center center">
+          <div layout-gt-sm="row" layout-sm="column" layout-align="center center" layout-align-sm="center center">
 
+            <md-content>
             <div class="profilePic" layout="column" align="center">
               <md-content>
                 <img ng-src="images/profilePic_grey_wood_cir.png" alt="profile picture"/>
               </md-content>
             </div><!-- end profilePic -->
+            </md-content>
 
           <!-- Profile Text -->
+          <md-content>
             <div class="profileText" layout="column" layout-align="center start" layout-align-sm="start center">
               <h1>Bryce Hairabedian</h1>
               <h2>Software Engineer</h2>
@@ -131,6 +134,7 @@
                 <br>Currently seeking new opportunities as I will be graduating this May 2017.
                 <br>Check out my Portfolio Tab at the top for apps &amp; projects I've worked on.
               </p>
+              </md-content>
 
               <md-card-actions layout="row" layout-align="center">
                 <md-button class="md-icon-button" aria-label="github" href="https://github.com/blh22buck/" target="_blank">
