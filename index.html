@@ -267,6 +267,7 @@
           <md-content layout-padding>
     <md-grid-list
         md-cols-gt-md="9" md-cols="4" md-cols-md="8"
+        md-cols-xs="3"
         md-row-height-gt-md="1:1" md-row-height="4:3"
         md-gutter-gt-md="16px" md-gutter-md="8px" md-gutter="4px">
 
@@ -278,8 +279,8 @@
           md-colspan-gt-sm="{{tile.colspan}}"
           md-rowspan-gt-sm="{{tile.rowspan}}">
           <a href="" ng-click="showAdvanced($event)">
-          <p><span class="tileText">{{tile.skill}}</span></p>
-          <md-grid-tile-footer><h3>{{tile.type}}</h3></md-grid-tile-footer>
+          <p flex><span class="tileText" flex>{{tile.skill}}</span></p>
+          <md-grid-tile-footer hide-xs><h3>{{tile.type}}</h3></md-grid-tile-footer>
           </a>
       </md-grid-tile>
 
