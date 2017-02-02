@@ -51,7 +51,7 @@ var SKILLS = [
 {type: 'Languages', skill: 'HTML'},
 {type: 'Languages', skill: 'XML'},
 {type: 'Languages', skill: 'AngularJS'},
-{type: 'Languages', skill: 'CodenameOne'},
+{type: 'Languages', skill: 'Scheme'},
 {type: 'Languages', skill: 'R'},
 
 
@@ -188,7 +188,7 @@ this.tiles = (function() {
       {lang: 'HTML'},
       {lang: 'XML'},
       {lang: 'AngularJS'},
-      {lang: 'Scheme'},      
+      {lang: 'Scheme'},
       {lang: 'R'}
     ];
     $scope.tools = [
