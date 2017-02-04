@@ -44,16 +44,15 @@ var SKILLS = [
 {type: 'Languages', skill: 'C'},
 {type: 'Languages', skill: 'C++'},
 {type: 'Languages', skill: 'JavaScript'},
-{type: 'Languages', skill: 'PHP'},
 {type: 'Languages', skill: 'MySQL'},
 {type: 'Languages', skill: 'Python'},
+{type: 'Languages', skill: 'LESS'},
 {type: 'Languages', skill: 'CSS'},
 {type: 'Languages', skill: 'HTML'},
 {type: 'Languages', skill: 'XML'},
 {type: 'Languages', skill: 'AngularJS'},
 {type: 'Languages', skill: 'Scheme'},
 {type: 'Languages', skill: 'R'},
-
 
 {type: 'Tools', skill: 'Photoshop'},
 {type: 'Tools', skill: 'Illustrator'},
@@ -68,7 +67,6 @@ var SKILLS = [
 {type: 'Methodologies', skill: 'Scrum'},
 {type: 'Methodologies', skill: 'Agile'},
 {type: 'Methodologies', skill: 'Iterative'}
-
 
   ];
 
@@ -133,7 +131,7 @@ this.tiles = (function() {
             parent: angular.element(document.body),
             targetEvent: ev,
             clickOutsideToClose:true,
-            fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+            fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints
           });
         }
 
@@ -176,7 +174,6 @@ this.tiles = (function() {
 
 /* Skills page */
     $scope.languages = [
-      {lang: 'PHP'},
       {lang: 'Java'},
       {lang: 'C'},
       {lang: 'C++'},
@@ -185,6 +182,7 @@ this.tiles = (function() {
       {lang: 'MySQL'},
       {lang: 'Python'},
       {lang: 'CSS'},
+      {lang: 'LESS'},
       {lang: 'HTML'},
       {lang: 'XML'},
       {lang: 'AngularJS'},
@@ -287,8 +285,5 @@ this.tiles = (function() {
     $scope.previous = function() {
       $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
     };
-
-
-
 
 });

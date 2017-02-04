@@ -61,7 +61,7 @@
                       <!--Gmail sidenav -->
                       <div style="background-color:#c2272d;">
                         <md-list>
-                          <a href="" ng-click="showAlert($event)">
+                          <a href="mailto:Bryce.Hairabedian@gmail.com" target="_blank">
                           <md-item>
                             <div layout="column" layout-align="center center">
                                 <img class="md-media" src="images/gmail_195_48.png">
@@ -97,7 +97,7 @@
          <span flex class="flex"></span>
          <div>
            <md-button hide show-gt-sm flex class="md-raised" ng-click="toggleLeft()">
-             <span style="color: orange;">Contact</span>
+             <span style="color: #3f51b5;">Contact</span>
            </md-button>
          </div>
        </div>
@@ -131,19 +131,20 @@
               <h2>Software Engineer</h2>
               <p>Hello, my name is Bryce.
                 <br>I am a passionate software developer, avid sports fan, &amp; novice snowboarder.
-                <br>Currently seeking new opportunities as I will be graduating this May 2017.
-                <br>Check out my Portfolio Tab at the top for apps &amp; projects I've worked on.
+                <br>Currently seeking new opportunities as I will be graduating with
+                <br>B.S., in Computer Science from Sacramento State this May 2017.
+                <br>Check out my Portfolio for apps &amp; projects I've worked on.
               </p>
-              </md-content>
+          </md-content>
 
               <md-card-actions layout="row" layout-align="center">
-                <md-button class="md-icon-button" aria-label="github" href="https://github.com/blh22buck/" target="_blank">
+                <md-button class="md-icon-button" aria-label="github" ng-href="https://github.com/blh22buck/" target="_blank">
                   <img ng-src="images/gitHub_32px.png"/>
                 </md-button>
-                <md-button class="md-icon-button" aria-label="Gmail" ng-click="showAlert($event)" >
+                <md-button class="md-icon-button" aria-label="Gmail" ng-href="mailto:Bryce.Hairabedian@gmail.com">
                   <img ng-src="images/logo_gmail_32px.png"/>
                 </md-button>
-                <md-button class="md-icon-button" aria-label="LinkdIn" href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
+                <md-button class="md-icon-button" aria-label="LinkdIn" ng-href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
                   <img ng-src="images/in_icon.png"/>
                 </md-button>
               </md-card-actions>
@@ -260,7 +261,7 @@
         <md-tab-body align="center">
 <!-- Dynamic Tiles skills -->
         <div align="center" ng-controller="AppCtrl as appCtrl">
-          <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">
+          <md-button class="md-raised md-warn" ng-click="showAdvanced($event)">
             Skills Listed
           </md-button>
 
