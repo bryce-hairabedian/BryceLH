@@ -60,9 +60,9 @@ var SKILLS = [
 {type: 'Tools', skill: 'Git'},
 {type: 'Tools', skill: 'Linux'},
 {type: 'Tools', skill: 'Spring'},
-{type: 'Tools', skill: 'Android Studio'},
 {type: 'Tools', skill: 'Eclipse'},
 {type: 'Tools', skill: 'RESTful'},
+{type: 'Tools', skill: 'Android Studio'},
 
 {type: 'Methodologies', skill: 'Scrum'},
 {type: 'Methodologies', skill: 'Agile'},
@@ -196,9 +196,9 @@ this.tiles = (function() {
       {tool: 'Photoshop'},
       {tool: 'Illustrator'},
       {tool: 'Spring'},
-      {tool: 'Android Studio'},
       {tool: 'Eclipse'},
-      {tool: 'RESTful'}
+      {tool: 'RESTful'},
+      {tool: 'Android Studio'}
     ];
     $scope.methods = [
       {method: 'Scrum'},
