@@ -110,9 +110,9 @@ var TILEDIM = [
               }
           }
           function shuffle(a) {
-              for (let i = a.length; i; i--) {
-                  let j = Math.floor(Math.random() * i);
-                  [a[i - 1], a[j]] = [a[j], a[i - 1]];
+              for (var i = a.length; i; i--) {
+                  var j = Math.floor(Math.random() * i);
+                  a[i - 1], a[j] = a[j], a[i - 1];
               }
           }
 this.tiles = (function() {
@@ -121,7 +121,6 @@ this.tiles = (function() {
             shuffle(COLORS);
             var skillLength = SKILLS.length;
             for (var i = 0; i < skillLength; i++) {
-              //var randomI = Math.floor(Math.random() * skillLength);
               tiles.push({
                 color: COLORS[i],
                 colspan: TILEDIM[i].column,
