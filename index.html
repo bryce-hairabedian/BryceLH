@@ -19,69 +19,6 @@
 <body>
 
 <div ng-controller="AppCtrl" ng-app="MyApp">
-  <!--Hamburger menu / sidenav -->
-                <md-sidenav class="md-sidenav-left ng-isolate-scope _md md-whiteframe-4dp" md-component-id="left" md-disable-backdrop="" md-whiteframe="4" tabindex="-1">
-                      <md-toolbar class="md-primary _md _md-toolbar-transitions">
-                      <div layout="row" layout-align="space-between none" class="md-toolbar-tools" style="background-color:inherit;">
-                        <h1>Connect With Me</h1>
-                        <md-button class="md-icon-button" ng-click="toggleLeft()" aria-label="Settings">
-                          <i class="material-icons md-36" >arrow_back</i><!--md-svg-icon="img/icons/menu.svg" -->
-                        </md-button>
-                      </div>
-                      </md-toolbar>
-
-                    <div layout="column" layout-align="start stretch">
-                  <!-- colored rows for Hamburgerlinks -->
-                    <!--Github sidenav -->
-                    <div style="background-color:#ccc;">
-                      <md-list>
-                        <a href="https://github.com/blh22buck/" target="_blank">
-                        <md-item>
-                          <div layout="column" layout-align="center center">
-                              <img class="md-media" src="images/github_195_48_2.png">
-                          </div>
-                        </md-item>
-                      </a>
-                      </md-list>
-                    </div>
-
-                    <!-- LinkedIn sidenav -->
-                      <div style="background-color:#0077b5;">
-                        <md-list>
-                          <a  href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
-                          <md-item>
-                            <div layout="column" layout-align="center center">
-                              <img class="md-media" src="images/in_logo_195_48.png">
-                            </div>
-                          </md-item>
-                        </a>
-                        </md-list>
-                      </div>
-
-                      <!--Gmail sidenav -->
-                      <div style="background-color:#c2272d;">
-                        <md-list>
-                          <a href="mailto:Bryce.Hairabedian@gmail.com" target="_blank">
-                          <md-item>
-                            <div layout="column" layout-align="center center">
-                                <img class="md-media" src="images/gmail_195_48.png">
-                            </div>
-                          </md-item>
-                        </a>
-                        </md-list>
-                      </div>
-
-
-                    </div><!-- end Colored Rows for hamburger menu -->
-
-                      <md-content layout="row" layout-align="end end" class="layout-margin _md">
-                        <button class="md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
-                          Close Menu
-                        </span><div class="md-ripple-container"></div>
-                      </button>
-                      </md-content>
-                </md-sidenav>
-  <!-- end hamburger menu -->
 
   <!-- toolbar/App Header -->
   <md-toolbar class="md-primary _md _md-toolbar-transitions">
@@ -96,7 +33,7 @@
 
          <span flex class="flex"></span>
          <div>
-           <md-button hide show-gt-sm flex class="md-raised" ng-click="toggleLeft()">
+           <md-button hide show-gt-sm class="md-raised" ng-click="toggleLeft()">
              <span style="color: #3f51b5;">Contact</span>
            </md-button>
          </div>
@@ -134,6 +71,7 @@
                 <br>Graduating with B.S., in Computer Science this May, I am currently seeking an entry level position.
                 <br>If you like my work, let me know. Connect with me on GitHub, Gmail, or LinkedIn.
               </p>
+            </div>
           </md-content>
 
               <md-card-actions layout="row" layout-align="center">
@@ -149,7 +87,6 @@
               </md-card-actions>
 
 
-            </div><!-- end profileText -->
 
           </div><!-- end parent div for About tab 1 -->
 
@@ -296,9 +233,77 @@
 
 
     </md-tabs>
- </md-content>
 </div>
-</div>
+
+<!--Hamburger menu / sidenav -->
+
+              <md-sidenav class="md-sidenav-left ng-isolate-scope _md md-whiteframe-4dp" md-component-id="left"
+              md-whiteframe="4" tabindex="-1">
+                    <md-toolbar class="md-primary _md _md-toolbar-transitions">
+                    <div layout="row" layout-align="space-between none" class="md-toolbar-tools" style="background-color:inherit;">
+                      <h1>Connect With Me</h1>
+                      <md-button class="md-icon-button" ng-click="toggleLeft()" aria-label="Settings">
+                        <i class="material-icons md-36" >arrow_back</i><!--md-svg-icon="img/icons/menu.svg" -->
+                      </md-button>
+                    </div>
+                    </md-toolbar>
+
+                  <div layout="column" layout-align="start stretch">
+                <!-- colored rows for Hamburgerlinks -->
+                  <!--Github sidenav -->
+                  <div style="background-color:#ccc;">
+                    <md-list>
+                      <a href="https://github.com/blh22buck/" target="_blank">
+                      <md-item>
+                        <div layout="column" layout-align="center center">
+                            <img class="md-media" src="images/github_195_48_2.png">
+                        </div>
+                      </md-item>
+                    </a>
+                    </md-list>
+                  </div>
+
+                  <!-- LinkedIn sidenav -->
+                    <div style="background-color:#0077b5;">
+                      <md-list>
+                        <a  href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
+                        <md-item>
+                          <div layout="column" layout-align="center center">
+                            <img class="md-media" src="images/in_logo_195_48.png">
+                          </div>
+                        </md-item>
+                      </a>
+                      </md-list>
+                    </div>
+
+                    <!--Gmail sidenav -->
+                    <div style="background-color:#c2272d;">
+                      <md-list>
+                        <a href="mailto:Bryce.Hairabedian@gmail.com" target="_blank">
+                        <md-item>
+                          <div layout="column" layout-align="center center">
+                              <img class="md-media" src="images/gmail_195_48.png">
+                          </div>
+                        </md-item>
+                      </a>
+                      </md-list>
+                    </div>
+
+
+                  </div><!-- end Colored Rows for hamburger menu -->
+
+                    <md-content layout="row" layout-align="end end" class="layout-margin _md">
+                      <button class="md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
+                        Close Menu
+                      </span><div class="md-ripple-container"></div>
+                    </button>
+                    </md-content>
+              </md-sidenav>
+
+<!-- end hamburger menu -->
+
+
+</div><!--end app-->
 
 <!-- Footer
 <footer>

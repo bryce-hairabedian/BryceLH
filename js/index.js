@@ -83,8 +83,7 @@ var TILEDIM = [
 
 /*SideNav toggler */
             $scope.toggleLeft = buildToggler('left');
-            $scope.toggleRight = buildToggler('right');
-            var compId = "left";
+            //var compId = "left";
             function buildToggler(componentId) {
               compId = componentId;
               return function() {
@@ -294,5 +293,4 @@ this.tiles = (function() {
     $scope.previous = function() {
       $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
     };
-
 });
