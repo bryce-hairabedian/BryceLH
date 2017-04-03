@@ -4,6 +4,10 @@
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: medium;
 }
+
+.contact-button {
+  background-color: rgba(158, 158, 158, 0.2);
+}
 .profilePic{
   padding: 15px;
 }

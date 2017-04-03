@@ -226,7 +226,8 @@ this.tiles = (function() {
       linkButton_link:'http://www.asi.csus.edu/programs/safe-rides/',
       linkButton_color:'#7e9f2a',
       linkButton_text:'More Info',
-      color:'#7e9f2a'
+      color:'#7e9f2a',
+      b_color:'background-color:blue'
       },
       {imagePath:'images/dogCatcher_small_200.jpg',
       title:'Dog Catcher',
@@ -239,7 +240,8 @@ this.tiles = (function() {
       linkButton_link:'',
       linkButton_color:'',
       linkButton_text:'',
-      color:'#a15a2c'
+      color:'#a15a2c',
+      b_color:'background-color:blue'
       },
       {imagePath:'images/gtaQuickCodes_small_200.jpg',
       title:'GTA Codes Quick',
@@ -252,7 +254,8 @@ this.tiles = (function() {
       linkButton_link:'',
       linkButton_color:'',
       linkButton_text:'',
-      color:'#F44336'
+      color:'#F44336',
+      b_color:'background-color:blue'
       }
     ];
     $scope.portfolios_right = [
@@ -267,7 +270,8 @@ this.tiles = (function() {
       linkButton_link:'',
       linkButton_color:'',
       linkButton_text:'',
-      color:'#3F51B5'
+      color:'#3F51B5',
+      b_color:'background-color: blue;'
     },
       {imagePath:'images/sacState_200.png',
       title:'CSUS Ride Share',
@@ -280,7 +284,8 @@ this.tiles = (function() {
       linkButton_link:'',
       linkButton_color:'',
       linkButton_text:'',
-      color:'#cfb668'
+      color:'#cfb668',
+      b_color:'background-color:blue'
       }
     ];
 
