@@ -8,6 +8,25 @@
 .contact-button {
   background-color: rgba(158, 158, 158, 0.2);
 }
+.red-dead-card-header{
+  background-color: #cc0001;
+}
+.asi-card-card-header{
+  background-color: #7e9f2a;
+}
+.my-website-card-header{
+    background-color: #3F51B5;
+}
+.dog-catcher-card-header{
+    background-color: #a15a2c;
+}
+.gta-quickcodes-card-header{
+    background-color: #F44336;
+}
+.csus-rideshare-card-header{
+    background-color: #cfb668;
+}
+
 .profilePic{
   padding: 15px;
 }

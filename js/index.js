@@ -227,7 +227,8 @@ this.tiles = (function() {
       linkButton_color:'#7e9f2a',
       linkButton_text:'More Info',
       color:'#7e9f2a',
-      b_color:'background-color:blue'
+      b_color:'background-color:blue',
+      header_class:'asi-card-card-header'
       },
       {imagePath:'images/dogCatcher_small_200.jpg',
       title:'Dog Catcher',
@@ -241,7 +242,8 @@ this.tiles = (function() {
       linkButton_color:'',
       linkButton_text:'',
       color:'#a15a2c',
-      b_color:'background-color:blue'
+      b_color:'background-color:blue',
+      header_class:'dog-catcher-card-header'
       },
       {imagePath:'images/gtaQuickCodes_small_200.jpg',
       title:'GTA Codes Quick',
@@ -255,7 +257,8 @@ this.tiles = (function() {
       linkButton_color:'',
       linkButton_text:'',
       color:'#F44336',
-      b_color:'background-color:blue'
+      b_color:'background-color:blue',
+      header_class:'gta-quickcodes-card-header'
       }
     ];
     $scope.portfolios_right = [
@@ -271,7 +274,8 @@ this.tiles = (function() {
       linkButton_color:'',
       linkButton_text:'',
       color:'#3F51B5',
-      b_color:'background-color: blue;'
+      b_color:'background-color: blue;',
+      header_class:'my-website-card-header'
     },
       {imagePath:'images/sacState_200.png',
       title:'CSUS Ride Share',
@@ -285,7 +289,8 @@ this.tiles = (function() {
       linkButton_color:'',
       linkButton_text:'',
       color:'#cfb668',
-      b_color:'background-color:blue'
+      b_color:'background-color:blue',
+      header_class:'csus-rideshare-card-header'
       }
     ];
 
