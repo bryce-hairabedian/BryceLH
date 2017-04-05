@@ -4,6 +4,9 @@
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: medium;
 }
+div.hidden{
+visibility: hidden;
+}
 
 .contact-button {
   background-color: rgba(158, 158, 158, 0.2);

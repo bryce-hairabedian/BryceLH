@@ -1,7 +1,8 @@
 angular
       .module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
       .controller('AppCtrl', function($scope, $timeout, $mdSidenav, $mdDialog){
-
+  var vm = this;
+  vm.loadsidenav = false;
 /**************Colors *************/
 
 var COLORS = [ '#f22a26', '#f44f1d', '#f75a11', '#f77810', '#ffa30f', '#ffc30f', '#ffeb0f', '#e3fc07', '#a2fc07', '#2be506', '#20f948', '#04f480', '#04f4b0', '#04f4df', '#04d0f4', '#0490e8', '#0440e8', '#1304e8', '#6d00fc', '#b000fc', '#8401bc', '#ca02f7', '#72018c', '#f702e2', '#910084', '#f2009d', '#91015e', '#f9025d', '#137f16', '#ed0219'
@@ -293,6 +294,10 @@ this.tiles = (function() {
       header_class:'csus-rideshare-card-header'
       }
     ];
+
+    $(document).ready(function() {
+    $("div#sidenav").removeClass("hidden");
+});
 
 /*Begin on tab1, and transition between tabs */
     $scope.data = {selectedIndex: 0};
