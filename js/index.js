@@ -218,7 +218,7 @@ this.tiles = (function() {
     $scope.portfolios_left = [
       {imagePath:'images/red_dead_card_header_img.png',
       title:'Red Dead QuickCodes',
-      description:'Android application providing all cheats and codes for Red Dead series.'
+      description:'Android application providing all cheats and codes for Red Dead series. '
       +'Get all cheats for Red Dead and soon Red Dead 2 once released.',
       skills: 'Android Development, Java, XML, Photoshop',
       alt:'Red Dead QuickCodes',
