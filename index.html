@@ -26,7 +26,7 @@
        <div class="md-toolbar-tools">
 
          <md-button md-ink-ripple="false" class="md-icon-button" ng-click="toggleLeft()" aria-label="Settings">
-           <i class="material-icons md-36" >menu</i>
+           <i class="material-icons md-48" >menu</i>
          </md-button>
          <!-- Main app header -->
            <h1>Bryce Hairabedian</h1>
@@ -51,7 +51,7 @@
       <md-tab id="tab1">
         <md-tab-label>About</md-tab-label>
         <md-tab-body>
-          <div layout-gt-sm="row" layout-sm="column" layout-align="center center" layout-align-sm="center center">
+          <md-card layout-gt-sm="row" layout-sm="column" layout-align="center center" layout-align-sm="center center">
 
             <md-content>
             <div class="profilePic" layout="column" align="center">
@@ -73,7 +73,8 @@
               </p>
             </div>
           </md-content>
-
+          <md-card-footer>
+              <md-content>
               <md-card-actions layout="row" layout-align="center">
                 <md-button class="md-icon-button" aria-label="github" ng-href="https://github.com/blh22buck/" target="_blank">
                   <img ng-src="images/gitHub_32px.png"/>
@@ -85,10 +86,9 @@
                   <img ng-src="images/in_icon.png"/>
                 </md-button>
               </md-card-actions>
-
-
-
-          </div><!-- end parent div for About tab 1 -->
+            </md-content>
+          </md-card-footer>
+          </md-card>
 
         </md-tab-body>
       </md-tab>
@@ -127,12 +127,17 @@
                 <!-- links / buttons -->
                       <div layout="row" layout-align="end start" layout-align-xs="center end">
 
-                      <md-button style="display:{{card.linkButton_display}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
-                        {{card.linkButton_text}}
-                      </span><div class="md-ripple-container"></div>
+                      <md-button ng-hide="card.hide_moreinfo" class="md-button md-ink-ripple"
+                      type="button" href="{{card.linkButton_link}}" target="_blank" >
+                        <span class="{{card.linkButton_color}}">
+                          {{card.linkButton_text}}
+                        </span><div class="md-ripple-container"></div>
                       </md-button>
 
-                      <md-button style="display:{{card.githubButton_display}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
+                      <md-button ng-hide="card.hide_github"
+                      style="display:{{card.githubButton_display}}"
+                      class="md-icon-button" href="{{card.github_link}}"
+                      target="_blank" aria-label="Github">
                         <img src="images/gitHub_32px.png">
                       </md-button>
 
@@ -251,7 +256,7 @@
                   <div layout="column" layout-align="start stretch">
                 <!-- colored rows for Hamburgerlinks -->
                   <!--Github sidenav -->
-                  <div style="background-color:#ccc;">
+                  <div class="github-sidenav">
                     <md-list>
                       <a href="https://github.com/blh22buck/" target="_blank">
                       <md-item>
@@ -264,7 +269,7 @@
                   </div>
 
                   <!-- LinkedIn sidenav -->
-                    <div style="background-color:#0077b5;">
+                    <div class="linkedin-sidenav">
                       <md-list>
                         <a  href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
                         <md-item>
@@ -277,7 +282,7 @@
                     </div>
 
                     <!--Gmail sidenav -->
-                    <div style="background-color:#c2272d;">
+                    <div class="gmail-sidenav">
                       <md-list>
                         <a href="mailto:Bryce.Hairabedian@gmail.com" target="_blank">
                         <md-item>

@@ -7,15 +7,26 @@
 div.hidden{
 visibility: hidden;
 }
-
+.gmail-sidenav{
+  background-color:#c2272d;
+}
+.github-sidenav{
+  background-color:#ccc;
+}
+.linkedin-sidenav{
+  background-color:#0077b5;
+}
 .contact-button {
   background-color: rgba(158, 158, 158, 0.2);
 }
 .red-dead-card-header{
   background-color: #cc0001;
 }
-.asi-card-card-header{
+.asi-card-header{
   background-color: #7e9f2a;
+}
+.asi-info-button{
+  color: #7e9f2a;
 }
 .my-website-card-header{
     background-color: #3F51B5;

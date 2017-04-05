@@ -189,7 +189,7 @@ this.tiles = (function() {
       {lang: 'JavaScript'},
       {lang: 'PHP'},
       {lang: 'MySQL'},
-      {lang: 'Python'},
+      //{lang: 'Python'},
       {lang: 'CSS'},
       {lang: 'LESS'},
       {lang: 'HTML5'},
@@ -203,7 +203,7 @@ this.tiles = (function() {
       {tool: 'Illustrator'},
       {tool: 'PSD'},
       {tool: 'Spring'},
-      {tool: 'Eclipse'},
+      //{tool: 'Eclipse'},
       {tool: 'RESTful'},
       {tool: 'Drupal'},
       {tool: 'Node.JS'},
@@ -225,11 +225,12 @@ this.tiles = (function() {
       github_link:'https://github.com/blh22buck/safe-rides',
       linkButton_display:'display',
       linkButton_link:'http://www.asi.csus.edu/programs/safe-rides/',
-      linkButton_color:'#7e9f2a',
+      linkButton_color:'asi-info-button',
       linkButton_text:'More Info',
       color:'#7e9f2a',
-      b_color:'background-color:blue',
-      header_class:'asi-card-card-header'
+      hide_github: true,
+      hide_moreinfo: false,
+      header_class:'asi-card-header'
       },
       {imagePath:'images/dogCatcher_small_200.jpg',
       title:'Dog Catcher',
@@ -243,7 +244,8 @@ this.tiles = (function() {
       linkButton_color:'',
       linkButton_text:'',
       color:'#a15a2c',
-      b_color:'background-color:blue',
+      hide_github: false,
+      hide_moreinfo: true,
       header_class:'dog-catcher-card-header'
       },
       {imagePath:'images/gtaQuickCodes_small_200.jpg',
@@ -258,7 +260,8 @@ this.tiles = (function() {
       linkButton_color:'',
       linkButton_text:'',
       color:'#F44336',
-      b_color:'background-color:blue',
+      hide_github: false,
+      hide_moreinfo: true,
       header_class:'gta-quickcodes-card-header'
       }
     ];
@@ -275,7 +278,8 @@ this.tiles = (function() {
       linkButton_color:'',
       linkButton_text:'',
       color:'#3F51B5',
-      b_color:'background-color: blue;',
+      hide_github: false,
+      hide_moreinfo: true,
       header_class:'my-website-card-header'
     },
       {imagePath:'images/sacState_200.png',
@@ -290,7 +294,8 @@ this.tiles = (function() {
       linkButton_color:'',
       linkButton_text:'',
       color:'#cfb668',
-      b_color:'background-color:blue',
+      hide_github: true,
+      hide_moreinfo: true,
       header_class:'csus-rideshare-card-header'
       }
     ];
