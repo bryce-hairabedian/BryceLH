@@ -9,18 +9,18 @@ var COLORS = [ '#f22a26', '#f44f1d', '#f75a11', '#f77810', '#ffa30f', '#ffc30f',
 ];
 
 var SKILLS = [
-{type: 'Languages', skill: 'PHP'},
 {type: 'Languages', skill: 'Java'},
 {type: 'Languages', skill: 'C'},
 {type: 'Languages', skill: 'C++'},
 {type: 'Languages', skill: 'JavaScript'},
+{type: 'Languages', skill: 'AngularJS'},
 {type: 'Languages', skill: 'MySQL'},
-{type: 'Languages', skill: 'Python'},
+{type: 'Languages', skill: 'XML'},
+{type: 'Languages', skill: 'PHP'},
 {type: 'Languages', skill: 'LESS'},
+{type: 'Languages', skill: 'Python'},
 {type: 'Languages', skill: 'CSS'},
 {type: 'Languages', skill: 'HTML5'},
-{type: 'Languages', skill: 'XML'},
-{type: 'Languages', skill: 'AngularJS'},
 {type: 'Languages', skill: 'R'},
 
 {type: 'Tools', skill: 'Photoshop'},
