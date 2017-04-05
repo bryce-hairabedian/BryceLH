@@ -31,11 +31,21 @@ visibility: hidden;
 .my-website-card-header{
     background-color: #3F51B5;
 }
+.mywebsite-info-button{
+  color: #3F51B5;
+}
+
 .dog-catcher-card-header{
     background-color: #a15a2c;
 }
+.dog-catcher-info-buton{
+  color: #a15a2c;
+}
 .gta-quickcodes-card-header{
     background-color: #F44336;
+}
+.gta-quickcodes-info-button{
+    color: #F44336;
 }
 .csus-rideshare-card-header{
     background-color: #cfb668;

@@ -134,13 +134,18 @@
                         </span><div class="md-ripple-container"></div>
                       </md-button>
 
-                      <md-button ng-hide="card.hide_github"
-                      style="display:{{card.githubButton_display}}"
-                      class="md-icon-button" href="{{card.github_link}}"
-                      target="_blank" aria-label="Github">
-                        <img src="images/gitHub_32px.png">
+                      <md-button ng-hide="card.hide_github" class="md-button md-ink-ripple"
+                      type="button" href="{{card.linkButton_link}}" target="_blank" >
+                        <span class="{{card.linkButton_color}}">
+                          GitHub
+                        </span><div class="md-ripple-container"></div>
                       </md-button>
 
+                      <a ng-hide="card.hide_playstorebutton" 
+                      href="https://play.google.com/store/apps/details?id=com.brycehairabedian.reddeadquickcodes&hl=en">
+                        <img
+                        ng-src="images/google-play-badge_125w.png"/>
+                      </a>
                     </div><!--end button /link section-->
                   </div><!--end bottom row of card -->
                 </md-card-content>
@@ -175,20 +180,24 @@
                 <!-- Card Skills -->
                     <div layout="row" layout-xs="column" layout-align="space-between none" >
                       <p>{{card.skills}}</p>
-                <!-- links / buttons -->
-                    <div layout="row" layout-align="end start" layout-align-xs="center end">
+                      <!-- links / buttons -->
+                            <div layout="row" layout-align="end start" layout-align-xs="center end">
 
-                      <md-button style="display:{{card.linkButton_display}}" class="md-accent md-button md-ink-ripple" type="button" href="{{card.linkButton_link}}" target="_blank" ><span class="ng-scope" style="color:{{card.linkButton_color}}">
-                        {{card.linkButton_text}}
-                      </span><div class="md-ripple-container"></div>
-                    </md-button>
+                            <md-button ng-hide="card.hide_moreinfo" class="md-button md-ink-ripple"
+                            type="button" href="{{card.linkButton_link}}" target="_blank" >
+                              <span class="{{card.linkButton_color}}">
+                                {{card.linkButton_text}}
+                              </span><div class="md-ripple-container"></div>
+                            </md-button>
 
+                            <md-button ng-hide="card.hide_github" class="md-button md-ink-ripple"
+                            type="button" href="{{card.linkButton_link}}" target="_blank" >
+                              <span class="{{card.linkButton_color}}">
+                                GitHub
+                              </span><div class="md-ripple-container"></div>
+                            </md-button>
 
-                      <md-button style="display:{{card.githubButton_display}}" class="md-icon-button" href="{{card.github_link}}" target="_blank" aria-label="Github">
-                        <img src="images/gitHub_32px.png">
-                      </md-button>
-
-                    </div><!--end button /link section-->
+                          </div><!--end button /link section-->
                   </div><!--end bottom row of card -->
                 </md-card-content>
               </md-card><!-- end card in portfolios_right -->
