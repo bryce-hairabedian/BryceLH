@@ -333,7 +333,7 @@ this.tiles = (function() {
 });
 
 /*Begin on tab1, and transition between tabs */
-    $scope.data = {selectedIndex: 0};
+    $scope.data = {selectedIndex: 1};
 
     $scope.next = function() {
       $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
