@@ -256,9 +256,9 @@ this.tiles = (function() {
       hide_moreinfo: true,
       header_class:'dog-catcher-card-header'
       },
-      {imagePath:'images/gtaQuickCodes_small_200.jpg',
+      {imagePath:'images/gtaQuickCodes_small_200.png',
       title:'GTA QuickCodes',
-      description:'Currently developing a App in my own time to be deployed. Very fast, light, and customizable mobile app. Provides GTA codes quickly and up to date.',
+      description:'Comming soon. Very fast, light, and customizable mobile app. Provides GTA codes quickly and up-to-date.',
       skills: 'Java, XML, Android Development',
       alt:'GTA Code Quick',
       githubButton_display:'display',
