@@ -5,7 +5,12 @@ angular
   vm.loadsidenav = false;
 /**************Colors *************/
 
-var COLORS = [ '#f22a26', '#f44f1d', '#f75a11', '#f77810', '#ffa30f', '#ffc30f', '#ffeb0f', '#e3fc07', '#a2fc07', '#2be506', '#20f948', '#04f480', '#04f4b0', '#04f4df', '#04d0f4', '#0490e8', '#0440e8', '#1304e8', '#6d00fc', '#b000fc', '#8401bc', '#ca02f7', '#72018c', '#f702e2', '#910084', '#f2009d', '#91015e', '#f9025d', '#137f16', '#ed0219'
+var COLORS = [ '#f22a26', '#f44f1d', '#f75a11', '#f77810', '#ffa30f',
+                '#ffc30f', '#ffeb0f', '#e3fc07', '#a2fc07', '#2be506',
+                '#20f948', '#04f480', '#04f4b0', '#04f4df', '#04d0f4',
+                '#0490e8', '#0440e8', '#1304e8', '#6d00fc', '#b000fc',
+                '#8401bc', '#ca02f7', '#72018c', '#f702e2', '#910084',
+                '#f2009d', '#91015e', '#f9025d', '#137f16', '#ed0219'
 ];
 
 var SKILLS = [
@@ -242,7 +247,7 @@ this.tiles = (function() {
       githubButton_display:'display',
       github_link:'https://github.com/blh22buck/DogCatcher_CodenameOne',
       linkButton_display:'none',
-      linkButton_link:'',
+      linkButton_link:'https://github.com/blh22buck/DogCatcher_CodenameOne',
       linkButton_color:'dog-catcher-info-buton',
       linkButton_text:'',
       color:'#a15a2c',
@@ -264,7 +269,7 @@ this.tiles = (function() {
       linkButton_text:'',
       color:'#F44336',
       hide_playstorebutton: true,
-      hide_github: false,
+      hide_github: true,
       hide_moreinfo: true,
       header_class:'gta-quickcodes-card-header'
       }
@@ -295,7 +300,7 @@ this.tiles = (function() {
       githubButton_display:'display',
       github_link:'https://github.com/blh22buck/BryceLH',
       linkButton_display:'none',
-      linkButton_link:'',
+      linkButton_link:'https://github.com/blh22buck/BryceLH',
       linkButton_color:'mywebsite-info-button',
       linkButton_text:'GitHub',
       color:'#3F51B5',
