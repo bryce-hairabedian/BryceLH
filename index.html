@@ -76,15 +76,15 @@
           <md-card-footer>
               <md-content>
               <md-card-actions layout="row" layout-align="center">
-                <md-button class="md-icon-button" aria-label="github" ng-href="https://github.com/blh22buck/" target="_blank">
+                <a class="md-icon-button" aria-label="github" ng-href="https://github.com/blh22buck/" target="_blank">
                   <img ng-src="images/gitHub_32px.png"/>
-                </md-button>
-                <md-button class="md-icon-button" aria-label="Gmail" ng-href="mailto:Bryce.Hairabedian@gmail.com">
+              </a>
+                <a class="md-icon-button" aria-label="Gmail" ng-href="mailto:Bryce.Hairabedian@gmail.com">
                   <img ng-src="images/logo_gmail_32px.png"/>
-                </md-button>
-                <md-button class="md-icon-button" aria-label="LinkdIn" ng-href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
+              </a>
+                <a class="md-icon-button" aria-label="LinkedIn" ng-href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
                   <img ng-src="images/in_icon.png"/>
-                </md-button>
+              </a>
               </md-card-actions>
             </md-content>
           </md-card-footer>
@@ -100,7 +100,7 @@
           <md-content class="_md layout-xs-column layout-row" layout-xs="column" layout="row">
             <!-- left column -->
               <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-                <md-card ng-repeat="card in portfolios_left"><!-- flex="40" flex-sm="80" -->
+                <md-card ng-repeat="card in portfolios_left">
                 <!--Card Title -->
                   <md-card-title
                     class="{{card.header_class}}">

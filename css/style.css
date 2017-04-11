@@ -42,7 +42,8 @@ visibility: hidden;
   color: #a15a2c;
 }
 .gta-quickcodes-card-header{
-    background-color: #F44336;
+    /*background-color: #F44336;*/
+    background-color: #000;
 }
 .gta-quickcodes-info-button{
     color: #F44336;
