@@ -13,6 +13,39 @@ var COLORS = [ '#f22a26', '#f44f1d', '#f75a11', '#f77810', '#ffa30f',
                 '#f2009d', '#91015e', '#f9025d', '#137f16', '#ed0219'
 ];
 
+/* Skills page */
+    $scope.languages = [
+      'Java',
+      'C',
+      'C++',
+      'JavaScript',
+      'PHP',
+      'MySQL',
+      'CSS',
+      'LESS',
+      'HTML5',
+      'XML',
+      'AngularJS'
+    ];
+    $scope.tools = [
+      'Git',
+      'Linux',
+      'Visio',
+      'Illustrator',
+      'PSD',
+      'Spring',
+      'Eclipse',
+      'RESTful',
+      'Drupal',
+      'Node.JS',
+      'Android Studio'
+    ];
+    $scope.methods = [
+      'Scrum',
+      'Agile',
+      'Iterative'
+    ];
+
 var SKILLS = [
 {type: 'Languages', skill: 'Java'},
 {type: 'Languages', skill: 'C'},
@@ -114,16 +147,9 @@ var TILEDIM = [
                 return 3;
               }
           }
-          function shuffle(a) {
-              for (var i = a.length; i; i--) {
-                  var j = Math.floor(Math.random() * i);
-                  a[i - 1], a[j] = a[j], a[i - 1];
-              }
-          }
+
 this.tiles = (function() {
             var tiles = [];
-            shuffle(SKILLS);
-            shuffle(COLORS);
             var skillLength = SKILLS.length;
             for (var i = 0; i < skillLength; i++) {
               tiles.push({
@@ -147,7 +173,7 @@ this.tiles = (function() {
             clickOutsideToClose:true,
             fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints
           });
-        }
+      };
 
 
 
@@ -186,39 +212,6 @@ this.tiles = (function() {
   };
 }
 
-/* Skills page */
-    $scope.languages = [
-      {lang: 'Java'},
-      {lang: 'C'},
-      {lang: 'C++'},
-      {lang: 'JavaScript'},
-      {lang: 'PHP'},
-      {lang: 'MySQL'},
-      //{lang: 'Python'},
-      {lang: 'CSS'},
-      {lang: 'LESS'},
-      {lang: 'HTML5'},
-      {lang: 'XML'},
-      {lang: 'AngularJS'},
-    ];
-    $scope.tools = [
-      {tool: 'Git'},
-      {tool: 'Linux'},
-      {tool: 'Visio'},
-      {tool: 'Illustrator'},
-      {tool: 'PSD'},
-      {tool: 'Spring'},
-      //{tool: 'Eclipse'},
-      {tool: 'RESTful'},
-      {tool: 'Drupal'},
-      {tool: 'Node.JS'},
-      {tool: 'Android Studio'}
-    ];
-    $scope.methods = [
-      {method: 'Scrum'},
-      {method: 'Agile'},
-      {method: 'Iterative'}
-    ];
 /* Portfolios Page */
     $scope.portfolios_left = [
       {imagePath:'images/red_dead_card_header_img.png',
