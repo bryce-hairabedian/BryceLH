@@ -175,12 +175,6 @@
                       <!-- links / buttons -->
                             <div layout="row" layout-align="end start" layout-align-xs="center end">
 
-                            <md-button ng-hide="card.hide_moreinfo" class="md-button md-ink-ripple"
-                            type="button" href="{{card.linkButton_link}}" target="_blank" >
-                              <span class="{{card.linkButton_color}}">
-                                {{card.linkButton_text}}
-                              </span><div class="md-ripple-container"></div>
-                            </md-button>
 
                             <md-button ng-hide="card.hide_github" class="md-button md-ink-ripple"
                             type="button" href="{{card.linkButton_link}}" target="_blank" >
@@ -193,12 +187,25 @@
                   </div><!--end bottom row of card -->
 
 
-				  <div layout="row" ng-show="{{card.moreImages}}">
-					  <a ng-href="http://www.brycehairabedian.com/images/dogCatcher_small_200.jpg">
-					  <img src="{{card.img1}}">
-				  		</a>
+					  <p ng-show="{{card.moreImages}}">Screen Shots</p>
+				  <div layout="row" layout-align="space-around start" ng-show="{{card.moreImages}}">
+					  <!--thumbnail images -->
+					  <a ng-href="{{card.img1_link}}">
+					  	<img  class="imageLinks" src="{{card.img1_thumb}}">
+				  	  </a>
+
+					  <a ng-href="{{card.img2_link}}">
+					  	<img src="{{card.img2_thumb}}">
+				  	  </a>
+					  <!-- more info or github button -->
+					  <md-button ng-show="card.moreInfo" class="md-button md-ink-ripple"
+					  type="button" href="{{card.moreInfo_link}}" target="_blank" >
+					    <span class="{{card.moreInfo_color}}">
+					  	{{card.moreInfo_text}}
+					    </span><div class="md-ripple-container"></div>
+					  </md-button>
+
 				  </div>
-				  <button class="md-primary" ng-click="showLargeImg(card.img1)"> press </button>
 
 				</md-card-content>
               </md-card><!-- end card in portfolios_right -->
