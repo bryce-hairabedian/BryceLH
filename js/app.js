@@ -181,8 +181,6 @@ this.tiles = (function() {
       };
 
 
-
-
 /* Dialog - Gmail  */
   $scope.showAlert = function(ev) {
     // Appending dialog to document.body to cover sidenav in docs app
@@ -234,7 +232,9 @@ this.tiles = (function() {
       hide_playstorebutton: false,
       hide_github: true,
       hide_moreinfo: true,
-      header_class:'red-dead-card-header'
+      header_class:'red-dead-card-header',
+	  moreImages: true,
+	  img1: 'images/scrnsht/rdq_main1.png'
       },
 	  {imagePath:'images/gtaQuickCodes_small_200.png',
       title:'GTA QuickCodes',
@@ -251,11 +251,14 @@ this.tiles = (function() {
       hide_playstorebutton: true,
       hide_github: true,
       hide_moreinfo: true,
-      header_class:'gta-quickcodes-card-header'
+      header_class:'gta-quickcodes-card-header',
+	  moreImages: false,
+	  img1: undefined
   	  },
-	  {imagePath:'images/myWebsite_small_200.jpg',
-	        title:'My Website',
-	        description:'Created a personal web application. AngularJS, JavaScript, Node.js, NPM, Grunt, Bower, CSS, & HTML were used.',
+	  {
+		  imagePath:'images/myWebsite_small_200.jpg',
+	      title:'My Website',
+    		description:'Created a personal web application. AngularJS, JavaScript, Node.js, NPM, Grunt, Bower, CSS, & HTML were used.',
 	        skills: 'AngularJS Material Design, JavaScript, CSS, HTML',
 	        alt:'Bryce Hairabedian Website',
 	        githubButton_display:'display',
@@ -268,7 +271,9 @@ this.tiles = (function() {
 	        hide_playstorebutton: true,
 	        hide_github: false,
 	        hide_moreinfo: true,
-	        header_class:'my-website-card-header'
+	        header_class:'my-website-card-header',
+			moreImages: false,
+	  	  img1: undefined
 	  }
   ];
     $scope.portfolios_right = [
@@ -286,7 +291,9 @@ this.tiles = (function() {
       hide_playstorebutton: true,
       hide_github: true,
       hide_moreinfo: false,
-      header_class:'asi-card-header'
+      header_class:'asi-card-header',
+	  moreImages: true,
+	  img1: 'images/scrnsht/current-ride.jpg'
       },
       {imagePath:'images/myWebsite_small_200.jpg',
       title:'Data Mining',
@@ -296,14 +303,16 @@ this.tiles = (function() {
       githubButton_display:'display',
       github_link:'https://github.com/davidjudilla/csc177_data_mining_warehousing_student_performance',
       linkButton_display:'none',
-      linkButton_link:'https://github.com/davidjudilla/csc177_data_mining_warehousing_student_performance',
+      linkButton_link:'http://athena.ecs.csus.edu/~hairabeb/pdfs/Team6-Final-Report-DW-DM.pdf',
       linkButton_color:'mywebsite-info-button',
-      linkButton_text:'GitHub',
+      linkButton_text:'Read Report',
       color:'#3F51B5',
       hide_playstorebutton: true,
       hide_github: false,
       hide_moreinfo: true,
-      header_class:'my-website-card-header'
+      header_class:'my-website-card-header',
+	  moreImages: true,
+	  img1: 'images/scrnsht/mining-classification.jpg'
     },
       {imagePath:'images/sacState_200.png',
       title:'Data Mart Web App',
@@ -320,7 +329,9 @@ this.tiles = (function() {
       hide_playstorebutton: true,
       hide_github: false,
       hide_moreinfo: true,
-      header_class:'csus-rideshare-card-header'
+      header_class:'csus-rideshare-card-header',
+	  moreImages: true,
+	  img1: 'images/scrnsht/dm-line.jpg'
       }
     ];
 

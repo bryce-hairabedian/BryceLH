@@ -122,7 +122,9 @@
                       <p>{{card.skills}}</p>
                 <!-- links / buttons -->
                       <div layout="row" layout-align="end start" layout-align-xs="center end">
-
+						<div ng-show="{{card.moreImages}}">
+							<img src="{{card.img1}}" >
+						</div>
                       <md-button ng-hide="card.hide_moreinfo" class="md-button md-ink-ripple"
                       type="button" href="{{card.linkButton_link}}" target="_blank" >
                         <span class="{{card.linkButton_color}}">
@@ -333,6 +335,7 @@
 <script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js'></script>
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
     <script src="js/app.js"></script>
 
 </body>

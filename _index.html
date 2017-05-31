@@ -7,6 +7,7 @@
 
   <title>Bryce Hairabedian-Software Engineer</title>
 
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
   <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css'>
   <link rel='stylesheet prefetch' href='https://material.angularjs.org/1.1.1/docs.css'>
@@ -112,6 +113,11 @@
                 <!-- links / buttons -->
                       <div layout="row" layout-align="end start" layout-align-xs="center end">
 
+						  <div class="md-media card-media" ng-show="{{card.moreImages}}">
+  							<img src="{{card.img1}}" height="33%" width="33%">
+  						</div>
+
+
                       <md-button ng-hide="card.hide_moreinfo" class="md-button md-ink-ripple"
                       type="button" href="{{card.linkButton_link}}" target="_blank" >
                         <span class="{{card.linkButton_color}}">
@@ -185,7 +191,16 @@
 
                           </div><!--end button /link section-->
                   </div><!--end bottom row of card -->
-                </md-card-content>
+
+
+				  <div layout="row" ng-show="{{card.moreImages}}">
+					  <a ng-href="http://www.brycehairabedian.com/images/dogCatcher_small_200.jpg">
+					  <img src="{{card.img1}}">
+				  		</a>
+				  </div>
+				  <button class="md-primary" ng-click="showLargeImg(card.img1)"> press </button>
+
+				</md-card-content>
               </md-card><!-- end card in portfolios_right -->
               </div><!--end right column-->
           </div>
@@ -313,6 +328,7 @@
 <script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js'></script>
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
     <script src="js/app.js"></script>
 
 </body>
