@@ -21,7 +21,7 @@
 <div ng-controller="AppCtrl" ng-app="MyApp">
 
   <!-- toolbar/App Header -->
-  <md-toolbar class="md-primary _md _md-toolbar-transitions">
+  <md-toolbar class="md-primary">
 
        <div class="md-toolbar-tools">
 
@@ -29,7 +29,7 @@
            <i class="material-icons md-48" >menu</i>
          </md-button>
          <!-- Main app header -->
-           Bryce Hairabedian
+           <span class="appTitle">Bryce&nbsp;Hairabedian.com</span>
 
          <span flex class="flex"></span>
          <div>
@@ -41,58 +41,48 @@
      </md-toolbar>
    <!-- end toolbar-->
 
-<!-- navbar/ md-tabs -->
-  <div ng-cloak="" class="navTabs">
-<!--  <md-content class="md-padding"> -->
-    <md-tabs md-dynamic-height md-center-tabs="true" md-stretch-tabs="auto" md-selected="data.selectedIndex" md-align-tabs="top">
-      <!-- Add to above for swippable content. Doesn't work well on all browsers.  md-swipe-content -->
+<md-content>
+	<!-- About Tab 1 _____________________________________________________________ -->
+	<br>
+	  <div layaout-align="center center" layout="column">
+			  <md-card layout-gt-sm="row" layout-sm="column" layout-align="center center" layout-align-sm="center center">
 
-<!-- About Tab 1 _____________________________________________________________ -->
-      <md-tab id="tab1">
-        <md-tab-label>About</md-tab-label>
-        <md-tab-body>
-          <md-card layout-gt-sm="row" layout-sm="column" layout-align="center center" layout-align-sm="center center">
-
-            <div class="profilePic" layout="column" align="center">
-             <img ng-src="images/profilePic_grey_wood_cir.png" alt="profile picture"/>
-            </div><!-- end profilePic -->
+				<div class="profilePic" layout="column" align="center">
+				 <img ng-src="images/profilePic_grey_wood_cir.png" alt="profile picture"/>
+				</div><!-- end profilePic -->
 
 
-          <!-- Profile Text -->
-              <div class="profileText" layout="column" layout-align="center start" layout-align-sm="start center">
-              <h1>Bryce Hairabedian</h1>
-              <h2>Software Engineer</h2>
-              <p>Hello, my name is Bryce.
-                <br>I am a passionate software developer, avid sports fan, &amp; novice data scientist.
-                <br>I am currently seeking an entry level role.
-                <br>If you like my work, let me know. Connect with me on GitHub, Gmail, or LinkedIn.
-              </p>
-            </div>
-          <md-card-footer>
-              <md-card-actions layout="row" layout-align="center">
-                <a class="md-icon-button" aria-label="github" ng-href="https://github.com/blh22buck/" target="_blank">
-                  <img ng-src="images/gitHub_32px.png"/>
-              </a>
-                <a class="md-icon-button" aria-label="Gmail" ng-href="mailto:Bryce.Hairabedian@gmail.com" target="_blank">
-                  <img ng-src="images/logo_gmail_32px.png"/>
-              </a>
-                <a class="md-icon-button" aria-label="LinkedIn" ng-href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
-                  <img ng-src="images/in_icon.png"/>
-              </a>
-              </md-card-actions>
+			  <!-- Profile Text -->
+				  <div class="profileText" layout="column" layout-align="center start" layout-align-sm="start center">
+				  <span class="nameOnCard"><h1>Bryce Hairabedian</h1></span>
+				  <span class="textOnCard"><h2>Software Developer, Aspiring Data Scientist</h2></span>
+				  <p>Hello, my name is Bryce.
+					<br>I am a passionate software engineer, novice data scientist, &amp; avid sports fan.
+					<br>Recently graduated with a B.S., in Computer Science I am currently seeking an entry level role in software development.
+					<br>If you like my work, let me know. Connect with me on GitHub, Bryce.Hairabedian@gmail, or LinkedIn.
+				  </p>
+				</div>
+			  <md-card-footer>
+				  <md-card-actions layout="row" layout-align="center">
+					<a class="md-icon-button" aria-label="github" ng-href="https://github.com/blh22buck/" target="_blank">
+					  <img ng-src="images/gitHub_32px.png"/>
+				  </a>
+					<a class="md-icon-button" aria-label="Gmail" ng-href="mailto:Bryce.Hairabedian@gmail.com" target="_blank">
+					  <img ng-src="images/logo_gmail_32px.png"/>
+				  </a>
+					<a class="md-icon-button" aria-label="LinkedIn" ng-href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
+					  <img ng-src="images/in_icon.png"/>
+				  </a>
+				  </md-card-actions>
 
-          </md-card-footer>
+			  </md-card-footer>
 
-		  </md-card>
-
-        </md-tab-body>
-      </md-tab>
+			</md-card>
+		</div>
 
 <!-- Portfolio Tab 2 _____________________________________________________________ -->
-      <md-tab id="tab2">
-        <md-tab-label>Apps</md-tab-label>
-        <md-tab-body>
-          <md-content class="_md layout-xs-column layout-row" layout-xs="column" layout="row">
+	<h2 class="title-sep">Apps</h2>
+          <div class="_md layout-xs-column layout-row" layout-xs="column" layout="row">
             <!-- left column -->
               <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
                 <md-card ng-repeat="card in portfolios_left">
@@ -113,13 +103,12 @@
                   </md-card-title>
                   <md-card-content class="md-padding">
                 <!-- Card description -->
-                    <p>
-                      {{card.description}}
-                    </p>
+
+                    <p>{{card.description}}</p>
                     <br>
                 <!-- Card Skills -->
                     <div layout="row" layout-xs="column" layout-align="space-between none" >
-                      <p>{{card.skills}}</p>
+                      <p>Skills:<br>{{card.skills}}</p>
                 <!-- links / buttons -->
                       <div layout="row" layout-align="end start" layout-align-xs="center end">
 
@@ -176,7 +165,7 @@
                     <br>
                 <!-- Card Skills -->
                     <div layout="row" layout-xs="column" layout-align="space-between none" >
-                      <p>{{card.skills}}</p>
+                      <p>Skills:<br>{{card.skills}}</p>
                       <!-- links / buttons -->
                             <div layout="row" layout-align="end start" layout-align-xs="center end">
 
@@ -199,20 +188,17 @@
                 </md-card-content>
               </md-card><!-- end card in portfolios_right -->
               </div><!--end right column-->
-          </md-content>
-        </md-tab-body>
-      </md-tab>
+          </div>
+
 <!-- Skill Tab____________________________________________ -->
-      <md-tab id="tab3" ng-disabled="data.secondLocked">
-        <md-tab-label>Skills</md-tab-label>
-        <md-tab-body align="center">
+<h2 class="title-sep">Skills - Tools</h2>
 <!-- Dynamic Tiles skills -->
         <div align="center" ng-controller="AppCtrl as appCtrl">
           <md-button class="md-raised md-warn" ng-click="showAdvanced($event)">
-            Skills Listed
+            Listed
           </md-button>
 
-          <md-content layout-padding>
+
     <md-grid-list
         md-cols-gt-md="9"
         md-cols="4"
@@ -234,16 +220,10 @@
       </md-grid-tile>
 
     </md-grid-list>
-  </md-content>
-        </div>
 
 
 
-        </md-tab-body>
-      </md-tab>
 
-
-    </md-tabs>
 </div>
 
 <!--Hamburger menu / sidenav -->
@@ -303,18 +283,18 @@
 
                   </div><!-- end Colored Rows for hamburger menu -->
 
-                    <md-content layout="row" layout-align="end end" class="layout-margin _md">
+                    <div layout="row" layout-align="end end" class="layout-margin _md">
                       <button class="md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
                         Close Menu
                       </span><div class="md-ripple-container"></div>
                     </button>
-                    </md-content>
+				</div>
               </md-sidenav>
-            </div>
+		  </div><!-- end sidenav -->
 
 <!-- end hamburger menu -->
 
-
+</md-content>
 </div><!--end app-->
 
 <!-- Footer
