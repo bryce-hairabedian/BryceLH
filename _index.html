@@ -108,37 +108,38 @@
                     <p>{{card.description}}</p>
                     <br>
                 <!-- Card Skills -->
+				<!-- Card Skills -->
                     <div layout="row" layout-xs="column" layout-align="space-between none" >
-                      <p>Skills:<br>{{card.skills}}</p>
-                <!-- links / buttons -->
-                      <div layout="row" layout-align="end start" layout-align-xs="center end">
-
-						  <div class="md-media card-media" ng-show="{{card.moreImages}}">
-  							<img src="{{card.img1}}" height="33%" width="33%">
-  						</div>
+                      <p><strong>Skills:</strong><br>{{card.skills}}</p>
+                  </div><!--end bottom row of card -->
 
 
-                      <md-button ng-hide="card.hide_moreinfo" class="md-button md-ink-ripple"
-                      type="button" href="{{card.linkButton_link}}" target="_blank" >
-                        <span class="{{card.linkButton_color}}">
-                          {{card.linkButton_text}}
-                        </span><div class="md-ripple-container"></div>
-                      </md-button>
+				  <p ng-show="{{card.showImages}}"><strong>Screen Shots:</strong></p>
+				  <div layout="row" layout-align="space-around start" ng-show="{{card.showRow}}">
+					  <!--thumbnail images -->
+					  <a ng-href="{{card.img1_link}}">
+					  	<img class="imageLinks" src="{{card.img1_thumb}}">
+				  	  </a>
 
-                      <md-button ng-hide="card.hide_github" class="md-button md-ink-ripple"
-                      type="button" href="{{card.linkButton_link}}" target="_blank" >
-                        <span class="{{card.linkButton_color}}">
-                          GitHub
-                        </span><div class="md-ripple-container"></div>
-                      </md-button>
+					  <a ng-href="{{card.img2_link}}">
+					  	<img class="imageLinks" src="{{card.img2_thumb}}">
+				  	  </a>
+					  <!-- more info or github button -->
+					  <md-button ng-show="{{card.showButton}}" class="md-button md-raised md-ink-ripple"
+					  type="button" href="{{card.moreInfo_link}}" target="_blank" >
+					    <span class="{{card.moreInfo_color}}">
+					  	{{card.moreInfo_text}}
+					    </span><div class="md-ripple-container"></div>
+					  </md-button>
 
-                      <a ng-hide="card.hide_playstorebutton" target="_blank"
+					  <a ng-show="{{card.show_playstorebutton}}" target="_blank"
                       href="https://play.google.com/store/apps/details?id=com.brycehairabedian.reddeadquickcodes&hl=en">
                         <img
                         ng-src="images/google-play-badge_125w.png"/>
                       </a>
-                    </div><!--end button /link section-->
-                  </div><!--end bottom row of card -->
+
+				  </div>
+
                 </md-card-content>
               </md-card><!-- end card in portfolios_left -->
               </div><!--end left column-->
@@ -171,34 +172,22 @@
                     <br>
                 <!-- Card Skills -->
                     <div layout="row" layout-xs="column" layout-align="space-between none" >
-                      <p>Skills:<br>{{card.skills}}</p>
-                      <!-- links / buttons -->
-                            <div layout="row" layout-align="end start" layout-align-xs="center end">
-
-
-                            <md-button ng-hide="card.hide_github" class="md-button md-ink-ripple"
-                            type="button" href="{{card.linkButton_link}}" target="_blank" >
-                              <span class="{{card.linkButton_color}}">
-                                GitHub
-                              </span><div class="md-ripple-container"></div>
-                            </md-button>
-
-                          </div><!--end button /link section-->
+                      <p><strong>Skills:</strong><br>{{card.skills}}</p>
                   </div><!--end bottom row of card -->
 
 
-					  <p ng-show="{{card.moreImages}}">Screen Shots</p>
+				  <p ng-show="{{card.moreImages}}"><strong>Screen Shots:</strong></p>
 				  <div layout="row" layout-align="space-around start" ng-show="{{card.moreImages}}">
 					  <!--thumbnail images -->
 					  <a ng-href="{{card.img1_link}}">
-					  	<img  class="imageLinks" src="{{card.img1_thumb}}">
+					  	<img class="imageLinks" src="{{card.img1_thumb}}">
 				  	  </a>
 
 					  <a ng-href="{{card.img2_link}}">
-					  	<img src="{{card.img2_thumb}}">
+					  	<img class="imageLinks" src="{{card.img2_thumb}}">
 				  	  </a>
 					  <!-- more info or github button -->
-					  <md-button ng-show="card.moreInfo" class="md-button md-ink-ripple"
+					  <md-button ng-show="card.moreInfo" class="md-button md-raised md-ink-ripple"
 					  type="button" href="{{card.moreInfo_link}}" target="_blank" >
 					    <span class="{{card.moreInfo_color}}">
 					  	{{card.moreInfo_text}}
@@ -243,10 +232,15 @@
 
     </md-grid-list>
 
+	</div>
 
-
-
-</div>
+<br>
+<footer style="background-color: #ccc;">
+        <div layout="row" layout-align="center">
+            <h2>Bryce Hairabedian.com</h2>
+        </div>
+</footer>
+</md-content>
 
 <!--Hamburger menu / sidenav -->
             <div id="sidenav" class="hidden">
@@ -316,16 +310,11 @@
 
 <!-- end hamburger menu -->
 
-</md-content>
 </div><!--end app-->
 
-<!-- Footer
-<footer>
-        <div layout="row" layout-align="center center">
-            <h2>My Awesome Footer</h2>
-        </div>
-</footer>
--->
+
+
+
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script>
 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script>

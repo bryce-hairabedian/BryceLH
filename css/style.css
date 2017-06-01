@@ -37,6 +37,20 @@ visibility: hidden;
 .mywebsite-info-button{
   color: #3F51B5;
 }
+.datamart-header {
+	background-color: #e78b00;
+}
+.datamart-info-button {
+	color: #e78b00;
+}
+.datamine-header {
+	background-color: #0490e8;
+}
+.datamine-info-button {
+	color: #0490e8;
+}
+
+
 
 .dog-catcher-card-header{
     background-color: #a15a2c;
