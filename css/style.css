@@ -2,11 +2,7 @@
    padding:1px;
    border:1px solid #021a40;
 }
-.myHeading {
-  color: #fff;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: medium;
-}
+
 div.hidden{
 visibility: hidden;
 }
@@ -72,12 +68,13 @@ visibility: hidden;
 .appTitle{
 	font-size: 50pt;
 }
+
 .title-sep{
 	color: #3f51b5 ;
 	text-align: center;
 	font-size: 35pt;
-	padding-bottom: 8px;
-	padding-top: 18px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 .profileText{
 	padding: 16px;
@@ -126,43 +123,3 @@ md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
   .navTabs md-tab-content:nth-child(3) {
     /*background-color: #fff;*/
   }
-
-/* Dynamic tiles skills */
-.gridListdemoDynamicTiles md-icon {
-  width: 50%;
-  height: 30%; }
-
-.gridListdemoDynamicTiles .s64 {
-  font-size: 64px; }
-
-.gridListdemoDynamicTiles .s32 {
-  font-size: 48px; }
-
-.gridListdemoDynamicTiles md-icon.fa {
-  display: block;
-  padding-left: 0; }
-
-.gridListdemoDynamicTiles md-icon.s32 span {
-  padding-left: 8px; }
-
-.gridListdemoDynamicTiles md-grid-list {
-  margin: 8px; }
-
-.gridListdemoDynamicTiles md-grid-tile {
-  transition: all 300ms ease-out 50ms; }
-
-.gridListdemoDynamicTiles md-grid-tile md-icon {
-  padding-bottom: 32px; }
-
-.gridListdemoDynamicTiles md-grid-tile md-grid-tile-footer {
-  background: rgba(0, 0, 0, 0.68);
-  height: 36px; }
-
-.gridListdemoDynamicTiles md-grid-tile-footer figcaption {
-  width: 100%; }
-
-.gridListdemoDynamicTiles md-grid-tile-footer figcaption h3 {
-  margin: 0;
-  font-weight: 700;
-  width: 100%;
-  text-align: center; }

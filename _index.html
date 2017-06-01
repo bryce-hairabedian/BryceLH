@@ -30,7 +30,7 @@
            <i class="material-icons md-48" >menu</i>
          </md-button>
          <!-- Main app header -->
-           <span class="appTitle">Bryce&nbsp;Hairabedian.com</span>
+           <h2>BryceHairabedian.com</h2>
 
          <span flex class="flex"></span>
          <div>
@@ -176,8 +176,8 @@
                   </div><!--end bottom row of card -->
 
 
-				  <p ng-show="{{card.moreImages}}"><strong>Screen Shots:</strong></p>
-				  <div layout="row" layout-align="space-around start" ng-show="{{card.moreImages}}">
+				  <p ng-show="{{card.showImages}}"><strong>Screen Shots:</strong></p>
+				  <div layout="row" layout-align="space-around start" ng-show="{{card.showRow}}">
 					  <!--thumbnail images -->
 					  <a ng-href="{{card.img1_link}}">
 					  	<img class="imageLinks" src="{{card.img1_thumb}}">
@@ -187,12 +187,18 @@
 					  	<img class="imageLinks" src="{{card.img2_thumb}}">
 				  	  </a>
 					  <!-- more info or github button -->
-					  <md-button ng-show="card.moreInfo" class="md-button md-raised md-ink-ripple"
+					  <md-button ng-show="{{card.showButton}}" class="md-button md-raised md-ink-ripple"
 					  type="button" href="{{card.moreInfo_link}}" target="_blank" >
 					    <span class="{{card.moreInfo_color}}">
 					  	{{card.moreInfo_text}}
 					    </span><div class="md-ripple-container"></div>
 					  </md-button>
+
+					  <a ng-show="{{card.show_playstorebutton}}" target="_blank"
+                      href="https://play.google.com/store/apps/details?id=com.brycehairabedian.reddeadquickcodes&hl=en">
+                        <img
+                        ng-src="images/google-play-badge_125w.png"/>
+                      </a>
 
 				  </div>
 
@@ -202,7 +208,7 @@
           </div>
 
 <!-- Skill Tab____________________________________________ -->
-<h2 class="title-sep">Skills - Tools</h2>
+<h2 class="title-sep">Tools</h2>
 <!-- Dynamic Tiles skills -->
         <div align="center" ng-controller="AppCtrl as appCtrl">
           <md-button class="md-raised md-warn" ng-click="showAdvanced($event)">
@@ -235,9 +241,19 @@
 	</div>
 
 <br>
-<footer style="background-color: #ccc;">
-        <div layout="row" layout-align="center">
-            <h2>Bryce Hairabedian.com</h2>
+<footer style="background-color: #ccc;" layout-align="start end">
+        <div layout="row" layout-align="center end">
+            <h2>Bryce Hairabedian&nbsp;&nbsp;</h2>
+
+			  <a class="md-icon-button" aria-label="github" ng-href="https://github.com/blh22buck/" target="_blank">
+				<img ng-src="images/gitHub_32px.png"/>
+			</a>
+			  <a class="md-icon-button" aria-label="Gmail" ng-href="mailto:Bryce.Hairabedian@gmail.com" target="_blank">
+				<img ng-src="images/logo_gmail_32px.png"/>
+			</a>
+			  <a class="md-icon-button" aria-label="LinkedIn" ng-href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
+				<img ng-src="images/in_icon.png"/>
+			</a>
         </div>
 </footer>
 </md-content>
