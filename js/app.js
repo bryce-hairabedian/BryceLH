@@ -1,6 +1,14 @@
+/**
+ * @ngdoc function
+ * @name safeRidesWebApp.controller:AssignDriverModalCtrl
+ * @description
+ * # AssignDriverModalCtrl
+ * Controller of the safeRidesWebApp
+ */
+
 angular
       .module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
-      .controller('AppCtrl', function($scope, $timeout, $mdSidenav, $mdDialog){
+      .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdDialog) {
   var vm = this;
   vm.loadsidenav = false;
 /**************Colors *************/
@@ -17,7 +25,6 @@ var COLORS = [ '#f22a26', '#f44f1d', '#f75a11', '#f77810', '#ffa30f',
     $scope.languages = [
       'Java',
       'C',
-      'C++',
       'JavaScript',
       'PHP',
       'MySQL',
@@ -49,7 +56,6 @@ var COLORS = [ '#f22a26', '#f44f1d', '#f75a11', '#f77810', '#ffa30f',
 var SKILLS = [
 {type: 'Languages', skill: 'Java'},
 {type: 'Languages', skill: 'C'},
-{type: 'Languages', skill: 'C++'},
 {type: 'Languages', skill: 'JavaScript'},
 {type: 'Languages', skill: 'AngularJS'},
 {type: 'Languages', skill: 'MySQL'},
@@ -71,7 +77,6 @@ var SKILLS = [
 {type: 'Tools', skill: 'RESTful API'},
 {type: 'Tools', skill: 'Android Studio'},
 {type: 'Tools', skill: 'Node.JS'},
-{type: 'Tools', skill: 'Drupal'},
 
 {type: 'Methodologies', skill: 'Scrum'},
 {type: 'Methodologies', skill: 'Agile'},
@@ -176,8 +181,6 @@ this.tiles = (function() {
       };
 
 
-
-
 /* Dialog - Gmail  */
   $scope.showAlert = function(ev) {
     // Appending dialog to document.body to cover sidenav in docs app
@@ -216,117 +219,144 @@ this.tiles = (function() {
     $scope.portfolios_left = [
       {imagePath:'images/red_dead_card_header_img.png',
       title:'Red Dead QuickCodes',
-      description:'Android application providing all cheats and codes for Red Dead series. '
-      +'Get all cheats for Red Dead and soon Red Dead 2 once released.',
+      description:'Native Android application deployed to the Google Play Store in my spare time with Java, XML, Android Studio, and Photoshop providing users around the world up-to-date Red Dead codes. Google Play Rating 4.8',
       skills: 'Android Development, Java, XML, Photoshop',
       alt:'Red Dead QuickCodes',
-      githubButton_display:'display',
-      github_link:'https://github.com/blh22buck/',
-      linkButton_display:'none',
-      linkButton_link:'',
-      linkButton_color:'',
-      linkButton_text:'',
       color:'#cc0001',
-      hide_playstorebutton: false,
-      hide_github: true,
-      hide_moreinfo: true,
-      header_class:'red-dead-card-header'
+	  moreInfo_link:undefined,
+      moreInfo_color: undefined,
+      moreInfo_text:'More',
+      show_playstorebutton: true,
+      moreInfo: true,
+      header_class:'red-dead-card-header',
+	  moreImages: true,
+	  img1_thumb: 'images/scrnsht/thumb-rdq_main1.jpg',
+	  img1_link: 'images/scrnsht/rdq_main1.jpg',
+	  img2_thumb: 'images/scrnsht/thumb-rdq_drawer.jpg',
+	  img2_link: 'images/scrnsht/rdq_drawer.jpg',
+	  showImages: true,
+	  showRow: true,
+	  showButton: false
       },
-      {imagePath:'images/dogCatcher_small_200.jpg',
-      title:'Dog Catcher',
-      description:'2D Mobile cross platform game. Includes touch screen controls, scoreview, and mapview. Based on observer design pattern. Written with Codename One.',
-      skills: 'Codename One, Java',
-      alt:'Dog in net',
-      githubButton_display:'display',
-      github_link:'https://github.com/blh22buck/DogCatcher_CodenameOne',
-      linkButton_display:'none',
-      linkButton_link:'https://github.com/blh22buck/DogCatcher_CodenameOne',
-      linkButton_color:'dog-catcher-info-buton',
-      linkButton_text:'',
-      color:'#a15a2c',
-      hide_playstorebutton: true,
-      hide_github: false,
-      hide_moreinfo: true,
-      header_class:'dog-catcher-card-header'
-      },
-      {imagePath:'images/gtaQuickCodes_small_200.png',
-      title:'GTA QuickCodes',
-      description:'Comming soon. Very fast, light, and customizable mobile app. Provides GTA codes quickly and up-to-date.',
-      skills: 'Java, XML, Android Development',
-      alt:'GTA Code Quick',
-      githubButton_display:'display',
-      github_link:'https://github.com/blh22buck/GTA_QuickCodes',
-      linkButton_display:'none',
-      linkButton_link:'',
-      linkButton_color:'gta-quickcodes-info-button',
-      linkButton_text:'',
-      color:'#F44336',
-      hide_playstorebutton: true,
-      hide_github: true,
-      hide_moreinfo: true,
-      header_class:'gta-quickcodes-card-header'
-      }
-    ];
+
+	  {imagePath: undefined,
+	  title:'Data Mining',
+	  description:'Mined & warehoused over 1,000 student records with Random Forest decision tree classification. Autonomous machine learning was used to predict scores based upon student facts with 91% accuracy.',
+	  skills: 'R, Python',
+	  alt: undefined,
+	  color:'#3F51B5',
+	  moreInfo_link:'http://athena.ecs.csus.edu/~hairabeb/pdfs/Team6-Final-Report-DW-DM.pdf',
+	  moreInfo_color:'datamine-info-button',
+	  moreInfo_text:'More',
+	  show_playstorebutton: false,
+	  moreInfo: true,
+	  header_class:'datamine-header',
+	  moreImages: true,
+	  img1_thumb: 'images/scrnsht/thumb-mining-classification.jpg',
+	  img1_link: 'images/scrnsht/mining-classification.jpg',
+	  img2_thumb: 'images/scrnsht/thumb-mining-prediction.jpg',
+	  img2_link: 'images/scrnsht/mining-prediction.jpg',
+	  showImages: true,
+	  showRow: true,
+	  showButton: true
+  },
+  {
+	imagePath:'images/myWebsite_small_200.jpg',
+	title:'My Website',
+	  description:'Created a personal web application. AngularJS, JavaScript, CSS, & HTML were used.',
+	  skills: 'AngularJS Material Design, JavaScript, CSS, HTML',
+	  alt:'Bryce Hairabedian Website',
+	  color:'#3F51B5',
+	  moreInfo_link:'https://github.com/blh22buck/BryceLH',
+	  moreInfo_color:'mywebsite-info-button',
+	  moreInfo_text:'GitHub',
+	  show_playstorebutton: false,
+	  moreInfo: true,
+	  header_class:'my-website-card-header',
+	moreImages: false,
+	img1_thumb: undefined,
+	img1_link: undefined,
+	img2_thumb: undefined,
+	img2_link: undefined,
+	showImages: false,
+	showRow: true,
+	showButton: true
+  }
+];
     $scope.portfolios_right = [
       {imagePath:'images/cardHeader_saferides_small_200.jpg',
-      title:'ASI SafeRides',
-      description:'Currently developing App with small team using Scrum with Agile. Mobile dispatching system used to find student or faculty a safe ride home. Deliverable date May 2017',
-      skills: 'JS, PHP, REST, Spring, MySQL, HTML, CSS',
+      title:'Sacramento State Safe Rides',
+      description:'Lead team in creation of Sacramento States first Uber like ride share application using Java, AngularJS, Spring, RESTful, MySQL, CSS, & HTML saving Sacramento State over $7,000 a year. Scrum SDLC. Launch date Sept 2017.',
+      skills: 'Java, AngularJS, Spring, RESTful, MySQL, HTML5, CSS3, Grunt, Bower, NPM',
       alt:'asi SafeRides',
-      githubButton_display:'none',
-      github_link:'https://github.com/blh22buck/safe-rides',
-      linkButton_display:'display',
-      linkButton_link:'http://www.asi.csus.edu/programs/safe-rides/',
-      linkButton_color:'asi-info-button',
-      linkButton_text:'More Info',
-      color:'#7e9f2a',
-      hide_playstorebutton: true,
-      hide_github: true,
-      hide_moreinfo: false,
-      header_class:'asi-card-header'
+	  color:'#7e9f2a',
+      moreInfo_link:'http://www.asi.csus.edu/programs/safe-rides/',
+      moreInfo_color:'asi-info-button',
+      moreInfo_text:'More',
+      show_playstorebutton: false,
+      moreInfo: true,
+      header_class:'asi-card-header',
+	  moreImages: true,
+	  img1_thumb: 'images/scrnsht/thumb-current-ride.jpg',
+	  img1_link: 'images/scrnsht/current-ride.jpg',
+	  img2_thumb: 'images/scrnsht/thumb-rider_enter_info.jpg',
+	  img2_link: 'images/scrnsht/rider_enter_info.jpg',
+	  showImages: true,
+	  showRow: true,
+	  showButton: true
       },
-      {imagePath:'images/myWebsite_small_200.jpg',
-      title:'My Website',
-      description:'My own personal webapp built from scratch for the fun of learning AngularJS. Designed aesthetically with a passion for Google Material Design.',
-      skills: 'JS, AngularJS, Node.js, CSS, HTML',
-      alt:'Bryce Hairabedian Website',
-      githubButton_display:'display',
-      github_link:'https://github.com/blh22buck/BryceLH',
-      linkButton_display:'none',
-      linkButton_link:'https://github.com/blh22buck/BryceLH',
-      linkButton_color:'mywebsite-info-button',
-      linkButton_text:'GitHub',
-      color:'#3F51B5',
-      hide_playstorebutton: true,
-      hide_github: false,
-      hide_moreinfo: true,
-      header_class:'my-website-card-header'
-    },
-      {imagePath:'images/sacState_200.png',
-      title:'CSUS Ride Share',
-      description:'Lead team of 5 in development of Android App. CSUS Students willing to share rides to & from campus. App was reviewed by CSUS VP of Student Affairs.',
-      skills: 'Java, PHP, MySQL, XML, Android Development',
-      alt:'CSUS Ride Share',
-      githubButton_display:'display',
-      github_link:'https://github.com/blh22buck/SacStateRideshare',
-      linkButton_display:'none',
-      linkButton_link:'',
-      linkButton_color:'',
-      linkButton_text:'',
+
+      {imagePath: undefined,
+      title:'Data Mart Web App',
+      description:'Designed data mart web app & RESTful server using Python, AngularJS, SQLite, CSS, and HTML5 to provide educational institutions ability to visually explore student life & grade performance with Google Charts',
+      skills: 'Python, RESTful, AngularJS, JavaScript, SQLite, Google Charts, CSS, HTML5',
+      alt: undefined,
       color:'#cfb668',
-      hide_playstorebutton: true,
-      hide_github: true,
-      hide_moreinfo: true,
-      header_class:'csus-rideshare-card-header'
-      }
-    ];
+	  moreInfo_link:'https://github.com/davidjudilla/csc177_data_mining_warehousing_student_performance',
+      moreInfo_color:'datamart-info-button',
+      moreInfo_text:'GitHub',
+      show_playstorebutton: false,
+      moreInfo: true,
+      header_class:'datamart-header',
+	  moreImages: true,
+	  img1_thumb: 'images/scrnsht/thumb-donutChart.jpg',
+	  img1_link: 'images/scrnsht/donutChart.jpg',
+	  img2_thumb: 'images/scrnsht/thumb-dm-line.jpg',
+	  img2_link: 'images/scrnsht/dm-line.jpg',
+	  showImages: true,
+	  showRow: true,
+	  showButton: true
+  },
+  {imagePath:'images/gtaQuickCodes_small_200.png',
+  title:'GTA QuickCodes',
+  description:'Comming soon. Very fast, light, and customizable mobile app. Provides GTA codes quickly and up-to-date.',
+  skills: 'Android Development, Java, XML, Photoshop',
+  alt:'GTA Code Quick',
+  color:'#F44336',
+  moreInfo_link:undefined,
+  moreInfo_color:'gta-quickcodes-info-button',
+  moreInfo_text:'More',
+  show_playstorebutton: false,
+  moreInfo: false,
+  header_class:'gta-quickcodes-card-header',
+  moreImages: false,
+  img1_thumb: 'images/scrnsht/thumb-current-ride.jpg',
+  img1_link: 'images/scrnsht/current-ride.jpg',
+  img2_thumb: 'images/scrnsht/thumb-rider_enter_info.jpg',
+  img2_link: 'images/scrnsht/rider_enter_info.jpg',
+  showImages: false,
+  showRow: false,
+  showButton: false
+	}
+];
 
     $(document).ready(function() {
     $("div#sidenav").removeClass("hidden");
 });
 
 /*Begin on tab1, and transition between tabs */
-    $scope.data = {selectedIndex: 1};
+/*
+	$scope.data = {selectedIndex: 1};
 
     $scope.next = function() {
       $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
@@ -334,4 +364,6 @@ this.tiles = (function() {
     $scope.previous = function() {
       $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
     };
+	*/
+
 });
