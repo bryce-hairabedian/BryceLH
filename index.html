@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Bryce Hairabedian-Software Engineer</title>
+  <title>Bryce Hairabedian-Software Developer</title>
 
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
@@ -107,7 +107,6 @@
 
                     <p>{{card.description}}</p>
                     <br>
-                <!-- Card Skills -->
 				<!-- Card Skills -->
                     <div layout="row" layout-xs="column" layout-align="space-between none" >
                       <p><strong>Skills:</strong><br>{{card.skills}}</p>
@@ -117,11 +116,11 @@
 				  <p ng-show="{{card.showImages}}"><strong>Screen Shots:</strong></p>
 				  <div layout="row" layout-align="space-around start" ng-show="{{card.showRow}}">
 					  <!--thumbnail images -->
-					  <a ng-show="{{card.showImages}}" ng-href="{{card.img1_link}}">
+					  <a ng-show="{{card.showImages}}" ng-href="{{card.img1_link}}" target="_blank">
 					  	<img class="imageLinks" src="{{card.img1_thumb}}">
 				  	  </a>
 
-					  <a ng-show="{{card.showImages}}" ng-href="{{card.img2_link}}">
+					  <a ng-show="{{card.showImages}}" ng-href="{{card.img2_link}}" target="_blank">
 					  	<img class="imageLinks" src="{{card.img2_thumb}}">
 				  	  </a>
 					  <!-- more info or github button -->
@@ -179,11 +178,11 @@
 				  <p ng-show="{{card.showImages}}"><strong>Screen Shots:</strong></p>
 				  <div layout="row" layout-align="space-around start" ng-show="{{card.showRow}}">
 					  <!--thumbnail images -->
-					  <a ng-show="{{card.showImages}}" ng-href="{{card.img1_link}}">
+					  <a ng-show="{{card.showImages}}" ng-href="{{card.img1_link}}" target="_blank">
 					  	<img class="imageLinks" src="{{card.img1_thumb}}">
 				  	  </a>
 
-					  <a ng-show="{{card.showImages}}" ng-href="{{card.img2_link}}">
+					  <a ng-show="{{card.showImages}}" ng-href="{{card.img2_link}}" target="_blank">
 					  	<img class="imageLinks" src="{{card.img2_thumb}}">
 				  	  </a>
 					  <!-- more info or github button -->
