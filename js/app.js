@@ -1,11 +1,3 @@
-/**
- * @ngdoc function
- * @name safeRidesWebApp.controller:AssignDriverModalCtrl
- * @description
- * # AssignDriverModalCtrl
- * Controller of the safeRidesWebApp
- */
-
 angular
       .module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
       .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdDialog) {
