@@ -1,8 +1,7 @@
-angular
-      .module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
-      .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdDialog) {
-  var vm = this;
-  vm.loadsidenav = false;
+angular.module('BryceHairabedianMaterialDesignSite',['ngMaterial']) /*, 'ngMessages', 'material.svgAssetsCache'*/
+       .controller('ParentCtrl', function ($mdSidenav, $mdDialog) { //$timeout,
+  	var vm = this;
+  	$scope.loadsidenav = false;
 /**************Colors *************/
 
 var COLORS = [ '#f22a26', '#f44f1d', '#f75a11', '#f77810', '#ffa30f',
