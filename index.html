@@ -47,7 +47,7 @@
 
        <div class="md-toolbar-tools">
 
-         <md-button md-ink-ripple="false" class="md-icon-button" ng-click="toggleLeft()" aria-label="Menu">
+         <md-button md-ink-ripple="false" class="md-icon-button" ng-click="openLeftMenu()" aria-label="Menu">
            <i class="material-icons md-48" >menu</i>
          </md-button>
          <!-- Main app header -->
@@ -55,14 +55,13 @@
 
          <span flex class="flex"></span>
          <div>
-           <md-button hide show-gt-sm class="md-raised" ng-click="toggleLeft()">
+           <md-button hide show-gt-sm class="md-raised" ng-click="openLeftMenu()">
              Contact
            </md-button>
          </div>
        </div>
      </md-toolbar>
    <!-- end toolbar-->
-
 <md-content>
 	<!-- About Tab 1 _____________________________________________________________ -->
 	<br>
@@ -278,15 +277,19 @@
 </footer>
 </md-content>
 
+<md-sidenav md-component-id="left" class="md-sidenav-left">
+  Left Nav!
+</md-sidenav>
+
 <!--Hamburger menu / sidenav -->
             <div id="sidenav" class="hidden">
-              <md-sidenav class="md-sidenav-left ng-isolate-scope _md md-whiteframe-4dp" md-component-id="left"
+              <md-sidenav class="md-sidenav-left ng-isolate-scope _md md-whiteframe-4dp" md-component-id="leftSidenav"
               md-whiteframe="4" tabindex="-1">
                     <md-toolbar class="md-primary _md _md-toolbar-transitions">
                     <div layout="row" layout-align="space-between none" class="md-toolbar-tools" style="background-color:inherit;">
                       <h1>Connect With Me</h1>
-                      <md-button class="md-icon-button" ng-click="toggleLeft()" aria-label="Settings">
-                        <i class="material-icons md-36" >arrow_back</i><!--md-svg-icon="img/icons/menu.svg" -->
+                      <md-button class="md-icon-button" ng-click="openLeftMenu()" aria-label="Settings">
+                        <i class="material-icons md-36" >arrow_back</i>
                       </md-button>
                     </div>
                     </md-toolbar>
@@ -336,7 +339,7 @@
                   </div><!-- end Colored Rows for hamburger menu -->
 
                     <div layout="row" layout-align="end end" class="layout-margin _md">
-                      <button class="md-button md-ink-ripple" type="button" ng-click="toggleLeft()"><span class="ng-scope">
+                      <button class="md-button md-ink-ripple" type="button" ng-click="openLeftMenu()"><span class="ng-scope">
                         Close Menu
                       </span><div class="md-ripple-container"></div>
                     </button>
@@ -347,49 +350,14 @@
 <!-- end hamburger menu -->
 
 </div><!--end app-->
-
-
-<!-- Angular Material requires Angular.js Libraries -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script> -->
-
-
-
-
-<!-- <script type="text/javascript" src="scripts/vendor/angular.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-<!-- <script src="scripts/vendor/angular-animate.min.js"></script> -->
-<!-- <script src="scripts/vendor/angular-aria.min.js"></script> -->
-<!-- <script src="scripts/vendor/angular-messages.min.js"></script> -->
-<!-- <script type="text/javascript" src="scripts/vendor/angular-material.js"></script> -->
-
-
-
-
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 <script type="text/javascript" src="scripts/app.js"></script>
-
-
-
-
-<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script> -->
-<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script> -->
-<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script> -->
-<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js'></script> -->
-<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js'></script> -->
-<!-- <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script> -->
-<!-- <script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js'></script> -->
-
-<!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
-
-
 
 </body>
 

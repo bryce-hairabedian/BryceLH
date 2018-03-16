@@ -289,20 +289,16 @@ angular.module('BryceHairabedianMaterialDesignSite', [
             }
         ];
 
-        /*SideNav toggler */
-        $scope.toggleLeft = function(){
-			console.log('buildToggler');
-			buildToggler('left');
-		};
-        //var compId = "left";
-        function buildToggler(componentId) {
-            compId = componentId;
-            return function() {
-                $mdSidenav(componentId).toggle();
-            }
-        }
 
-
+		$scope.openLeftMenu = function() {
+		    $mdSidenav('leftSidenav').toggle();
+		  };
+		  $scope.isSidenavOpen = function() {
+			  return $mdSidenav('leftSidenav').isOpen();
+		  }
+		  $(document).ready(function() {
+		  	$("div#sidenav").removeClass("hidden");
+		  });
 
         /* Dynamic tiles skills page */
         function randomColor() {
@@ -363,24 +359,6 @@ angular.module('BryceHairabedianMaterialDesignSite', [
                 .targetEvent(ev)
             );
         };
-
-
-        function DialogController($scope, $mdDialog) {
-            $scope.hide = function() {
-                $mdDialog.hide();
-            };
-
-            $scope.cancel = function() {
-                $mdDialog.cancel();
-            };
-
-            $scope.closeDialog_openSidenav = function() {
-                $mdDialog.cancel();
-
-                $mdSidenav(compId).toggle();
-
-            };
-        }
 
         /* Portfolios Page */
         $scope.portfolios_left = [{
@@ -520,20 +498,7 @@ angular.module('BryceHairabedianMaterialDesignSite', [
             }
         ];
 
-        // $(document).ready(function() {
-        // $("div#sidenav").removeClass("hidden");
-    });
 
-/*Begin on tab1, and transition between tabs */
-/*
-	$scope.data = {selectedIndex: 1};
 
-    $scope.next = function() {
-      $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
-    };
-    $scope.previous = function() {
-      $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
-    };
-	*/
 
-// });
+}); //end controller
