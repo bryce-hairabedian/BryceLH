@@ -11,9 +11,23 @@
 	  <link rel="stylesheet" href="styles/style.css">
 
 
-	  <script type="text/javascript" src="scripts/vendor/angular.min.js"></script>
-	  <script type="text/javascript" src="scripts/vendor/angular-material.js"></script>
-	  <script type="text/javascript" src="scripts/app.js"></script>
+	  <!-- <script type="text/javascript" src="scripts/vendor/angular.min.js"></script>
+
+	  <script src="scripts/vendor/angular-animate.min.js"></script>
+	  <script src="scripts/vendor/angular-aria.min.js"></script>
+	  <script src="scripts/vendor/angular-messages.min.js"></script>
+	  <script type="text/javascript" src="scripts/vendor/angular-material.js"></script> -->
+	  <!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script> -->
+	  <!-- Angular Material requires Angular.js Libraries -->
+
+	  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script> -->
+
+	  <!-- Angular Material Library -->
+	  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+	  <script type="text/javascript" src="scripts/app.js"></script> -->
 
 	  <title>Bryce Hairabedian-Software Developer</title>
 
@@ -26,7 +40,7 @@
 	</head>
 <body>
 
-<div ng-controller="ParentCtrl as ctrl" ng-app="BryceHairabedianMaterialDesignSite">
+<div ng-controller="ParentController" ng-app="BryceHairabedianMaterialDesignSite">
 
   <!-- toolbar/App Header -->
   <md-toolbar class="md-primary">
@@ -216,7 +230,7 @@
 <!-- Skill Tab____________________________________________ -->
 <h2 class="title-sep">Tools</h2>
 <!-- Dynamic Tiles skills -->
-        <div align="center" ng-controller="AppCtrl as appCtrl">
+        <div align="center">
           <md-button class="md-raised md-warn" ng-click="showAdvanced($event)">
             Listed
           </md-button>
@@ -230,7 +244,7 @@
         md-gutter-gt-md="16px" md-gutter-md="8px" md-gutter="4px">
 
       <md-grid-tile
-          ng-repeat="tile in appCtrl.tiles"
+          ng-repeat="tile in ParentController.tiles"
           ng-style="{
             'background': tile.color
           }"
@@ -335,17 +349,45 @@
 </div><!--end app-->
 
 
+<!-- Angular Material requires Angular.js Libraries -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script> -->
 
 
-<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
-<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script>
-<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script>
-<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js'></script>
-<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
-<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js'></script>
 
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+
+<!-- <script type="text/javascript" src="scripts/vendor/angular.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+<!-- <script src="scripts/vendor/angular-animate.min.js"></script> -->
+<!-- <script src="scripts/vendor/angular-aria.min.js"></script> -->
+<!-- <script src="scripts/vendor/angular-messages.min.js"></script> -->
+<!-- <script type="text/javascript" src="scripts/vendor/angular-material.js"></script> -->
+
+
+
+
+
+<script type="text/javascript" src="scripts/app.js"></script>
+
+
+
+
+<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script> -->
+<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script> -->
+<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script> -->
+<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js'></script> -->
+<!-- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js'></script> -->
+<!-- <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script> -->
+<!-- <script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js'></script> -->
+
+<!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
 
 
 
