@@ -90,127 +90,70 @@
 			<h2 class="title-sep">Apps</h2>
 			<div class="_md layout-xs-column layout-row" layout-xs="column" layout="row">
 				<!-- left column -->
-				<div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-					<md-card ng-repeat="card in portfolios_left">
-						<!--Card Title -->
-						<md-card-title class="{{card.header_class}}">
-							<md-card-title-text>
-								<span class="md-headline" style="color:white;">
-						{{card.title}}
-					  </span>
-							</md-card-title-text>
-							<!-- Card Image -->
-							<md-card-title-media>
-								<div class="md-media card-media">
-									<img ng-src="{{card.imagePath}}" class="md-card-image" alt="{{card.alt}}">
-								</div>
-							</md-card-title-media>
-						</md-card-title>
-						<md-card-content class="md-padding">
-							<!-- Card description -->
+				<!-- <md-card ng-repeat="card in portfolios_left"> -->
 
-							<p>{{card.description}}</p>
-							<br>
-							<!-- Card Skills -->
-							<div layout="row" layout-xs="column" layout-align="space-between none">
-								<p><strong>Skills:</strong><br>{{card.skills}}</p>
-							</div>
-							<!--end bottom row of card -->
-
-
-							<p ng-show="{{card.showImages}}"><strong>Screen Shots:</strong></p>
-							<div layout="row" layout-align="space-around start" ng-show="{{card.showRow}}">
-								<!--thumbnail images -->
-								<a ng-show="{{card.showImages}}" href="{{card.img1_link}}" target="_blank">
-						<img class="imageLinks" src="{{card.img1_thumb}}">
-					  </a>
-
-								<a ng-show="{{card.showImages}}" href="{{card.img2_link}}" target="_blank">
-						<img class="imageLinks" src="{{card.img2_thumb}}">
-					  </a>
-								<!-- more info or github button -->
-								<md-button ng-show="{{card.showButton}}" class="md-button md-raised md-ink-ripple" type="button" href="{{card.moreInfo_link}}" target="_blank">
-									<span class="{{card.moreInfo_color}}">
-						{{card.moreInfo_text}}
-						</span>
-									<div class="md-ripple-container"></div>
-								</md-button>
-
-								<a ng-show="{{card.show_playstorebutton}}" target="_blank" href="https://play.google.com/store/apps/details?id=com.brycehairabedian.reddeadquickcodes&hl=en">
-						<img
-						ng-src="images/google-play-badge_125w.png"/>
-					  </a>
-
-							</div>
-
-						</md-card-content>
-					</md-card>
-					<!-- end card in portfolios_left -->
-				</div>
-				<!--end left column-->
+				<div class="md-padding" layout="row" flex>
+			       <div layout="row" flex>
+			          <div class="parent" layout="column" ng-repeat="card in portfolios_right" flex>
+						  <md-card>
+		  						<!--Card Title -->
+		  						<md-card-title class="{{card.header_class}}">
+		  							<md-card-title-text>
+		  								<span class="md-headline" style="color:white;">
+		  						{{card.title}}
+		  					  </span>
+		  							</md-card-title-text>
+		  							<!-- Card Image -->
+		  							<md-card-title-media>
+		  								<div class="md-media card-media">
+		  									<img ng-src="{{card.imagePath}}" class="md-card-image" alt="{{card.alt}}">
+		  								</div>
+		  							</md-card-title-media>
+		  						</md-card-title>
+		  						<md-card-content class="md-padding">
+		  							<!-- Card description -->
+		  							<p>
+		  								{{card.description}}
+		  							</p>
+		  							<br>
+		  							<!-- Card Skills -->
+		  							<div layout="row" layout-xs="column" layout-align="space-between none">
+		  								<p><strong>Skills:</strong><br>{{card.skills}}</p>
+		  							</div>
+		  							<!--end bottom row of card -->
 
 
+		  							<p ng-show="card.showImages"><strong>Screen Shots:</strong></p>
+		  							<div layout="row" layout-align="space-around start" ng-show="{{card.showRow}}">
+		  								<!--thumbnail images -->
+		  								<a ng-show="{{card.showImages}}" href="{{card.img1_link}}" target="_blank">
+		  						<img class="imageLinks" src="{{card.img1_thumb}}">
+		  					  </a>
 
-				<!--start portfolios right column-->
-				<div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-					<md-card ng-repeat="card in portfolios_right">
-						<!--Card Title -->
-						<md-card-title class="{{card.header_class}}">
-							<md-card-title-text>
-								<span class="md-headline" style="color:white;">
-						{{card.title}}
-					  </span>
-							</md-card-title-text>
-							<!-- Card Image -->
-							<md-card-title-media>
-								<div class="md-media card-media">
-									<img ng-src="{{card.imagePath}}" class="md-card-image" alt="{{card.alt}}">
-								</div>
-							</md-card-title-media>
-						</md-card-title>
-						<md-card-content class="md-padding">
-							<!-- Card description -->
-							<p>
-								{{card.description}}
-							</p>
-							<br>
-							<!-- Card Skills -->
-							<div layout="row" layout-xs="column" layout-align="space-between none">
-								<p><strong>Skills:</strong><br>{{card.skills}}</p>
-							</div>
-							<!--end bottom row of card -->
+		  								<a ng-show="{{card.showImages}}" href="{{card.img2_link}}" target="_blank">
+		  						<img class="imageLinks" src="{{card.img2_thumb}}">
+		  					  </a>
+		  								<!-- more info or github button -->
+		  								<md-button ng-show="{{card.showButton}}" class="md-button md-raised md-ink-ripple" type="button" href="{{card.moreInfo_link}}" target="_blank">
+		  									<span class="{{card.moreInfo_color}}">
+		  						{{card.moreInfo_text}}
+		  						</span>
+		  									<div class="md-ripple-container"></div>
+		  								</md-button>
 
+		  								<a ng-show="{{card.show_playstorebutton}}" target="_blank" href="https://play.google.com/store/apps/details?id=com.brycehairabedian.reddeadquickcodes&hl=en">
+		  						<img
+		  						ng-src="images/google-play-badge_125w.png"/>
+		  					  </a>
 
-							<p ng-show="{{card.showImages}}"><strong>Screen Shots:</strong></p>
-							<div layout="row" layout-align="space-around start" ng-show="{{card.showRow}}">
-								<!--thumbnail images -->
-								<a ng-show="{{card.showImages}}" href="{{card.img1_link}}" target="_blank">
-						<img class="imageLinks" src="{{card.img1_thumb}}">
-					  </a>
+		  							</div>
 
-								<a ng-show="{{card.showImages}}" href="{{card.img2_link}}" target="_blank">
-						<img class="imageLinks" src="{{card.img2_thumb}}">
-					  </a>
-								<!-- more info or github button -->
-								<md-button ng-show="{{card.showButton}}" class="md-button md-raised md-ink-ripple" type="button" href="{{card.moreInfo_link}}" target="_blank">
-									<span class="{{card.moreInfo_color}}">
-						{{card.moreInfo_text}}
-						</span>
-									<div class="md-ripple-container"></div>
-								</md-button>
+		  						</md-card-content>
+		  				</md-card>
+			          </div>
+			       </div>
+			    </div>
 
-								<a ng-show="{{card.show_playstorebutton}}" target="_blank" href="https://play.google.com/store/apps/details?id=com.brycehairabedian.reddeadquickcodes&hl=en">
-						<img
-						ng-src="images/google-play-badge_125w.png"/>
-					  </a>
-
-							</div>
-
-						</md-card-content>
-					</md-card>
-					<!-- end card in portfolios_right -->
-				</div>
-				<!--end right column-->
 			</div>
 
 			<!-- Skill Tab____________________________________________ -->
