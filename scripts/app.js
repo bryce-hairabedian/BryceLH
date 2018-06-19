@@ -1,11 +1,15 @@
+'use strict';
+
 angular.module('BryceHairabedianMaterialDesignSite', [
 	'ngAnimate',
 	'ngAria',
 	'ngMaterial'
 ]) /*'ngMaterial', 'ngMessages', 'material.svgAssetsCache'*/
     .controller('ParentController', function($scope,$timeout,$mdSidenav, $mdDialog) { //,$timeout,$mdSidenav, $mdDialog
+
         var vm = this;
         $scope.loadsidenav = false;
+		console.log('app.js run');
         /**************Colors *************/
 
         var COLORS = ['#f22a26', '#f44f1d', '#f75a11', '#f77810', '#ffa30f',
@@ -15,6 +19,10 @@ angular.module('BryceHairabedianMaterialDesignSite', [
             '#8401bc', '#ca02f7', '#72018c', '#f702e2', '#910084',
             '#f2009d', '#91015e', '#f9025d', '#137f16', '#ed0219'
         ];
+
+		vm.test = 'Hey Hey YO';
+		// vm.test = 'Hey Hey';
+		// vm.test = 'Hey Hey';
 
         /* Skills page */
         $scope.languages = [
@@ -290,12 +298,10 @@ angular.module('BryceHairabedianMaterialDesignSite', [
         ];
 
 
-		$scope.openLeftMenu = function() {
+		vm.toggleSideNav = function() {
 		    $mdSidenav('leftSidenav').toggle();
 		  };
-		  $scope.isSidenavOpen = function() {
-			  return $mdSidenav('leftSidenav').isOpen();
-		  }
+
 		  $(document).ready(function() {
 		  	$("div#sidenav").removeClass("hidden");
 		  });
@@ -316,7 +322,7 @@ angular.module('BryceHairabedianMaterialDesignSite', [
             }
         }
 
-        $scope.tiles = (function() {
+    vm.tiles = (function() {
             var tiles = [];
             var skillLength = SKILLS.length;
             for (var i = 0; i < skillLength; i++) {
@@ -341,23 +347,6 @@ angular.module('BryceHairabedianMaterialDesignSite', [
                 clickOutsideToClose: true,
                 fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints
             });
-        };
-
-
-        /* Dialog - Gmail  */
-        $scope.showAlert = function(ev) {
-            // Appending dialog to document.body to cover sidenav in docs app
-
-            $mdDialog.show(
-                $mdDialog.alert()
-                .parent(angular.element(document.querySelector('#popupContainer')))
-                .clickOutsideToClose(true)
-                .title('Email Me')
-                .textContent('Bryce.Hairabedian@Gmail.com')
-                .ariaLabel('Gmail Dialog')
-                .ok('Done')
-                .targetEvent(ev)
-            );
         };
 
         /* Portfolios Page */

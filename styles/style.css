@@ -6,6 +6,9 @@
 div.hidden{
 visibility: hidden;
 }
+.tile-text-clickable {
+	cursor: pointer;
+}
 .gmail-sidenav{
   background-color:#c2272d;
 }
