@@ -350,7 +350,8 @@ angular.module('BryceHairabedianMaterialDesignSite', [
         };
 
         /* Portfolios Page */
-        $scope.portfolios_left = [{
+        $scope.portfolios_left = [
+			{
                 imagePath: 'images/red_dead_card_header_img.png',
                 title: 'Red Dead QuickCodes',
                 description: 'Native Android application deployed to the Google Play Store in my spare time with Java, XML, Android Studio, and Photoshop providing users around the world up-to-date Red Dead codes. Google Play Rating 4.8',
@@ -395,30 +396,9 @@ angular.module('BryceHairabedianMaterialDesignSite', [
                 showRow: true,
                 showButton: true
             },
-            {
-                imagePath: 'images/myWebsite_small_200.jpg',
-                title: 'My Website',
-                description: 'Created a personal web application. AngularJS, JavaScript, CSS, & HTML were used.',
-                skills: 'AngularJS Material Design, JavaScript, CSS, HTML',
-                alt: 'Bryce Hairabedian Website',
-                color: '#3F51B5',
-                moreInfo_link: 'https://github.com/blh22buck/BryceLH',
-                moreInfo_color: 'mywebsite-info-button',
-                moreInfo_text: 'GitHub',
-                show_playstorebutton: false,
-                moreInfo: true,
-                header_class: 'my-website-card-header',
-                moreImages: false,
-                img1_thumb: undefined,
-                img1_link: undefined,
-                img2_thumb: undefined,
-                img2_link: undefined,
-                showImages: false,
-                showRow: true,
-                showButton: true
-            }
-        ];
-        $scope.portfolios_right = [{
+        // ];
+        // $scope.portfolios_right = [
+			{
                 imagePath: 'images/cardHeader_saferides_small_200.jpg',
                 title: 'Sacramento State Safe Rides',
                 description: 'Lead team in creation of Sacramento States first Uber like ride share application using Java, AngularJS, Spring, RESTful, MySQL, CSS, & HTML saving Sacramento State over $7,000 a year. Scrum SDLC. Launch date Sept 2017.',
@@ -460,6 +440,28 @@ angular.module('BryceHairabedianMaterialDesignSite', [
                 img2_thumb: 'images/scrnsht/thumb-dm-line.jpg',
                 img2_link: 'images/scrnsht/dm-line.jpg',
                 showImages: true,
+                showRow: true,
+                showButton: true
+            },
+			{
+                imagePath: 'images/myWebsite_small_200.jpg',
+                title: 'My Website',
+                description: 'Created a personal web application. AngularJS, JavaScript, CSS, & HTML were used.',
+                skills: 'AngularJS Material Design, JavaScript, CSS, HTML',
+                alt: 'Bryce Hairabedian Website',
+                color: '#3F51B5',
+                moreInfo_link: 'https://github.com/blh22buck/BryceLH',
+                moreInfo_color: 'mywebsite-info-button',
+                moreInfo_text: 'GitHub',
+                show_playstorebutton: false,
+                moreInfo: true,
+                header_class: 'my-website-card-header',
+                moreImages: false,
+                img1_thumb: undefined,
+                img1_link: undefined,
+                img2_thumb: undefined,
+                img2_link: undefined,
+                showImages: false,
                 showRow: true,
                 showButton: true
             },

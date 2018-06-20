@@ -47,17 +47,13 @@
 		</md-toolbar>
 		<!-- end toolbar-->
 		<md-content>
-			<!-- About Tab 1 _____________________________________________________________ -->
 			<br>
+			<!-- About -->
 			<div layaout-align="center center" layout="column">
 				<md-card layout-gt-sm="row" layout-sm="column" layout-align="center center" layout-align-sm="center center">
-
 					<div class="profilePic" layout="column" align="center">
 						<img ng-src="images/profilePic_grey_wood_cir.png" alt="profile picture" />
 					</div>
-					<!-- end profilePic -->
-
-
 					<!-- Profile Text -->
 					<div class="profileText" layout="column" layout-align="center start" layout-align-sm="start center">
 						<span class="nameOnCard"><h1>Bryce Hairabedian</h1></span>
@@ -93,8 +89,8 @@
 				<!-- <md-card ng-repeat="card in portfolios_left"> -->
 
 				<div class="md-padding" layout="row" flex>
-			       <div layout="row" flex>
-			          <div class="parent" layout="column" ng-repeat="card in portfolios_right" flex>
+			       <div layout="row" layout-wrap>
+			          <div ng-repeat="card in portfolios_left" flex="50">
 						  <md-card>
 		  						<!--Card Title -->
 		  						<md-card-title class="{{card.header_class}}">
