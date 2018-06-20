@@ -1,0 +1,284 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Bryce Hairabedian-Software Developer</title>
+    <meta name="description" content="BryceHairabedian.com">
+    <meta name="author" content="Bryce Hairabedian">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="styles/angular-material.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+	<link rel="stylesheet prefetch" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- address bar color -->
+  <meta name="theme-color" content="#3f51b5" />
+</head>
+
+<body>
+	<div ng-controller="ParentController as pCtrl" ng-app="BryceHairabedianMaterialDesignSite">
+		<!-- toolbar/App Header -->
+		<md-toolbar class="md-primary">
+
+			<div class="md-toolbar-tools">
+
+				<md-button md-ink-ripple="false" class="md-icon-button" ng-click="pCtrl.toggleSideNav()" aria-label="Menu">
+					<i class="material-icons md-48">menu</i>
+				</md-button>
+				<!-- Main app header -->
+				<h2>BryceHairabedian.com</h2>
+
+				<span flex class="flex"></span>
+				<div>
+					<md-button hide show-gt-sm class="md-raised" ng-click="pCtrl.toggleSideNav()">
+						Contact
+					</md-button>
+				</div>
+			</div>
+		</md-toolbar>
+		<!-- end toolbar-->
+		<md-content>
+			<br>
+			<!-- About -->
+			<div layaout-align="center center" layout="column">
+				<md-card layout-gt-sm="row" layout-sm="column" layout-align="center center" layout-align-sm="center center">
+					<div class="profilePic" layout="column" align="center">
+						<img ng-src="images/profilePic_grey_wood_cir.png" alt="profile picture" />
+					</div>
+					<!-- Profile Text -->
+					<div class="profileText" layout="column" layout-align="center start" layout-align-sm="start center">
+						<span class="nameOnCard"><h1>Bryce Hairabedian</h1></span>
+						<span class="textOnCard"><h2>Software Developer, Aspiring Data Scientist</h2></span>
+						<p>Hello, my name is Bryce.
+							<br>I am a passionate software engineer, novice data scientist, &amp; avid sports fan.
+							<br>Recently graduated with a B.S., in Computer Science I am currently seeking an entry level role in software development.
+							<br>If you like my work, let me know. Connect with me on GitHub, Bryce.Hairabedian@gmail, or LinkedIn.
+						</p>
+					</div>
+					<md-card-footer>
+						<md-card-actions layout="row" layout-align="center">
+							<a class="md-icon-button" aria-label="github" href="https://github.com/blh22buck/" target="_blank">
+					  <img ng-src="images/gitHub_32px.png"/>
+				  </a>
+							<a class="md-icon-button" aria-label="Gmail" href="mailto:Bryce.Hairabedian@gmail.com" target="_blank">
+					  <img ng-src="images/logo_gmail_32px.png"/>
+				  </a>
+							<a class="md-icon-button" aria-label="LinkedIn" href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
+					  <img ng-src="images/in_icon.png"/>
+				  </a>
+						</md-card-actions>
+
+					</md-card-footer>
+
+				</md-card>
+			</div>
+
+			<!-- Portfolio Tab 2 _____________________________________________________________ -->
+			<h2 class="title-sep">Apps</h2>
+			<div class="_md layout-xs-column layout-row" layout-xs="column" layout="row">
+				<!-- left column -->
+				<!-- <md-card ng-repeat="card in portfolios_left"> -->
+
+				<div class="md-padding" layout="row" flex>
+			       <div layout="row" layout-wrap>
+			          <div ng-repeat="card in portfolios_left" flex="50">
+						  <md-card>
+		  						<!--Card Title -->
+		  						<md-card-title class="{{card.header_class}}">
+		  							<md-card-title-text>
+		  								<span class="md-headline" style="color:white;">
+		  						{{card.title}}
+		  					  </span>
+		  							</md-card-title-text>
+		  							<!-- Card Image -->
+		  							<md-card-title-media>
+		  								<div class="md-media card-media">
+		  									<img ng-src="{{card.imagePath}}" class="md-card-image" alt="{{card.alt}}">
+		  								</div>
+		  							</md-card-title-media>
+		  						</md-card-title>
+		  						<md-card-content class="md-padding">
+		  							<!-- Card description -->
+		  							<p>
+		  								{{card.description}}
+		  							</p>
+		  							<br>
+		  							<!-- Card Skills -->
+		  							<div layout="row" layout-xs="column" layout-align="space-between none">
+		  								<p><strong>Skills:</strong><br>{{card.skills}}</p>
+		  							</div>
+		  							<!--end bottom row of card -->
+
+
+		  							<p ng-show="card.showImages"><strong>Screen Shots:</strong></p>
+		  							<div layout="row" layout-align="space-around start" ng-show="{{card.showRow}}">
+		  								<!--thumbnail images -->
+		  								<a ng-show="{{card.showImages}}" href="{{card.img1_link}}" target="_blank">
+		  						<img class="imageLinks" src="{{card.img1_thumb}}">
+		  					  </a>
+
+		  								<a ng-show="{{card.showImages}}" href="{{card.img2_link}}" target="_blank">
+		  						<img class="imageLinks" src="{{card.img2_thumb}}">
+		  					  </a>
+		  								<!-- more info or github button -->
+		  								<md-button ng-show="{{card.showButton}}" class="md-button md-raised md-ink-ripple" type="button" href="{{card.moreInfo_link}}" target="_blank">
+		  									<span class="{{card.moreInfo_color}}">
+		  						{{card.moreInfo_text}}
+		  						</span>
+		  									<div class="md-ripple-container"></div>
+		  								</md-button>
+
+		  								<a ng-show="{{card.show_playstorebutton}}" target="_blank" href="https://play.google.com/store/apps/details?id=com.brycehairabedian.reddeadquickcodes&hl=en">
+		  						<img
+		  						ng-src="images/google-play-badge_125w.png"/>
+		  					  </a>
+
+		  							</div>
+
+		  						</md-card-content>
+		  				</md-card>
+			          </div>
+			       </div>
+			    </div>
+
+			</div>
+
+			<!-- Skill Tab____________________________________________ -->
+			<h2 class="title-sep">Tools</h2>
+			<!-- Dynamic Tiles skills -->
+			<div align="center">
+				<md-button class="md-raised md-warn" ng-click="showAdvanced($event)">
+					Listed
+				</md-button>
+
+
+				<md-grid-list md-cols-gt-md="9" md-cols="4"
+							  md-cols-xs="3" md-row-height-gt-md="1:1"
+							  md-row-height="4:3" md-gutter-gt-md="16px"
+							  md-gutter-md="8px" md-gutter="4px">
+
+					<md-grid-tile ng-repeat="tile in pCtrl.tiles" ng-style="{'background': tile.color}"
+								  md-colspan-gt-sm="{{tile.colspan}}"
+								  md-rowspan-gt-sm="{{tile.rowspan}}">
+						<span class="tile-text-clickable" ng-click="showAdvanced($event)">
+							<p flex><span class="tileText" flex>{{tile.skill}}</span></p>
+							<md-grid-tile-footer hide-xs>
+								<h3>{{tile.type}}</h3></md-grid-tile-footer>
+						</span>
+					</md-grid-tile>
+
+				</md-grid-list>
+
+			</div>
+
+			<br>
+			<footer style="background-color: #ccc;" layout-align="start end">
+				<div layout="row" layout-align="center end">
+					<h2>Bryce Hairabedian&nbsp;&nbsp;</h2>
+
+					<a class="md-icon-button" aria-label="github" href="https://github.com/blh22buck/" target="_blank">
+				<img ng-src="images/gitHub_32px.png"/>
+			</a>
+					<a class="md-icon-button" aria-label="Gmail" href="mailto:Bryce.Hairabedian@gmail.com" target="_blank">
+				<img ng-src="images/logo_gmail_32px.png"/>
+			</a>
+					<a class="md-icon-button" aria-label="LinkedIn" href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
+				<img ng-src="images/in_icon.png"/>
+			</a>
+				</div>
+			</footer>
+		</md-content>
+
+		<!--Hamburger menu / sidenav -->
+		<div id="sidenav" class="hidden">
+			<md-sidenav class="md-sidenav-left" md-component-id="leftSidenav"
+			 			md-whiteframe="4" tabindex="-1">
+				<md-toolbar class="md-primary _md _md-toolbar-transitions">
+					<div layout="row" layout-align="space-between none" class="md-toolbar-tools" style="background-color:inherit;">
+						<h1>Connect With Me</h1>
+						<md-button class="md-icon-button" ng-click="pCtrl.toggleSideNav()" aria-label="Settings">
+							<i class="material-icons md-36">arrow_back</i>
+						</md-button>
+					</div>
+				</md-toolbar>
+
+				<div layout="column" layout-align="start stretch">
+					<!-- colored rows for Hamburgerlinks -->
+					<!--Github sidenav -->
+					<div class="github-sidenav">
+						<md-list>
+							<a href="https://github.com/blh22buck/" target="_blank">
+								<md-item>
+									<div layout="column" layout-align="center center">
+										<img class="md-media" src="images/github_195_48_2.png">
+									</div>
+								</md-item>
+							</a>
+						</md-list>
+					</div>
+
+					<!-- LinkedIn sidenav -->
+					<div class="linkedin-sidenav">
+						<md-list>
+							<a href="https://www.linkedin.com/in/bryce-hairabedian" target="_blank">
+								<md-item>
+									<div layout="column" layout-align="center center">
+										<img class="md-media" src="images/in_logo_195_48.png">
+									</div>
+								</md-item>
+							</a>
+						</md-list>
+					</div>
+
+					<!--Gmail sidenav -->
+					<div class="gmail-sidenav">
+						<md-list>
+							<a href="mailto:Bryce.Hairabedian@gmail.com" target="_blank">
+								<md-item>
+									<div layout="column" layout-align="center center">
+										<img class="md-media" src="images/gmail_195_48.png">
+									</div>
+								</md-item>
+							</a>
+						</md-list>
+					</div>
+
+
+				</div>
+				<!-- end Colored Rows for hamburger menu -->
+
+				<div layout="row" layout-align="end end" class="layout-margin _md">
+					<button class="md-button md-ink-ripple" type="button" ng-click="pCtrl.toggleSideNav()">
+						<span class="ng-scope">
+						Close Menu
+					  </span><div class="md-ripple-container"></div>
+					</button>
+				</div>
+			</md-sidenav>
+		</div>
+		<!-- end sidenav -->
+
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="vendors/angular.min.js"></script>
+	<script src="vendors/angular-animate.min.js"></script>
+	<script src="vendors/angular-aria.min.js"></script>
+	<script src="vendors/angular-messages.min.js"></script>
+	<script src="https://cdn.gitcdn.link/cdn/angular/bower-material/master/angular-material.js"></script>
+
+	<script src="scripts/app.js"></script>
+
+</body>
+
+</html>
